@@ -30,14 +30,16 @@ def translate_with_deepseek(text, max_retries=2):
     """
     使用 DeepSeek API 翻译文本
     """
-    if not DEEPSEEK_API_KEY:
+    api_key = os.getenv("DEEPSEEK_API_KEY") or DEEPSEEK_API_KEY
+    if not api_key:
+        print("Warning: DEEPSEEK_API_KEY not set", file=sys.stderr)
         return None
 
     try:
         import requests
 
         headers = {
-            "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
         }
 
@@ -58,7 +60,7 @@ def translate_with_deepseek(text, max_retries=2):
             "max_tokens": 500
         }
 
-        response = requests.post(DEEPSEEK_API_URL, headers=headers, json=payload, timeout=10)
+        response = requests.post(DEEPSEEK_API_URL, headers=headers, json=payload, timeout=30)
 
         if response.status_code == 200:
             result = response.json()
@@ -103,7 +105,7 @@ def translate_title(title):
     return title
 
 
-def translate_summary(content, title, max_length=500):
+def translate_summary(content, title, max_length=600):
     """
     生成中文摘要
     使用 DeepSeek API 翻译和摘要
@@ -114,41 +116,42 @@ def translate_summary(content, title, max_length=500):
     # 检查是否已经主要是中文
     chinese_chars = sum(1 for c in content if '\u4e00' <= c <= '\u9fff')
     if chinese_chars > len(content) * 0.3:
-        # 已经是中文，截断即可
+        # 已经是中文，确保有足够长度
         if len(content) > max_length:
             return content[:max_length-3] + "..."
-        return content
+        return content if len(content) >= 100 else content[:max_length]
 
     # 对于英文内容，使用 DeepSeek API 翻译并生成摘要
-    if DEEPSEEK_API_KEY:
+    api_key = os.getenv("DEEPSEEK_API_KEY") or DEEPSEEK_API_KEY
+    if api_key:
         try:
             import requests
 
             headers = {
-                "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+                "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json"
             }
 
-            # 准备内容（截取前 2000 字符）
-            content_to_translate = content[:2000] if len(content) > 2000 else content
+            # 准备内容（使用更多内容来生成更长的摘要）
+            content_to_translate = content[:3000] if len(content) > 3000 else content
 
             payload = {
                 "model": "deepseek-chat",
                 "messages": [
                     {
                         "role": "system",
-                        "content": f"你是一个科技新闻编辑。请将英文新闻内容翻译并整理成简体中文摘要。要求：1. 翻译准确自然 2. 提取关键信息 3. 控制在 {max_length} 字以内 4. 不要重复标题内容 5. 保持专业术语原文（AI、LLM、GPT 等） 6. 直接返回摘要，不要添加任何额外说明"
+                        "content": f"你是一个科技新闻编辑。请将英文新闻内容翻译并整理成简体中文摘要。要求：1. 翻译准确自然 2. 提取关键信息和技术细节 3. 控制在 {max_length} 字以内 4. 不要只重复标题，要提供实质性的内容摘要 5. 保持专业术语原文（AI、LLM、GPT、Claude、RAG、GitHub、API等） 6. 包含项目的核心功能、特点或价值 7. 直接返回摘要，不要添加任何额外说明"
                     },
                     {
                         "role": "user",
-                        "content": f"标题：{title}\n\n内容：{content_to_translate}\n\n请生成中文摘要："
+                        "content": f"新闻标题：{title}\n\n新闻内容：{content_to_translate}\n\n请生成详细的中文摘要（{max_length}字以内）："
                     }
                 ],
                 "temperature": 0.3,
-                "max_tokens": 800
+                "max_tokens": 1000
             }
 
-            response = requests.post(DEEPSEEK_API_URL, headers=headers, json=payload, timeout=15)
+            response = requests.post(DEEPSEEK_API_URL, headers=headers, json=payload, timeout=60)
 
             if response.status_code == 200:
                 result = response.json()
@@ -157,12 +160,23 @@ def translate_summary(content, title, max_length=500):
                 summary = summary.strip('"\'""''').strip()
                 # 移除可能的 "摘要：" 前缀
                 summary = re.sub(r'^摘要[:：]\s*', '', summary)
+                # 移除可能重复的标题
+                summary = re.sub(re.escape(title), '', summary, flags=re.IGNORECASE)
+                # 清理
+                summary = re.sub(r'^[、，。]\s*', '', summary.strip())
+                if len(summary) < 50:
+                    summary = f"{title}。{summary}"
                 return summary
 
         except Exception as e:
             print(f"DeepSeek summary API exception: {e}", file=sys.stderr)
 
-    # API 失败，使用简单策略
+    # API 失败，生成本地摘要
+    return generate_fallback_summary(content, title, max_length)
+
+
+def generate_fallback_summary(content, title, max_length=600):
+    """生成回退摘要（当 API 不可用时）"""
     # 提取标题翻译作为开头
     translated_title = translate_title(title)
 
@@ -170,17 +184,16 @@ def translate_summary(content, title, max_length=500):
     sentences = re.split(r'[.!?]+', content)
     key_sentences = []
 
-    for sentence in sentences[:3]:
+    for sentence in sentences:
         sentence = sentence.strip()
-        if len(sentence) > 10:
+        if len(sentence) > 15 and len(' '.join(key_sentences)) < max_length - 100:
             key_sentences.append(sentence)
 
     if key_sentences:
         # 组合摘要
-        summary = f"{translated_title}。"
-        # 简单处理：将英文句子加入，在实际使用中会由 API 处理
-        for sent in key_sentences[:2]:
-            if len(summary) + len(sent) < max_length - 50:
+        summary = translated_title + "。"
+        for sent in key_sentences[:3]:
+            if len(summary) + len(sent) < max_length - 20:
                 summary += sent + "。"
 
         if len(summary) > max_length:
@@ -196,12 +209,14 @@ def translate_batch(items, api_call_limit=10):
     """
     批量翻译新闻列表
     """
+    import time
     translated_items = []
 
     for i, item in enumerate(items):
         # 设置 API Key（如果需要动态设置）
-        if DEEPSEEK_API_KEY:
-            os.environ["DEEPSEEK_API_KEY"] = DEEPSEEK_API_KEY
+        api_key = os.getenv("DEEPSEEK_API_KEY") or DEEPSEEK_API_KEY
+        if api_key:
+            os.environ["DEEPSEEK_API_KEY"] = api_key
 
         translated_item = item.copy()
         translated_item["title_zh"] = translate_title(item.get("title", ""))
@@ -211,10 +226,9 @@ def translate_batch(items, api_call_limit=10):
         )
         translated_items.append(translated_item)
 
-        # 避免过快调用
+        # API 调用间隔，避免超时
         if i < len(items) - 1:
-            import time
-            time.sleep(0.5)
+            time.sleep(1)  # 增加到1秒间隔
 
     return translated_items
 
