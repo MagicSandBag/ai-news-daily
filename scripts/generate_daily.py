@@ -20,7 +20,7 @@ from translator import translate_title, translate_summary
 
 # 配置
 TITLE_MAX_LENGTH = 80  # 标题最大显示长度
-SUMMARY_MIN_LENGTH = 200  # 摘要最小长度
+SUMMARY_TRUNCATE_LENGTH = 150  # 收起状态显示的摘要长度
 SUMMARY_MAX_LENGTH = 600  # 摘要最大长度
 
 # Set UTF-8 encoding for Windows console
@@ -196,6 +196,9 @@ def render_news_card(item, index, category_id):
     time_str = item.get("time", "")
     content = item.get("content", "")
 
+    # 格式化时间显示
+    formatted_time = format_time_display(time_str, source)
+
     # Translate title to Chinese
     translated_title = translate_title(title)
 
@@ -205,16 +208,18 @@ def render_news_card(item, index, category_id):
     if chinese_ratio > 0.3:
         # 有中文翻译，使用中文
         display_title = truncate_title(translated_title)
-        show_original = True
     else:
         # 无有效翻译，显示原标题
         display_title = truncate_title(title)
-        show_original = False
 
-    # 生成摘要（更长，且不重复标题）
+    # 生成摘要（完整版）
     summary = translate_summary(content, title, max_length=SUMMARY_MAX_LENGTH)
-    # 移除摘要中可能重复的标题内容
-    summary = remove_title_from_summary(summary, translated_title if chinese_ratio > 0.3 else title)
+
+    # 收起状态截断显示（使用相同内容，只是截断）
+    if len(summary) > SUMMARY_TRUNCATE_LENGTH:
+        collapsed_summary = summary[:SUMMARY_TRUNCATE_LENGTH] + "..."
+    else:
+        collapsed_summary = summary
 
     # 生成标签
     tags = []
@@ -225,9 +230,6 @@ def render_news_card(item, index, category_id):
             tags.append(f"#{keyword}")
 
     tags_str = " ".join(tags[:5]) if tags else "#AI"
-
-    # 收起状态显示的短摘要
-    short_summary = summary[:SUMMARY_MIN_LENGTH] + "..." if len(summary) > SUMMARY_MIN_LENGTH else summary
 
     # 使用翻译后的标题作为悬停提示
     hover_title = translated_title
@@ -244,9 +246,9 @@ def render_news_card(item, index, category_id):
                 <div class="news-card-meta">
                     <span class="source-badge">{source}</span>
                     {f'<span>🔥 {heat}</span>' if heat else ''}
-                    {f'<span>🕐 {time_str}</span>' if time_str else ''}
+                    {f'<span>🕐 {formatted_time}</span>' if formatted_time else ''}
                 </div>
-                <p class="news-card-summary">{short_summary}</p>
+                <p class="news-card-summary">{collapsed_summary}</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
@@ -257,10 +259,59 @@ def render_news_card(item, index, category_id):
                     </a>
                     <div class="news-meta-expanded">
                         <span>🏷️ {tags_str}</span>
-                        {f'<span>📊 {heat} · {time_str}</span>' if heat or time_str else ''}
+                        {f'<span>📊 {heat} · {formatted_time}</span>' if heat or formatted_time else ''}
                     </div>
                 </div>
             </article>'''
+
+def format_time_display(time_str, source):
+    """
+    格式化时间显示为 YYYY-MM-DD HH:MM:SS 或 YYYY-MM-DD
+    """
+    from datetime import datetime, timedelta
+
+    if not time_str:
+        return datetime.now().strftime("%Y-%m-%d")
+
+    time_str = time_str.strip()
+
+    # 如果已经是日期格式
+    if re.match(r'^\d{4}-\d{2}-\d{2}', time_str):
+        return time_str
+
+    # 处理相对时间
+    now = datetime.now()
+
+    # 处理 "X hours ago", "X days ago" 等
+    if 'hour ago' in time_str.lower():
+        hours = int(re.search(r'(\d+)', time_str).group(1))
+        return (now - timedelta(hours=hours)).strftime("%Y-%m-%d %H:%M")
+    elif 'hours ago' in time_str.lower():
+        hours = int(re.search(r'(\d+)', time_str).group(1))
+        return (now - timedelta(hours=hours)).strftime("%Y-%m-%d %H:%M")
+    elif 'day ago' in time_str.lower():
+        days = int(re.search(r'(\d+)', time_str).group(1))
+        return (now - timedelta(days=days)).strftime("%Y-%m-%d")
+    elif 'days ago' in time_str.lower():
+        days = int(re.search(r'(\d+)', time_str).group(1))
+        return (now - timedelta(days=days)).strftime("%Y-%m-%d")
+    elif 'yesterday' in time_str.lower():
+        return (now - timedelta(days=1)).strftime("%Y-%m-%d")
+    elif time_str.lower() == 'today':
+        return now.strftime("%Y-%m-%d")
+    elif 'real-time' in time_str.lower() or time_str.lower() == 'hot':
+        return now.strftime("%Y-%m-%d %H:%M")
+    # 尝试解析 ISO 格式
+    elif 'T' in time_str:
+        try:
+            dt = datetime.fromisoformat(time_str.replace('Z', '+00:00'))
+            return dt.strftime("%Y-%m-%d %H:%M")
+        except:
+            pass
+
+    # 默认返回今天日期
+    return now.strftime("%Y-%m-%d")
+
 
 def truncate_title(title, max_length=TITLE_MAX_LENGTH):
     """截断过长的标题"""

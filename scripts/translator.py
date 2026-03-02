@@ -49,7 +49,7 @@ def translate_with_deepseek(text, max_retries=2):
             "messages": [
                 {
                     "role": "system",
-                    "content": "你是一个专业的科技新闻翻译。请将英文新闻标题和内容翻译成简体中文。要求：1. 保持专业术语的准确性（如 AI、LLM、GPT、Claude、RAG 等）2. 翻译要自然流畅符合中文表达习惯 3. 直接返回翻译结果，不要添加任何解释 4. 对于专有名词（如人名、公司名、产品名）请保持原文或使用通用译名"
+                    "content": f"你是一个专业的科技新闻翻译。请将英文新闻标题和内容翻译成简体中文。要求：1. 保持专业术语的准确性（如 AI、LLM、GPT、Claude、RAG 等）2. 翻译要自然流畅符合中文表达习惯 3. 直接返回翻译结果，不要添加任何解释 4. 对于专有名词（如人名、公司名、产品名）请保持原文或使用通用译名 5. 不要使用任何markdown格式符号（如**、##、-列表等）"
                 },
                 {
                     "role": "user",
@@ -67,6 +67,9 @@ def translate_with_deepseek(text, max_retries=2):
             translated = result["choices"][0]["message"]["content"].strip()
             # 移除可能的引号
             translated = translated.strip('"\'""''')
+            # 移除 markdown 格式符号
+            translated = re.sub(r'\*\*\*(.+?)\*\*\*', r'\1', translated)
+            translated = re.sub(r'\*\*(.+?)\*\*', r'\1', translated)
             return translated
         else:
             print(f"DeepSeek API error: {response.status_code}", file=sys.stderr)
@@ -140,7 +143,7 @@ def translate_summary(content, title, max_length=600):
                 "messages": [
                     {
                         "role": "system",
-                        "content": f"你是一个科技新闻编辑。请将英文新闻内容翻译并整理成简体中文摘要。要求：1. 翻译准确自然 2. 提取关键信息和技术细节 3. 控制在 {max_length} 字以内 4. 不要只重复标题，要提供实质性的内容摘要 5. 保持专业术语原文（AI、LLM、GPT、Claude、RAG、GitHub、API等） 6. 包含项目的核心功能、特点或价值 7. 直接返回摘要，不要添加任何额外说明"
+                        "content": f"你是一个科技新闻编辑。请将英文新闻内容翻译并整理成简体中文摘要。要求：1. 翻译准确自然 2. 提取关键信息和技术细节 3. 控制在 {max_length} 字以内 4. 不要只重复标题，要提供实质性的内容摘要 5. 保持专业术语原文（AI、LLM、GPT、Claude、RAG、GitHub、API等） 6. 包含项目的核心功能、特点或价值 7. 直接返回摘要，不要添加任何额外说明 8. 不要使用markdown格式（如**、##、-列表等）"
                     },
                     {
                         "role": "user",
@@ -160,10 +163,19 @@ def translate_summary(content, title, max_length=600):
                 summary = summary.strip('"\'""''').strip()
                 # 移除可能的 "摘要：" 前缀
                 summary = re.sub(r'^摘要[:：]\s*', '', summary)
+                # 移除 markdown 格式符号
+                summary = re.sub(r'\*\*\*(.+?)\*\*\*', r'\1', summary)
+                summary = re.sub(r'\*\*(.+?)\*\*', r'\1', summary)
+                summary = re.sub(r'^(第?\d*[、.])\s*', '', summary)
+                summary = re.sub(r'^\d+\.\s+', '', summary)
+                summary = re.sub(r'^\d+、\s+', '', summary)
                 # 移除可能重复的标题
                 summary = re.sub(re.escape(title), '', summary, flags=re.IGNORECASE)
-                # 清理
-                summary = re.sub(r'^[、，。]\s*', '', summary.strip())
+                # 清理格式
+                summary = re.sub(r'\n+', '，', summary)
+                summary = re.sub(r'\s+', ' ', summary).strip()
+                # 移除开头的标点
+                summary = re.sub(r'^[、，。:：]\s*', '', summary)
                 if len(summary) < 50:
                     summary = f"{title}。{summary}"
                 return summary

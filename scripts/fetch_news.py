@@ -104,6 +104,64 @@ def filter_quality(items):
 
     return high_quality
 
+
+def is_today_news(item):
+    """
+    检查新闻是否为今天的新闻
+    返回 True 表示是今天的新闻，False 表示不是
+    """
+    from datetime import datetime, timedelta
+
+    time_str = item.get('time', '').lower()
+    today = datetime.now()
+
+    # 如果时间字段为空，假设是今天的
+    if not time_str or time_str == 'today' or time_str == 'hot' or time_str == 'real-time':
+        return True
+
+    # 如果已经包含日期格式，检查是否是今天
+    if re.search(r'\d{4}-\d{2}-\d{2}', time_str):
+        try:
+            item_date = datetime.strptime(re.search(r'\d{4}-\d{2}-\d{2}', time_str).group(), '%Y-%m-%d')
+            return item_date.date() == today.date()
+        except:
+            pass
+
+    # 处理相对时间
+    if 'hour ago' in time_str or 'hours ago' in time_str:
+        # 几小时前，是今天的
+        return True
+    elif 'day ago' in time_str or 'yesterday' in time_str:
+        # 昨天或更早，不是今天的
+        return False
+    elif 'days ago' in time_str:
+        # 几天前
+        days = int(re.search(r'\d+', time_str).group(0))
+        return days == 0
+
+    # 默认认为是今天的
+    return True
+
+
+def filter_today_only(items):
+    """
+    只保留今天的新闻
+    用于日报功能
+    """
+    today_items = []
+    filtered_count = 0
+
+    for item in items:
+        if is_today_news(item):
+            today_items.append(item)
+        else:
+            filtered_count += 1
+
+    if filtered_count > 0:
+        print(f"Filtered out {filtered_count} non-today items for daily report", file=sys.stderr)
+
+    return today_items
+
 def fetch_url_content(url):
     """
     Fetches the content of a URL and extracts text from paragraphs.
@@ -403,6 +461,14 @@ def main():
         filtered_count = original_count - len(results)
         if filtered_count > 0:
             sys.stderr.write(f"Quality filter: removed {filtered_count} items, kept {len(results)}\n")
+
+    # 应用日期过滤，只保留今天的新闻（日报功能）
+    if results:
+        original_count = len(results)
+        results = filter_today_only(results)
+        date_filtered = original_count - len(results)
+        if date_filtered > 0:
+            sys.stderr.write(f"Date filter: removed {date_filtered} non-today items, kept {len(results)}\n")
 
     if args.deep and results:
         sys.stderr.write(f"Deep fetching content for {len(results)} items...\n")

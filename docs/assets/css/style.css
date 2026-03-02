@@ -269,6 +269,23 @@ main {
     font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    position: relative;
+}
+
+/* 收起状态下的省略号效果 */
+.news-card.collapsed .news-card-summary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2em;
+    height: 1.2em;
+    background: linear-gradient(to right, transparent, var(--bg-card));
+}
+
+/* 展开时隐藏短摘要，显示完整内容 */
+.news-card.expanded .news-card-summary {
+    display: none;
 }
 
 /* News Details (Expandable) */
@@ -291,21 +308,16 @@ main {
     }
     to {
         opacity: 1;
-        max-height: 1000px;
+        max-height: 2000px;
     }
 }
 
 .summary-content {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.9;
-    margin-bottom: 1rem;
+    line-height: 1.8;
     white-space: pre-wrap;
     word-wrap: break-word;
-}
-
-.news-summary-full p {
-    margin-bottom: 0.75rem;
 }
 
 .news-summary-full strong {
