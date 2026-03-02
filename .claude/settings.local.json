@@ -25,7 +25,8 @@
       "Bash(powershell.exe -Command \"Rename-Item -Path ''C:\\\\Users\\\\28412\\\\.claude\\\\skills\\\\news-aggregator-skill-新闻聚合器'' -NewName ''news-aggregator-skill''\")",
       "Bash(powershell.exe:*)",
       "Bash(mkdir:*)",
-      "Bash(set DEEPSEEK_API_KEY=sk-00ed249fa4ac4552a5a8729690fc6f9b:*)"
+      "Bash(set DEEPSEEK_API_KEY=sk-00ed249fa4ac4552a5a8729690fc6f9b:*)",
+      "Bash(grep:*)"
     ]
   }
 }

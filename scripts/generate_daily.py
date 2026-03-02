@@ -64,7 +64,7 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
 
     <footer>
         <p>由 <a href="https://github.com">AI News Daily</a> 自动生成 · 数据来源于 Hacker News、GitHub Trending、36Kr 等</p>
-        <p style="margin-top: 0.5rem; color: var(--text-meta);">每日更新 · 免费 · 开源</p>
+        <p style="margin-top: 0.5rem; color: var(--text-meta);">每日更新 · AI 新鲜事</p>
     </footer>
 
     <script src="assets/js/main.js"></script>
