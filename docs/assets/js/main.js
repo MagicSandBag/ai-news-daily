@@ -44,12 +44,13 @@ async function loadArchiveDate(dateStr) {
     newsContent.innerHTML = '<div style="text-align: center; padding: 3rem; color: var(--text-secondary);">正在加载新闻...</div>';
 
     try {
-        // Fetch the JSON file
-        const response = await fetch('news/' + dateStr + '.json');
+        // Fetch the JSON file (add cache-busting parameter)
+        const response = await fetch('news/' + dateStr + '.json?t=' + Date.now());
         if (!response.ok) {
             throw new Error('Failed to load news');
         }
         const newsItems = await response.json();
+        console.log('Loaded news items:', newsItems.length);
 
         // Categorize items (same logic as generate_daily.py)
         const categories = categorizeNewsItems(newsItems);
@@ -62,6 +63,7 @@ async function loadArchiveDate(dateStr) {
             }
         }
 
+        console.log('Rendered HTML length:', html.length);
         newsContent.innerHTML = html || '<div style="text-align: center; padding: 3rem;">该日期暂无新闻</div>';
 
         // Initialize cards as collapsed
