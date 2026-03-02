@@ -6,6 +6,10 @@
 
 ---
 
+## 🎉 项目完成状态: 核心功能已完成
+
+---
+
 ## ✅ 已完成任务
 
 ### 第一阶段：项目初始化
@@ -39,14 +43,13 @@
 
 ---
 
-## ⏳ 待完成任务
-
-### 第五阶段：测试与部署
-- [ ] 本地测试所有脚本
-  - [ ] 测试 fetch_news.py 抓取功能
-  - [ ] 测试 generate_daily.py 生成功能
-  - [ ] 测试 update_archive.py 归档功能
-- [ ] 初始化 Git 仓库
+## ✅ 第五阶段：测试与部署
+- [x] 本地测试所有脚本
+  - [x] 测试 fetch_news.py 抓取功能 (14条新闻成功)
+  - [x] 测试 generate_daily.py 生成功能
+  - [x] 测试 update_archive.py 归档功能
+- [x] 初始化 Git 仓库 ✅
+- [x] 创建初始提交
 - [ ] 推送代码到 GitHub
 - [ ] 配置 GitHub Pages
   - [ ] 设置 Source 为 `docs/` folder
