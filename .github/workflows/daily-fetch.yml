@@ -1,0 +1,53 @@
+name: Daily News Fetch
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天 UTC 00:00 执行
+  workflow_dispatch:      # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch today's news
+        run: |
+          DATE=$(date +%Y%m%d)
+          python scripts/fetch_news.py \
+            --source all \
+            --limit 10 \
+            --keyword "AI,LLM,GPT,Claude,DeepSeek,Agent,大模型,人工智能" \
+            --deep \
+            > "docs/news/${DATE}.json"
+
+      - name: Generate index page
+        run: python scripts/generate_daily.py
+
+      - name: Update archive
+        run: python scripts/update_archive.py
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add docs/
+          git diff --staged --quiet || git commit -m "Update daily news $(date +%Y-%m-%d)"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(/usr/bin/python3:*)",
+      "Bash(where:*)",
+      "Bash(python scripts/fetch_news.py:*)",
+      "Bash(python:*)",
+      "Bash(cmd.exe /c \"python scripts\\\\fetch_news.py --source hackernews --limit 20 --deep\")",
+      "WebSearch",
+      "Bash(where.exe:*)",
+      "Bash(cmd.exe /c \"where python\")",
+      "Bash(done)",
+      "Bash(cmd.exe /c \"move mcp-builder mcp-builder-MCP服务器构建\")",
+      "Bash(cmd.exe /c \"move news-aggregator-skill news-aggregator-skill-新闻聚合器\")",
+      "Bash(cmd.exe /c \"move pptx pptx-演示文稿制作\")",
+      "Bash(cmd.exe /c \"move skill-creator skill-creator-Skill创建器\")",
+      "Bash(for dir in ~/.claude/skills/*/)",
+      "Bash(if not exist reports mkdir reports)",
+      "Bash(dir)",
+      "Bash(ren \"app_creator-移动应用原型\" \"app_creator\")",
+      "Bash(ren \"frontend-design-前端界面设计\" \"frontend-design\")",
+      "Bash(ren:*)",
+      "Bash(powershell.exe -Command \"Rename-Item -Path ''C:\\\\Users\\\\28412\\\\.claude\\\\skills\\\\mcp-builder-MCP服务器构建'' -NewName ''mcp-builder''\")",
+      "Bash(powershell.exe -Command \"Rename-Item -Path ''C:\\\\Users\\\\28412\\\\.claude\\\\skills\\\\news-aggregator-skill-新闻聚合器'' -NewName ''news-aggregator-skill''\")",
+      "Bash(powershell.exe:*)",
+      "Bash(mkdir:*)"
+    ]
+  }
+}

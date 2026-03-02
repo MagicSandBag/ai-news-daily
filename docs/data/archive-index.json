@@ -1,0 +1,29 @@
+{
+  "detailed": [
+    {
+      "date": "20260302",
+      "formatted": "2026年3月2日",
+      "weekday": "周一",
+      "count": 14,
+      "top_news": "If AI writes code, should the session be part of the commit?",
+      "categories": {
+        "tech": 3,
+        "other": 5,
+        "global": 5,
+        "product": 1
+      },
+      "categories_formatted": {
+        "科技与开发": 3,
+        "其他": 5,
+        "全球头条": 5,
+        "产品猎场": 1
+      },
+      "year": 2026,
+      "month": 3
+    }
+  ],
+  "grouped": [],
+  "last_updated": "2026-03-02T14:55:28.518499",
+  "total_days": 1,
+  "total_news": 14
+}

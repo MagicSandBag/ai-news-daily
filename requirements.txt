@@ -1,0 +1,6 @@
+# AI News Daily - Python Dependencies
+# 用于抓取和处理新闻数据的 Python 依赖
+
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
