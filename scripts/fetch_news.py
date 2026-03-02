@@ -26,6 +26,84 @@ def filter_items(items, keyword=None):
     regex = r'(?i)(' + pattern + r')'
     return [item for item in items if re.search(regex, item['title'])]
 
+# 内容质量过滤 - 过滤广告和低质量内容
+AD_KEYWORDS = [
+    # 广告相关
+    'sponsored', 'advertisement', 'ad:', 'promoted', 'partner content',
+    'promo', 'deal', 'discount', 'offer', 'coupon', 'sale', 'buy now',
+    'limited time', 'exclusive offer', 'free trial', 'sign up now',
+    'click here', 'order now', 'get yours', 'shop now', 'don\'t miss',
+    # 低质量内容
+    'clickbait', 'you won\'t believe', 'shocking', 'mind-blowing',
+    'this will blow your mind', 'secret trick', 'hack they don\'t want you to know',
+    # 纯推广
+    'best.*product.*20\d{2}', 'top.*rated.*product', 'we recommend',
+    # 营销文案
+    'transform your', 'revolutionary.*solution', 'game-changing.*results',
+]
+
+LOW_QUALITY_PATTERNS = [
+    r'^\d+\s+ways?\s+to\b',  # "10 ways to" 通常是标题党
+    r'^\d+\s+things?\s+',     # "5 things" 通常是标题党
+    r'^why\s+every\b',        # "why everyone" 通常是标题党
+    r'this\s+is\s+why\s+',    # "this is why" 通常是标题党
+]
+
+def is_high_quality(item):
+    """
+    检查新闻条目是否为高质量内容
+    返回 True 表示保留，False 表示过滤
+    """
+    title = item.get('title', '').lower()
+    source = item.get('source', '')
+
+    # 1. 检查是否包含广告关键词
+    for ad_keyword in AD_KEYWORDS:
+        if re.search(ad_keyword, title):
+            return False
+
+    # 2. 检查低质量模式
+    for pattern in LOW_QUALITY_PATTERNS:
+        if re.search(pattern, title):
+            return False
+
+    # 3. 检查标题长度（太短或太长可能是低质量）
+    title_len = len(item.get('title', ''))
+    if title_len < 10 or title_len > 300:
+        return False
+
+    # 4. 检查是否为纯数字或符号
+    if not re.search(r'[a-zA-Z\u4e00-\u9fff]', title):
+        return False
+
+    # 5. 特殊来源的额外过滤
+    if source == 'Product Hunt':
+        # Product Hunt 的内容需要更严格的过滤
+        product_hunt_ads = ['agency', 'services', 'marketing', 'seo', 'growth hack']
+        for keyword in product_hunt_ads:
+            if keyword in title:
+                return False
+
+    return True
+
+def filter_quality(items):
+    """
+    过滤低质量和广告内容
+    """
+    high_quality = []
+    filtered_count = 0
+
+    for item in items:
+        if is_high_quality(item):
+            high_quality.append(item)
+        else:
+            filtered_count += 1
+
+    if filtered_count > 0:
+        print(f"Filtered out {filtered_count} low-quality/ad items", file=sys.stderr)
+
+    return high_quality
+
 def fetch_url_content(url):
     """
     Fetches the content of a URL and extracts text from paragraphs.
@@ -317,6 +395,14 @@ def main():
         try:
             results.extend(func(args.limit, args.keyword))
         except: pass
+
+    # 应用质量过滤，移除广告和低质量内容
+    if results:
+        original_count = len(results)
+        results = filter_quality(results)
+        filtered_count = original_count - len(results)
+        if filtered_count > 0:
+            sys.stderr.write(f"Quality filter: removed {filtered_count} items, kept {len(results)}\n")
 
     if args.deep and results:
         sys.stderr.write(f"Deep fetching content for {len(results)} items...\n")

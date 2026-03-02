@@ -295,6 +295,40 @@ main {
     }
 }
 
+.summary-content {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.news-summary-full p {
+    margin-bottom: 0.75rem;
+}
+
+.news-summary-full strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.news-card.expanded .news-details {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 1000px;
+    }
+}
+
 .news-summary-full {
     font-size: 0.9rem;
     color: var(--text-secondary);
