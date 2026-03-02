@@ -41,6 +41,11 @@
 - [x] `plan.md` - 项目设计计划
 - [x] `todolist.md` - 本任务清单
 
+### 第四阶段补充：翻译功能
+- [x] `scripts/translator.py` - 英中翻译模块
+- [x] 更新 `generate_daily.py` 集成翻译
+- [x] 测试翻译效果并优化
+
 ---
 
 ## ✅ 第五阶段：测试与部署
