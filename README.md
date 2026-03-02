@@ -19,8 +19,7 @@ AI News Daily 是一个基于 GitHub Pages 和 GitHub Actions 的自动化新闻
 
 ## 在线访问
 
-- **首页**: https://yourusername.github.io/ai-news-daily/
-- **归档**: https://yourusername.github.io/ai-news-daily/archive.html
+- **首页**: [https://yourusername.github.io/ai-news-daily/](https://magicsandbag.github.io/ai-news-daily/)
 
 ## 项目结构
 
