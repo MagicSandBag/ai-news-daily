@@ -9,6 +9,14 @@ from datetime import datetime
 from pathlib import Path
 import io
 import sys
+import os
+
+# Add scripts directory to path for imports
+script_dir = Path(__file__).parent
+sys.path.insert(0, str(script_dir))
+
+# Import translator
+from translator import translate_title, translate_summary
 
 # Set UTF-8 encoding for Windows console
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -183,22 +191,36 @@ def render_news_card(item, index, category_id):
     time_str = item.get("time", "")
     content = item.get("content", "")
 
-    # Generate expanded summary
-    summary = expand_summary(content, title)
+    # Translate title to Chinese - returns (translation, is_good_translation)
+    translated_title, is_good_translation = translate_title(title)
 
-    # Generate tags from content/title
+    # If we have a good Chinese translation, use it; otherwise keep English
+    if is_good_translation:
+        display_title = translated_title
+        show_original_title = True
+    else:
+        display_title = title
+        show_original_title = False
+
+    # Generate summary (Chinese)
+    summary = translate_summary(content, title, max_length=200)
+
+    # Generate tags
     tags = []
-    tag_keywords = ["AI", "LLM", "GPT", "Claude", "OpenAI", "Rust", "Python", "JavaScript", "GitHub", "大模型"]
+    tag_keywords = ["AI", "LLM", "GPT", "Claude", "OpenAI", "Rust", "Python", "JavaScript", "GitHub", "大模型", "人工智能", "智能体"]
     for keyword in tag_keywords:
         if keyword.lower() in title.lower() or keyword.lower() in summary.lower():
             tags.append(f"#{keyword}")
 
     tags_str = " ".join(tags[:5]) if tags else "#AI"
 
+    # Short summary for collapsed view
+    short_summary = summary[:120] + "..." if len(summary) > 120 else summary
+
     return f'''            <article class="news-card collapsed" id="news-{card_id}">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="{url}" target="_blank">{title}</a>
+                        <a href="{url}" target="_blank" title="{title}">{display_title}</a>
                     </h3>
                     <button class="expand-btn" id="btn-{card_id}" onclick="toggleNews('{card_id}')">
                         展开详情 ▼
@@ -209,11 +231,13 @@ def render_news_card(item, index, category_id):
                     {f'<span>🔥 {heat}</span>' if heat else ''}
                     {f'<span>🕐 {time_str}</span>' if time_str else ''}
                 </div>
-                <p class="news-card-summary">{summary[:100]}...</p>
+                <p class="news-card-summary">{short_summary}</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        {summary}
+                        {f'<p><strong>中文标题：</strong>{translated_title}</p>' if show_original_title else ''}
+                        <p><strong>内容摘要：</strong>{summary}</p>
+                        {f'<p style="margin-top:0.5rem; color:var(--text-meta); font-size:0.85rem;"><strong>原标题：</strong>{title}</p>' if show_original_title else ''}
                     </div>
                     <a href="{url}" class="original-link" target="_blank">
                         🔗 查看原文
