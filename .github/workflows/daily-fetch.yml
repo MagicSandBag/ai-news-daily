@@ -11,6 +11,8 @@ permissions:
 jobs:
   fetch-news:
     runs-on: ubuntu-latest
+    env:
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,9 +37,6 @@ jobs:
 
       - name: Generate index page
         run: python scripts/generate_daily.py
-
-      - name: Update archive
-        run: python scripts/update_archive.py
 
       - name: Commit changes
         run: |
