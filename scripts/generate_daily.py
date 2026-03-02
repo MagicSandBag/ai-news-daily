@@ -99,7 +99,18 @@ ARCHIVE_TEMPLATE = '''<!DOCTYPE html>
             <div class="subtitle"><span class="emoji">📚</span> 浏览过去的 AI 每日速递</div>
         </div>
 
-        {archive_content}
+        <div id="archive-list">
+            {archive_content}
+        </div>
+
+        <!-- News Display Section (hidden by default) -->
+        <div id="news-display" style="display: none;">
+            <div class="archive-back-header">
+                <button onclick="closeArchiveNews()" class="back-btn">← 返回归档列表</button>
+                <div class="archive-date-title" id="display-date-title"></div>
+            </div>
+            <div id="news-content"></div>
+        </div>
 
         <div class="empty-state" style="display: {empty_display};">
             <p>📭 暂无历史记录</p>
@@ -108,6 +119,7 @@ ARCHIVE_TEMPLATE = '''<!DOCTYPE html>
 
     <footer>
         <p>由 <a href="https://github.com">AI News Daily</a> 自动生成</p>
+        <p style="margin-top: 0.5rem; color: var(--text-meta);">每日更新·AI新鲜事</p>
     </footer>
 
     <script src="assets/js/main.js"></script>
@@ -433,7 +445,7 @@ def generate_archive():
             date_str = json_file.stem
             try:
                 date_obj = datetime.strptime(date_str, "%Y%m%d")
-                formatted = date_obj.strftime("%Y年%-m月%-d日")
+                formatted = f"{date_obj.year}年{date_obj.month}月{date_obj.day}日"
                 weekday = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"][date_obj.weekday()]
             except:
                 formatted = date_str
@@ -468,7 +480,7 @@ def generate_archive():
             if cat_config and count > 0:
                 cat_badges += f'<span class="source-badge">{cat_config["name"]} {count}</span> '
 
-        archive_html += f'''        <div class="archive-item" onclick="loadArchiveDate('{arch["date"]}')" style="cursor: pointer;">
+        archive_html += f'''        <div class="archive-item" data-date="{arch["date"]}" onclick="loadArchiveDate('{arch["date"]}')" style="cursor: pointer;">
             <div class="archive-date">
                 <span class="date-text">{arch["formatted"]}</span>
                 <span class="weekday-text">{arch["weekday"]}</span>

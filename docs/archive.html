@@ -24,16 +24,27 @@
             <div class="subtitle"><span class="emoji">📚</span> 浏览过去的 AI 每日速递</div>
         </div>
 
-                <div class="archive-item" onclick="loadArchiveDate('20260302')" style="cursor: pointer;">
+        <div id="archive-list">
+                    <div class="archive-item" data-date="20260302" onclick="loadArchiveDate('20260302')" style="cursor: pointer;">
             <div class="archive-date">
-                <span class="date-text">20260302</span>
-                <span class="weekday-text"></span>
+                <span class="date-text">2026年3月2日</span>
+                <span class="weekday-text">周一</span>
             </div>
             <div class="archive-info">
                 <div class="archive-count">14条新闻</div>
                 <div class="archive-top">🔥 If AI writes code, should the session be part of the commit?</div>
                 <div class="archive-cats"><span class="source-badge">科技与开发 3</span> <span class="source-badge">其他 5</span> <span class="source-badge">全球头条 5</span> <span class="source-badge">产品猎场 1</span> </div>
             </div>
+        </div>
+        </div>
+
+        <!-- News Display Section (hidden by default) -->
+        <div id="news-display" style="display: none;">
+            <div class="archive-back-header">
+                <button onclick="closeArchiveNews()" class="back-btn">← 返回归档列表</button>
+                <div class="archive-date-title" id="display-date-title"></div>
+            </div>
+            <div id="news-content"></div>
         </div>
 
         <div class="empty-state" style="display: none;">
@@ -43,6 +54,7 @@
 
     <footer>
         <p>由 <a href="https://github.com">AI News Daily</a> 自动生成</p>
+        <p style="margin-top: 0.5rem; color: var(--text-meta);">每日更新·AI新鲜事</p>
     </footer>
 
     <script src="assets/js/main.js"></script>
