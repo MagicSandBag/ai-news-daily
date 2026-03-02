@@ -26,7 +26,8 @@
       "Bash(powershell.exe:*)",
       "Bash(mkdir:*)",
       "Bash(set DEEPSEEK_API_KEY=sk-00ed249fa4ac4552a5a8729690fc6f9b:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(export:*)"
     ]
   }
 }

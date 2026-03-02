@@ -8,10 +8,18 @@ import re
 import concurrent.futures
 from datetime import datetime
 import io
+import os
 
 # Set UTF-8 encoding for Windows console
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
+# Add scripts directory to path for imports
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, script_dir)
+
+# Import translator
+from translator import translate_batch
 
 # Headers for scraping to avoid basic bot detection
 HEADERS = {
@@ -37,7 +45,7 @@ AD_KEYWORDS = [
     'clickbait', 'you won\'t believe', 'shocking', 'mind-blowing',
     'this will blow your mind', 'secret trick', 'hack they don\'t want you to know',
     # 纯推广
-    'best.*product.*20\d{2}', 'top.*rated.*product', 'we recommend',
+    r'best.*product.*20\d{2}', 'top.*rated.*product', 'we recommend',
     # 营销文案
     'transform your', 'revolutionary.*solution', 'game-changing.*results',
 ]
@@ -47,6 +55,7 @@ LOW_QUALITY_PATTERNS = [
     r'^\d+\s+things?\s+',     # "5 things" 通常是标题党
     r'^why\s+every\b',        # "why everyone" 通常是标题党
     r'this\s+is\s+why\s+',    # "this is why" 通常是标题党
+    r'best.*product.*20\\d{2}', 'top.*rated.*product', 'we recommend',  # 修复转义
 ]
 
 def is_high_quality(item):
@@ -473,6 +482,12 @@ def main():
     if args.deep and results:
         sys.stderr.write(f"Deep fetching content for {len(results)} items...\n")
         results = enrich_items_with_content(results)
+
+    # 翻译新闻标题和摘要（使用 DeepSeek API）
+    if results:
+        sys.stderr.write(f"Translating {len(results)} news items...\n")
+        results = translate_batch(results)
+        sys.stderr.write(f"Translation completed.\n")
 
     print(json.dumps(results, indent=2, ensure_ascii=False))
 

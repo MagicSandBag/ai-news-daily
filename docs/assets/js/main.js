@@ -168,18 +168,20 @@ function renderNewsCard(item, index, categoryId) {
     const source = item.source || '未知来源';
     const heat = item.heat || '';
     const timeStr = item.time || '';
-    const content = item.content || '';
+
+    // 使用预翻译的内容（如果存在）
+    const displayTitle = item.title_zh || title;
+    const summary = item.summary_zh || item.content || title;
 
     // Format time display
     const formattedTime = formatTimeDisplay(timeStr, source);
 
-    // Generate summary (use content or title)
-    const summary = content || title;
+    // Truncate summary
     const summaryTruncated = summary.length > 150 ? summary.substring(0, 150) + '...' : summary;
 
     // Generate tags
     const tagKeywords = ["AI", "LLM", "GPT", "Claude", "OpenAI", "Rust", "Python", "JavaScript", "GitHub", "大模型", "人工智能", "智能体"];
-    const searchText = (title + ' ' + summary).toLowerCase();
+    const searchText = (displayTitle + ' ' + summary).toLowerCase();
     const tags = [];
     for (const keyword of tagKeywords) {
         if (searchText.includes(keyword.toLowerCase())) {
@@ -191,7 +193,7 @@ function renderNewsCard(item, index, categoryId) {
     return `            <article class="news-card collapsed" id="news-${cardId}">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="${url}" target="_blank" title="${title}">${title}</a>
+                        <a href="${url}" target="_blank" title="${displayTitle}">${displayTitle}</a>
                     </h3>
                     <button class="expand-btn" id="btn-${cardId}" onclick="toggleNews('${cardId}')">
                         展开详情 ▼

@@ -307,6 +307,8 @@ jobs:
 
 ### 第五阶段：测试与部署
 1. ⏳ 本地测试所有脚本
+    cd C:\Users\28412\Desktop\claude\news
+    python -m http.server 8000 --directory docs
 2. ⏳ 推送代码到 GitHub
 3. ⏳ 验证 GitHub Actions 执行
 4. ⏳ 验证 GitHub Pages 展示
