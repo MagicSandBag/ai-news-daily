@@ -229,10 +229,13 @@ def render_news_card(item, index, category_id):
     # 收起状态显示的短摘要
     short_summary = summary[:SUMMARY_MIN_LENGTH] + "..." if len(summary) > SUMMARY_MIN_LENGTH else summary
 
+    # 使用翻译后的标题作为悬停提示
+    hover_title = translated_title
+
     return f'''            <article class="news-card collapsed" id="news-{card_id}">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="{url}" target="_blank" title="{title}">{display_title}</a>
+                        <a href="{url}" target="_blank" title="{hover_title}">{display_title}</a>
                     </h3>
                     <button class="expand-btn" id="btn-{card_id}" onclick="toggleNews('{card_id}')">
                         展开详情 ▼
@@ -247,8 +250,6 @@ def render_news_card(item, index, category_id):
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        {f'<p style="color:var(--text-meta); font-size:0.85rem;"><strong>原标题：</strong>{title}</p>' if show_original else ''}
-                        <p><strong>内容摘要：</strong></p>
                         <div class="summary-content">{summary}</div>
                     </div>
                     <a href="{url}" class="original-link" target="_blank">
