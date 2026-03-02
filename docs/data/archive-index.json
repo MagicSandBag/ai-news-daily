@@ -4,26 +4,24 @@
       "date": "20260302",
       "formatted": "2026年3月2日",
       "weekday": "周一",
-      "count": 14,
-      "top_news": "If AI writes code, should the session be part of the commit?",
+      "count": 12,
+      "top_news": "Claude Code LSP",
       "categories": {
-        "tech": 3,
-        "other": 5,
-        "global": 5,
-        "product": 1
+        "global": 7,
+        "tech": 2,
+        "other": 3
       },
       "categories_formatted": {
-        "科技与开发": 3,
-        "其他": 5,
-        "全球头条": 5,
-        "产品猎场": 1
+        "全球头条": 7,
+        "科技与开发": 2,
+        "其他": 3
       },
       "year": 2026,
       "month": 3
     }
   ],
   "grouped": [],
-  "last_updated": "2026-03-02T14:55:28.518499",
+  "last_updated": "2026-03-02T12:58:34.166712",
   "total_days": 1,
-  "total_news": 14
+  "total_news": 12
 }
