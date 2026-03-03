@@ -1,25 +1,58 @@
+# 开发文档 - 不提交到 git
+plan.md
+todolist.md
+开发日志.md
+
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
 venv/
-env/
 ENV/
+env/
+.venv/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Project specific
-reports/
-style-preview/
-news_data.json
+# 临时文件
 *.log
+*.tmp
+temp_*
+ai_news_check.txt
+temp_news_list.txt
+
+# 环境变量（包含敏感信息）
+.env
+.env.local
+.env.*.local
+
+# Claude Code
+.claude/
