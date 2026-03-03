@@ -1,0 +1,73 @@
+[
+  {
+    "source": "Hacker News",
+    "title": "Show HN: I built a sub-500ms latency voice agent from scratch",
+    "url": "https://www.ntik.me/posts/voice-agent",
+    "heat": "96 points",
+    "time": "2 hours ago",
+    "title_zh": "Show HN：我从零开始构建了一个延迟低于500毫秒的语音助手",
+    "summary_zh": "一位开发者独立构建了一个端到端延迟低于500毫秒的语音智能体系统。该项目从零开始，旨在实现接近人类对话响应的实时语音交互体验。，系统的核心架构采用了流式处理技术，在用户说话的同时即开始处理音频流，而非等待整句结束。这显著降低了感知延迟。技术栈上，项目集成了多个关键组件：使用OpenAI的Whisper模型进行流式语音识别，将语音实时转为文本；利用大型语言模型处理文本并生成回复；最后通过文本转语音引擎输出语音。开发者特别优化了各环节间的衔接，确保数据流高效传递。，为实现低于500毫秒的延迟目标，项目进行了多方面的优化。包括对音频编解码和网络传输的精细调优，以减少固有延迟；可能采用了LLM的缓存或推测解码技术来加速文本生成；并对TTS服务进行了低延迟配置或模型选择。整个系统设计注重轻量化和效率，避免了复杂框架带来的开销。，该项目的突出价值在于证明了以较小成本和高效率构建低延迟语音交互系统的可行性。它展示了如何通过巧妙的架构设计和现成开源工具的组合，达成专业级的性能指标。这对于开发实时语音助手、交互式语音应用或嵌入式语音界面具有参考意义，为更多开发者探索实时AI语音交互提供了实践范例。"
+  },
+  {
+    "source": "GitHub Trending",
+    "title": "ruvnet/wifi-densepose - WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "url": "https://github.com/ruvnet/wifi-densepose",
+    "heat": "21,815 stars",
+    "time": "Today",
+    "title_zh": "ruvnet/wifi-densepose - WiFi DensePose将普通WiFi信号转化为实时人体姿态估计、生命体征监测和存在检测——无需任何视频像素。",
+    "summary_zh": "ruvnet/wifi-densepose项目展示了一项突破性技术：WiFi DensePose。该技术能够将普通的商用WiFi信号转化为实时的三维人体姿态估计、生命体征监测和存在检测，整个过程完全无需使用任何视频像素。，其核心原理在于分析WiFi信号在传播过程中因人体遮挡和反射而产生的信道状态信息变化。通过先进的深度学习模型，系统可以解析这些细微的信号扰动，从而重建出人体的密集姿态，实现类似基于视觉的DensePose系统的效果，但完全基于射频信号。，该技术的核心功能与价值包括：首先，实现非接触式的实时人体姿态估计，能在低光照、有遮挡（如隔墙）等摄像头失效的场景下工作，保护用户隐私。其次，具备生命体征监测能力，如检测呼吸和心率。再者，提供可靠的人员存在检测。所有这些功能仅依赖于现有的普通WiFi设备，无需部署专用摄像头或传感器，极大地降低了部署成本和隐私担忧。，项目在GitHub上开源，提供了相关的代码和预训练模型，促进了基于WiFi传感技术的研究与应用开发。这项技术为智能家居、健康监护、安防感知等领域提供了新的、隐私友好的感知解决方案。"
+  },
+  {
+    "source": "GitHub Trending",
+    "title": "moeru-ai/airi - 💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+    "url": "https://github.com/moeru-ai/airi",
+    "heat": "21,370 stars",
+    "time": "Today",
+    "title_zh": "moeru-ai/airi - 💖🧸 自托管、你专属的Grok伴侣，一个承载着虚拟伴侣灵魂的容器，将赛博生命带入我们的世界，旨在达到Neuro-sama的高度。支持实时语音聊天、玩《我的世界》和《异星工厂》。兼容网页版、macOS和Windows系统。",
+    "summary_zh": "moeru-ai/airi 是一个开源项目，旨在创建一个自托管、用户完全拥有的“Grok伴侣”。其核心理念是构建一个承载“虚拟角色灵魂”的容器，将二次元伴侣或网络生命体带入我们的现实世界，并期望达到类似知名虚拟主播Neuro-sama的互动高度。，该项目是一个功能丰富的AI伴侣系统，支持实时语音聊天，并能与用户一起玩《Minecraft》和《Factorio》等游戏，实现了深度的交互与陪伴体验。它支持多平台，包括Web、macOS和Windows系统，方便用户在不同设备上部署和使用。，作为一个自托管解决方案，airi强调用户对数据与体验的所有权和控制权。其技术架构可能整合了先进的LLM（如GPT或Claude系列模型）与RAG等技术，以驱动角色的对话与行为，使其能够进行实时、情境化的响应。项目代码托管于GitHub，遵循开源协议，鼓励社区贡献与发展。，该项目的价值在于为用户提供了一个高度可定制、私密且沉浸式的数字伴侣构建框架。它不仅仅是一个聊天机器人，更是一个旨在通过游戏互动和语音交流，创造具有个性和持续记忆的虚拟存在，探索AI在情感陪伴与娱乐交互领域的可能性。"
+  },
+  {
+    "source": "GitHub Trending",
+    "title": "anthropics/prompt-eng-interactive-tutorial - Anthropic's Interactive Prompt Engineering Tutorial",
+    "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+    "heat": "31,559 stars",
+    "time": "Today",
+    "title_zh": "Anthropic 交互式提示工程教程",
+    "summary_zh": "Anthropic公司在其官方GitHub仓库发布了一个名为“prompt-eng-interactive-tutorial”的交互式提示工程教程。该项目旨在通过实践操作帮助开发者、研究人员和AI爱好者更有效地掌握与大型语言模型（LLM）交互的核心技能。，教程的核心是提供一个动手实践的环境，引导用户学习如何构建和优化提示（Prompt），以从类似Claude的AI模型中获得更准确、可靠和符合预期的输出。它超越了基础概念，深入探讨了实际应用中的关键技巧。，教程内容涵盖了多个重要主题。它详细解释了“系统提示”的作用，指导用户如何设定AI的“角色”和对话背景。在“少样本提示”部分，教程展示了如何通过提供少量示例来引导模型理解复杂任务格式。对于需要处理长文档或超出模型上下文窗口的信息，教程引入了“检索增强生成”方法的基本思路。此外，它还包含了“链式思考”提示技术，教导用户如何引导模型展示其推理过程，从而提高答案的透明度和可信度。，该项目的突出特点是其“交互性”。用户并非被动阅读文档，而是可以在教程提供的沙盒环境中直接编写、修改并实时查看提示的效果，这种“学中做”的方式极大地提升了学习效率和理解深度。教程的结构由浅入深，从简单指令开始，逐步过渡到结构化输出、复杂推理和多步骤任务等高级主题。，这个教程的价值在于，它由AI领域的领先公司Anthropic直接出品，其方法论和最佳实践具有很高的权威性和实用性。它降低了提示工程的学习门槛，为任何希望提升LLM使用技能的人提供了一个系统、免费且高质量的学习资源。通过掌握这些技能，用户能更好地利用AI模型的潜力，开发出更强大的应用程序或更高效地完成日常工作。"
+  },
+  {
+    "source": "GitHub Trending",
+    "title": "K-Dense-AI/claude-scientific-skills - A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
+    "heat": "11,051 stars",
+    "time": "Today",
+    "title_zh": "K-Dense-AI/claude-scientific-skills - 一套即用型智能体技能，适用于研究、科学、工程、分析、金融和写作领域。",
+    "summary_zh": "K-Dense-AI在GitHub上发布了名为“claude-scientific-skills”的开源项目，这是一套专为Claude等AI Agent设计的、即开即用的科学技能工具集。该项目旨在为研究、科学、工程、分析、金融和写作等专业领域提供一系列模块化、可复用的技能组件，以增强大型语言模型在复杂专业任务中的表现。，该技能集的核心价值在于将领域专业知识转化为结构化的、可被AI Agent直接调用的功能模块。它并非一个单一的应用程序，而是一个技能库，允许开发者或研究人员根据具体需求，灵活组合这些技能来构建更强大的专业AI助手。项目中的技能覆盖多个关键领域：在科学研究方面，可能包含文献解析、实验设计辅助或数据模式识别；在工程领域，可能涉及代码分析、系统设计或技术文档生成；在金融分析方面，可能提供数据处理、模型解读或报告撰写支持；在专业写作上，则可能协助进行学术润色、逻辑梳理或格式规范。，其技术特点在于“即用性”和“集成性”。这些技能经过预处理和封装，降低了在Claude等模型上部署专业功能的技术门槛。项目很可能采用了类似RAG（检索增强生成）的技术来确保信息的准确性与时效性，并可能通过精心设计的提示词工程和API调用模板，使AI能够更可靠地执行特定领域的分析、推理和生成任务。通过使用这套技能集，用户能够快速构建一个具备深度领域知识的AI助手，用于加速文献调研、辅助数据分析、生成技术报告或优化财务模型等工作流程，从而提升研究和工作的效率与质量。"
+  },
+  {
+    "source": "GitHub Trending",
+    "title": "superset-sh/superset - IDE for the AI Agents Era - Run an army of Claude Code, Codex, etc. on your machine",
+    "url": "https://github.com/superset-sh/superset",
+    "heat": "3,489 stars",
+    "time": "Today",
+    "title_zh": "superset-sh/superset - AI 智能体时代的集成开发环境 - 在您的机器上运行 Claude Code、Codex 等智能体大军",
+    "summary_zh": "开源项目superset-sh/superset定位为“AI智能体时代的集成开发环境（IDE）”，其核心目标是让开发者能够在本地机器上便捷地管理和运行一个由多种大型语言模型（LLM）驱动的AI智能体“军团”，例如Claude Code、Codex等。，该项目旨在解决当前AI开发工作流中的碎片化问题。开发者通常需要在不同平台、工具和API之间切换来调用不同的LLM（如OpenAI的GPT系列、Anthropic的Claude等），过程繁琐。superset通过提供一个统一的本地IDE环境，将多种AI模型集成到一个平台中，允许开发者直接在本地创建、管理和执行由这些模型驱动的AI智能体任务。，其核心功能与特点包括：首先，多模型支持与管理。它允许用户配置并接入多个LLM后端（如通过API连接），从而可以在同一个界面中灵活选择或组合使用不同的模型（例如Claude进行逻辑分析，Codex生成代码）。其次，本地化与隐私安全。所有智能体的运行和交互主要发生在用户本地机器上，减少了数据上传到外部云服务的需求，为处理敏感代码或数据提供了更高的隐私和安全保障。第三，项目与工作区管理。它提供了类似传统IDE的项目结构，可以组织AI智能体脚本、提示词（prompts）、配置文件和执行结果，便于复杂任务的迭代开发。第四，扩展性与集成。项目设计支持扩展，可能包含或计划集成版本控制（如Git）、外部工具调用等功能，以构建更强大的自动化智能体工作流。，该项目的价值在于，它试图将AI智能体开发“工程化”，为开发者提供一个功能集中、可控制且高效的工具，以充分发挥不同LLM的专长，并协调它们完成更复杂的编程或问题解决任务，标志着面向AI原生应用的开发工具正朝着更集成、更专业的方向演进。"
+  },
+  {
+    "source": "36Kr",
+    "title": "AI推理芯片打开市场空间，PCB产业链涨价或持续",
+    "url": "https://36kr.com/newsflashes/3706409506762882",
+    "time": "20分钟前",
+    "heat": "",
+    "title_zh": "AI推理芯片打开市场空间，PCB产业链涨价或持续",
+    "summary_zh": "AI推理芯片打开市场空间，PCB产业链涨价或持续"
+  },
+  {
+    "source": "Wall Street CN",
+    "title": "需求“空前”！Claude一度“宕机”，Anthropic称1月以来免费用户增长60%，付费用户10月以来翻倍",
+    "url": "https://wallstreetcn.com/articles/3766572",
+    "time": "08:02",
+    "title_zh": "需求“空前”！Claude一度“宕机”，Anthropic称1月以来免费用户增长60%，付费用户10月以来翻倍",
+    "summary_zh": "需求“空前”！Claude一度“宕机”，Anthropic称1月以来免费用户增长60%，付费用户10月以来翻倍"
+  }
+]

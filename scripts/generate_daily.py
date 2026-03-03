@@ -15,6 +15,21 @@ import os
 script_dir = Path(__file__).parent
 sys.path.insert(0, str(script_dir))
 
+# 设置 UTF-8 编码用于 Windows 控制台
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
+
+def clean_surrogates(text):
+    """
+    清理字符串中的非法 Unicode 代理字符
+    """
+    if not isinstance(text, str):
+        return text
+    # 移除 surrogate characters (U+D800 to U+DFFF)
+    return re.sub(r'[\ud800-\udfff]', '', text)
+
 # 配置
 TITLE_MAX_LENGTH = 80  # 标题最大显示长度
 SUMMARY_TRUNCATE_LENGTH = 150  # 收起状态显示的摘要长度
@@ -417,7 +432,7 @@ def generate_index():
     index_path = Path("docs/index.html")
     index_path.parent.mkdir(parents=True, exist_ok=True)
     with open(index_path, 'w', encoding='utf-8') as f:
-        f.write(html)
+        f.write(clean_surrogates(html))
 
     print(f"Generated index.html with {total_count} news items", file=sys.stderr)
     return total_count
@@ -491,7 +506,7 @@ def generate_archive():
     # Write to docs/archive.html
     archive_path = Path("docs/archive.html")
     with open(archive_path, 'w', encoding='utf-8') as f:
-        f.write(html)
+        f.write(clean_surrogates(html))
 
     print(f"Generated archive.html with {len(archives)} days", file=sys.stderr)
     return len(archives)

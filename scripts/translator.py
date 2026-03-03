@@ -6,8 +6,26 @@ import os
 import json
 import re
 import sys
+from pathlib import Path
+
+# 尝试加载 .env 文件（用于本地开发）
+try:
+    from dotenv import load_dotenv
+    # 查找 .env 文件（当前目录、上级目录、项目根目录）
+    env_paths = [
+        Path(__file__).parent / '.env',
+        Path(__file__).parent.parent / '.env',
+        Path.cwd() / '.env',
+    ]
+    for env_path in env_paths:
+        if env_path.exists():
+            load_dotenv(env_path)
+            break
+except ImportError:
+    pass  # python-dotenv 未安装，继续使用环境变量
 
 # DeepSeek API 配置
+# 优先级: 环境变量 > .env 文件
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 

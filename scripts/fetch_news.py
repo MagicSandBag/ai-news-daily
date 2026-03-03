@@ -119,32 +119,50 @@ def is_today_news(item):
     检查新闻是否为今天的新闻
     返回 True 表示是今天的新闻，False 表示不是
     """
-    from datetime import datetime, timedelta
+    from datetime import datetime, timedelta, timezone
 
-    time_str = item.get('time', '').lower()
+    time_str = item.get('time', '')
     today = datetime.now()
 
     # 如果时间字段为空，假设是今天的
-    if not time_str or time_str == 'today' or time_str == 'hot' or time_str == 'real-time':
+    if not time_str or time_str.lower() in ['today', 'hot', 'real-time']:
         return True
 
-    # 如果已经包含日期格式，检查是否是今天
+    # 处理 ISO 8601 格式 (如 2026-03-01T20:08:17-08:00)
+    if 'T' in time_str and re.search(r'\d{4}-\d{2}-\d{2}T', time_str):
+        try:
+            # 解析 ISO 8601 格式，自动处理时区
+            # 清理时间字符串（可能包含毫秒）
+            clean_time = time_str.split('.')[0] if '.' in time_str else time_str
+            item_date = datetime.fromisoformat(clean_time)
+
+            # 如果没有时区信息，假设是 UTC
+            if item_date.tzinfo is None:
+                item_date = item_date.replace(tzinfo=timezone.utc)
+
+            # 转换为本地时区进行比较
+            local_date = item_date.astimezone().date()
+            return local_date == today.date()
+        except Exception as e:
+            # 如果解析失败，继续尝试其他格式
+            pass
+
+    # 如果已经包含日期格式 (YYYY-MM-DD)，检查是否是今天
     if re.search(r'\d{4}-\d{2}-\d{2}', time_str):
         try:
-            item_date = datetime.strptime(re.search(r'\d{4}-\d{2}-\d{2}', time_str).group(), '%Y-%m-%d')
+            date_match = re.search(r'\d{4}-\d{2}-\d{2}', time_str).group()
+            item_date = datetime.strptime(date_match, '%Y-%m-%d')
             return item_date.date() == today.date()
         except:
             pass
 
     # 处理相对时间
-    if 'hour ago' in time_str or 'hours ago' in time_str:
-        # 几小时前，是今天的
+    time_lower = time_str.lower()
+    if 'hour ago' in time_lower or 'hours ago' in time_lower:
         return True
-    elif 'day ago' in time_str or 'yesterday' in time_str:
-        # 昨天或更早，不是今天的
+    elif 'day ago' in time_lower or 'yesterday' in time_lower:
         return False
-    elif 'days ago' in time_str:
-        # 几天前
+    elif 'days ago' in time_lower:
         days = int(re.search(r'\d+', time_str).group(0))
         return days == 0
 
@@ -170,6 +188,235 @@ def filter_today_only(items):
         print(f"Filtered out {filtered_count} non-today items for daily report", file=sys.stderr)
 
     return today_items
+
+
+def filter_ai_related_by_deepseek(items):
+    """
+    使用 DeepSeek API 批量判断新闻是否与 AI 相关
+    返回只保留 AI 相关新闻的列表
+    """
+    if not items:
+        return []
+
+    api_key = os.getenv("DEEPSEEK_API_KEY", "")
+    if not api_key:
+        print("Warning: DEEPSEEK_API_KEY not set, skipping AI filter", file=sys.stderr)
+        return items
+
+    try:
+        import requests
+
+        # 批量处理，每次最多 15 条
+        batch_size = 15
+        ai_related_items = []
+        filtered_count = 0
+
+        # 跟踪已判断的新闻标题
+        judged_titles = set()
+
+        for i in range(0, len(items), batch_size):
+            batch = items[i:i + batch_size]
+
+            # 构建输入文本 - 包含序号和标题
+            titles_text = "\n".join(
+                f"{j + i}. {item.get('title', '')}"
+                for j, item in enumerate(batch)
+            )
+
+            headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json"
+            }
+
+            payload = {
+                "model": "deepseek-chat",
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": """你是AI新闻分类专家。判断新闻是否与AI技术直接相关。
+
+✅ 算是AI相关（返回true）：
+- 大语言模型：GPT/Claude/ChatGPT/DeepSeek/Gemini/Llama等
+- AI公司：OpenAI/Anthropic/Google DeepMind/Hugging Face等
+- AI技术：机器学习/深度学习/神经网络/PyTorch/TensorFlow
+- AI应用：生成式AI/AI Agent/RAG/提示工程/微调/计算机视觉/NLP
+- AI编程：Copilot/Cursor/代码助手/AI编码工具
+- AI芯片/硬件：NPU/神经引擎/TPU/H100等AI芯片
+- AI框架/工具：LangChain/向量数据库/AI平台
+
+❌ 不算AI相关（返回false）：
+- 纯金融/股市：股票涨跌、IPO、财报、市场分析
+- 纯军事/政治：战争、冲突、核武器、外交、选举
+- 纯硬件：手机/电脑/平板发布（除非提到AI功能）
+- 纯航天：火箭/卫星/空间站（除非提到AI应用）
+- 纯经济数据：PMI、GDP、通胀、就业数据
+- 一般公司新闻：融资、合作、收购（与AI无关）
+
+⚠️ 特别注意：
+- 标题只提到"AI"但实际不是AI技术新闻，应返回false
+- 严格标准：新闻必须主要讨论AI技术、产品或应用
+
+返回格式要求：
+1. 只返回JSON，不要任何其他文字
+2. JSON格式：{"判断结果":[{"序号":1,"标题":"原标题","是否AI相关":true/false},...]}
+3. 必须包含所有输入的序号和标题
+4. "是否AI相关"必须是布尔值true或false"""
+                    },
+                    {
+                        "role": "user",
+                        "content": f"""判断以下{len(batch)}条新闻是否与AI相关：
+
+{titles_text}
+
+只返回JSON格式：{{"判断结果":[{{"序号":1,"标题":"...","是否AI相关":true}},...]}}
+不要添加任何解释或其他文字。"""
+                    }
+                ],
+                "temperature": 0,
+                "max_tokens": 2000
+            }
+
+            response = requests.post(
+                "https://api.deepseek.com/v1/chat/completions",
+                headers=headers,
+                json=payload,
+                timeout=60
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                content = result["choices"][0]["message"]["content"].strip()
+
+                # 解析 JSON 结果
+                try:
+                    # 清理响应内容
+                    content = content.strip()
+
+                    # 移除 markdown 代码块标记
+                    if "```" in content:
+                        parts = content.split("```")
+                        for part in parts:
+                            if "{" in part or "判断" in part:
+                                content = part
+                                if content.startswith("json"):
+                                    content = content[4:]
+                                break
+                        content = content.strip()
+
+                    # 解析 JSON
+                    judgment = json.loads(content)
+                    judgments = judgment.get("判断结果", [])
+
+                    if not judgments:
+                        raise ValueError("No '判断结果' field in response")
+
+                    # 根据标题匹配来过滤
+                    batch_filtered = 0
+                    for judge_item in judgments:
+                        title_from_judge = judge_item.get("标题", "")
+                        is_ai = judge_item.get("是否AI相关")
+
+                        # 在原始批次中查找匹配的新闻
+                        for item in batch:
+                            original_title = item.get("title", "")
+                            # 标题可能被截断，使用模糊匹配
+                            if title_from_judge in original_title or original_title in title_from_judge or \
+                               len(title_from_judge) > 0 and (title_from_judge[:50] in original_title or original_title[:50] in title_from_judge):
+                                if is_ai:
+                                    ai_related_items.append(item)
+                                    judged_titles.add(original_title)
+                                else:
+                                    batch_filtered += 1
+                                break
+
+                    filtered_count += batch_filtered
+
+                except (json.JSONDecodeError, ValueError, KeyError) as e:
+                    print(f"Warning: Failed to parse AI filter response: {e}", file=sys.stderr)
+                    print(f"Debug: Response was: {content[:500]}", file=sys.stderr)
+                    # 解析失败时，跳过这一批
+                    continue
+            else:
+                print(f"DeepSeek API error in AI filter: {response.status_code}", file=sys.stderr)
+                continue
+
+            # 避免请求过快
+            if i + batch_size < len(items):
+                time.sleep(1)
+
+        # 检查是否有未判断的新闻
+        unjudged_items = [item for item in items if item.get('title', '') not in judged_titles]
+
+        if unjudged_items and len(unjudged_items) <= 10:
+            print(f"Re-judging {len(unjudged_items)} unmatched items", file=sys.stderr)
+            # 对未匹配的新闻进行单独判断
+            for item in unjudged_items:
+                title = item.get('title', '')
+
+                single_payload = {
+                    "model": "deepseek-chat",
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": "判断新闻是否与AI相关。只返回JSON：{\"是否AI相关\":true/false}。不要其他文字。"
+                        },
+                        {
+                            "role": "user",
+                            "content": f"新闻标题：{title}\n\n是否与AI相关？只返回JSON。"
+                        }
+                    ],
+                    "temperature": 0,
+                    "max_tokens": 100
+                }
+
+                try:
+                    response = requests.post(
+                        "https://api.deepseek.com/v1/chat/completions",
+                        headers=headers,
+                        json=single_payload,
+                        timeout=30
+                    )
+
+                    if response.status_code == 200:
+                        result = response.json()
+                        content = result["choices"][0]["message"]["content"].strip()
+
+                        # 清理并解析
+                        content = content.strip()
+                        if "```" in content:
+                            parts = content.split("```")
+                            for part in parts:
+                                if "{" in part:
+                                    content = part
+                                    if content.startswith("json"):
+                                        content = content[4:]
+                                    break
+
+                        judgment = json.loads(content)
+                        is_ai = judgment.get("是否AI相关", False)
+
+                        if is_ai:
+                            ai_related_items.append(item)
+                        else:
+                            filtered_count += 1
+
+                except:
+                    # 单条判断失败，保守处理：不保留
+                    filtered_count += 1
+
+                time.sleep(0.5)
+
+        if filtered_count > 0:
+            print(f"AI filter: removed {filtered_count} non-AI items, kept {len(ai_related_items)}", file=sys.stderr)
+        else:
+            print(f"AI filter: all {len(ai_related_items)} items are AI related", file=sys.stderr)
+
+        return ai_related_items
+
+    except Exception as e:
+        print(f"AI filter exception: {e}", file=sys.stderr)
+        # 出错时返回原始列表
+        return items
 
 def fetch_url_content(url):
     """
@@ -210,7 +457,7 @@ def enrich_items_with_content(items, max_workers=10):
 
 # --- Source Fetchers ---
 
-def fetch_hackernews(limit=5, keyword=None):
+def fetch_hackernews(limit=10, keyword=None):
     base_url = "https://news.ycombinator.com"
     news_items = []
     page = 1
@@ -262,7 +509,7 @@ def fetch_hackernews(limit=5, keyword=None):
 
     return news_items[:limit]
 
-def fetch_weibo(limit=5, keyword=None):
+def fetch_weibo(limit=10, keyword=None):
     # Use the PC Ajax API which returns JSON directly and is less rate-limited than scraping s.weibo.com
     url = "https://weibo.com/ajax/side/hotSearch"
     headers = {
@@ -300,7 +547,7 @@ def fetch_weibo(limit=5, keyword=None):
     except Exception:
         return []
 
-def fetch_github(limit=5, keyword=None):
+def fetch_github(limit=10, keyword=None):
     try:
         response = requests.get("https://github.com/trending", headers=HEADERS, timeout=10)
     except: return []
@@ -332,7 +579,7 @@ def fetch_github(limit=5, keyword=None):
         except: continue
     return filter_items(items, keyword)[:limit]
 
-def fetch_36kr(limit=5, keyword=None):
+def fetch_36kr(limit=10, keyword=None):
     try:
         response = requests.get("https://36kr.com/newsflashes", headers=HEADERS, timeout=10)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -353,7 +600,7 @@ def fetch_36kr(limit=5, keyword=None):
         return filter_items(items, keyword)[:limit]
     except: return []
 
-def fetch_v2ex(limit=5, keyword=None):
+def fetch_v2ex(limit=10, keyword=None):
     try:
         # Hot topics json
         data = requests.get("https://www.v2ex.com/api/topics/hot.json", headers=HEADERS, timeout=10).json()
@@ -374,7 +621,7 @@ def fetch_v2ex(limit=5, keyword=None):
         return filter_items(items, keyword)[:limit]
     except: return []
 
-def fetch_tencent(limit=5, keyword=None):
+def fetch_tencent(limit=10, keyword=None):
     try:
         url = "https://i.news.qq.com/web_backend/v2/getTagInfo?tagId=aEWqxLtdgmQ%3D"
         data = requests.get(url, headers={"Referer": "https://news.qq.com/"}, timeout=10).json()
@@ -389,7 +636,7 @@ def fetch_tencent(limit=5, keyword=None):
         return filter_items(items, keyword)[:limit]
     except: return []
 
-def fetch_wallstreetcn(limit=5, keyword=None):
+def fetch_wallstreetcn(limit=10, keyword=None):
     try:
         url = "https://api-one.wallstcn.com/apiv1/content/information-flow?channel=global-channel&accept=article&limit=30"
         data = requests.get(url, timeout=10).json()
@@ -408,31 +655,53 @@ def fetch_wallstreetcn(limit=5, keyword=None):
         return filter_items(items, keyword)[:limit]
     except: return []
 
-def fetch_producthunt(limit=5, keyword=None):
+def fetch_producthunt(limit=10, keyword=None):
     try:
-        # Using RSS for speed and reliability without API key
-        response = requests.get("https://www.producthunt.com/feed", headers=HEADERS, timeout=10)
-        soup = BeautifulSoup(response.text, 'xml')
-        if not soup.find('item'): soup = BeautifulSoup(response.text, 'html.parser')
+        # Using Atom feed for Product Hunt
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "application/atom+xml,application/xml,text/xml"
+        }
+        response = requests.get("https://www.producthunt.com/feed", headers=headers, timeout=10)
+
+        # Parse as XML (Atom format)
+        soup = BeautifulSoup(response.text, 'html.parser')
 
         items = []
-        for entry in soup.find_all(['item', 'entry']):
-            title = entry.find('title').get_text(strip=True)
-            link_tag = entry.find('link')
-            url = link_tag.get('href') or link_tag.get_text(strip=True) if link_tag else ""
+        for entry in soup.find_all('entry'):
+            try:
+                # Title
+                title_tag = entry.find('title')
+                if not title_tag: continue
+                title = title_tag.get_text(strip=True)
 
-            pubBox = entry.find('pubDate') or entry.find('published')
-            pub = pubBox.get_text(strip=True) if pubBox else ""
+                # URL - Atom format uses href attribute
+                link_tag = entry.find('link')
+                url = ""
+                if link_tag and link_tag.get('href'):
+                    url = link_tag.get('href')
+                elif link_tag:
+                    url = link_tag.get_text(strip=True)
 
-            items.append({
-                "source": "Product Hunt",
-                "title": title,
-                "url": url,
-                "time": pub,
-                "heat": "Top Product" # RSS implies top rank
-            })
+                # Published date
+                pub_tag = entry.find('published')
+                time_str = pub_tag.get_text(strip=True) if pub_tag else "Today"
+
+                if title and url:
+                    items.append({
+                        "source": "Product Hunt",
+                        "title": title,
+                        "url": url,
+                        "time": time_str,
+                        "heat": "Top Product"
+                    })
+            except: continue
+
         return filter_items(items, keyword)[:limit]
-    except: return []
+    except Exception as e:
+        import sys
+        print(f"Product Hunt error: {e}", file=sys.stderr)
+        return []
 
 def main():
     parser = argparse.ArgumentParser()
@@ -441,6 +710,9 @@ def main():
         '36kr': fetch_36kr, 'v2ex': fetch_v2ex, 'tencent': fetch_tencent,
         'wallstreetcn': fetch_wallstreetcn, 'producthunt': fetch_producthunt
     }
+
+    # 默认启用的来源（排除 v2ex）
+    default_sources = ['hackernews', 'weibo', 'github', '36kr', 'tencent', 'wallstreetcn', 'producthunt']
 
     parser.add_argument('--source', default='all', help='Source(s) to fetch from (comma-separated)')
     parser.add_argument('--limit', type=int, default=10, help='Limit per source. Default 10')
@@ -451,7 +723,9 @@ def main():
 
     to_run = []
     if args.source == 'all':
-        to_run = list(sources_map.values())
+        # 使用默认来源列表（排除 v2ex）
+        for s in default_sources:
+            if s in sources_map: to_run.append(sources_map[s])
     else:
         requested_sources = [s.strip() for s in args.source.split(',')]
         for s in requested_sources:
@@ -470,6 +744,10 @@ def main():
         filtered_count = original_count - len(results)
         if filtered_count > 0:
             sys.stderr.write(f"Quality filter: removed {filtered_count} items, kept {len(results)}\n")
+
+    # 使用 DeepSeek API 判断新闻是否与 AI 相关
+    if results:
+        results = filter_ai_related_by_deepseek(results)
 
     # 应用日期过滤，只保留今天的新闻（日报功能）
     if results:
