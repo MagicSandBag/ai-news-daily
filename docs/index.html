@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News Daily - 2026年3月12日</title>
+    <title>AI News Daily - 2026年3月13日</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="header-inner">
             <div class="logo">AI News <span>Daily</span></div>
-            <div class="header-meta">2026年3月12日 · 星期四</div>
+            <div class="header-meta">2026年3月13日 · 星期五</div>
             <nav class="nav-links">
                 <a href="archive.html">📅 归档</a>
                 <a href="#" onclick="location.reload(); return false;">🔄 刷新</a>
@@ -20,7 +20,7 @@
 
     <main>
         <div class="date-header">
-            <div class="date">2026年3月12日</div>
+            <div class="date">2026年3月13日</div>
             <div class="subtitle"><span class="emoji">☕</span> 早安，这是今天的 AI 每日速递</div>
         </div>
 
@@ -35,7 +35,7 @@
             <article class="news-card collapsed" id="news-global-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/manuelschipper/nah/" target="_blank" title="Show HN：面向Claude Code的上下文感知权限防护系统">Show HN：面向Claude Code的上下文感知权限防护系统</a>
+                        <a href="https://github.com/obsessiondb/rudel" target="_blank" title="Show HN：Rudel – Claude 代码会话分析工具">Show HN：Rudel – Claude 代码会话分析工具</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-0" onclick="toggleNews('global-0')">
                         展开详情 ▼
@@ -43,57 +43,57 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 114 points</span>
-                    <span>🕐 2026-03-12 00:05</span>
+                    <span>🔥 135 points</span>
+                    <span>🕐 2026-03-12 14:05</span>
                 </div>
-                <p class="news-card-summary">近日，GitHub上开源了一个名为“nah”的项目，它是一个为Claude Code设计的上下文感知权限防护系统。该项目旨在解决Claude Code现有权限系统仅提供“允许或拒绝”这种粗粒度控制的问题，通过引入更精细、智能的权限管理，让用户能够真正掌控AI助手对系统工具和文件的访问。，核心问题是，...</p>
+                <p class="news-card-summary">Rudel 是一个专为 Claude Code 设计的会话分析平台，它通过 CLI 工具自动收集并分析用户的编程会话数据，提供深度洞察仪表板。用户可以在 rudel.ai 免费试用托管版本。，核心功能是自动上传和分析 Claude Code 会话记录。安装 CLI 后，执行 `rudel enabl...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">近日，GitHub上开源了一个名为“nah”的项目，它是一个为Claude Code设计的上下文感知权限防护系统。该项目旨在解决Claude Code现有权限系统仅提供“允许或拒绝”这种粗粒度控制的问题，通过引入更精细、智能的权限管理，让用户能够真正掌控AI助手对系统工具和文件的访问。，核心问题是，Claude Code当前的权限机制是按工具（如Bash、Read、Write）进行全局允许或拒绝，这在实际使用中缺乏灵活性且难以扩展。例如，执行`git push`通常是安全的，但`git push --force`可能具有破坏性；删除缓存文件`__pycache__`可以接受，但删除关键配置文件`~/.bashrc`则非常危险。即使精心配置权限列表，高智能的模型（如Claude Opus）也可能找到绕过方法，单纯维护一个拒绝列表效果有限。，“nah”系统通过一个PreToolUse钩子，在每次工具调用执行前进行实时拦截和评估。其核心功能是根据上下文规则对工具调用进行毫秒级分类和检查：，- 对于Bash命令，它会进行结构分类，分析操作类型、管道组合并进行Shell解包。，- 对于Read操作，它会检测敏感路径（如`~/.ssh`、`~/.aws`、`.env`等）。，- 对于Write和Edit操作，它会检查路径、项目边界，并深入检查内容本身，以识别潜在的密钥泄露、数据外泄或破坏性负载。，对于模糊或难以判断的情况，系统可选地将决策路由给一个LLM进行辅助判断。所有决策都会被记录并可追溯，确保了透明性。，该项目易于安装（通过`pip install nah`后运行`nah install`），并提供了开箱即用的默认配置，同时也支持用户自定义规则。项目文档中强调，用户应避免使用Claude Code自带的`--dangerously-skip-permissions`选项，因为在绕过模式下，命令会在“nah”拦截之前就异步执行，失去保护作用。，为了帮助用户理解其防护能力，项目提供了一个安全演示（在Claude Code中运行`/nah-demo`），该演示会引导用户体验25个涉及8种威胁类别（包括远程代码执行、数据窃取、混淆命令等）的实时案例，整个过程约需5分钟。，总之，“nah”项目为Claude Code用户提供了一个可控、上下文感知且可审计的权限防护层，在提供便利的同时，显著增强了使用AI编程助手时的系统安全性和可控性。</div>
+                        <div class="summary-content">Rudel 是一个专为 Claude Code 设计的会话分析平台，它通过 CLI 工具自动收集并分析用户的编程会话数据，提供深度洞察仪表板。用户可以在 rudel.ai 免费试用托管版本。，核心功能是自动上传和分析 Claude Code 会话记录。安装 CLI 后，执行 `rudel enable` 即可注册一个钩子，在 Claude Code 会话结束时自动将会话记录上传至 Rudel 平台。数据在 ClickHouse 中存储和处理，最终转化为可视化的分析指标。，平台收集的数据维度全面，包括：会话 ID 与时间戳（开始时间、最后交互时间）、用户 ID 与组织 ID、项目路径与包名、Git 上下文（代码库、分支、提交哈希、远程地址）以及完整的会话记录（包含全部提示词和响应内容）。此外，它还能追踪子代理（Sub-agent）的使用情况。，其分析仪表板提供多项关键洞察，如令牌使用量、会话持续时间、活动模式、模型使用情况等，帮助开发者或团队理解 Claude Code 的使用习惯与效率。，在部署上，项目要求预先安装 Bun 运行时。新用户需在 app.rudel.ai 创建账户，并通过 `npm install -g rudel` 全局安装 CLI，接着执行 `rudel login` 完成浏览器认证。团队功能允许在仪表板的“设置→组织”中通过邮箱邀请队友。对于历史会话，可以使用 `rudel upload` 命令进行批量交互式上传。，项目特别强调了安全与隐私声明：由于 Rudel 旨在为分析而摄取完整的编码代理会话数据，因此上传的记录及相关元数据可能包含敏感信息，如源代码、提示词、工具输出、文件内容、命令输出、URL 甚至密钥。用户需对此知情并谨慎使用。</div>
                     </div>
-                    <a href="https://github.com/manuelschipper/nah/" class="original-link" target="_blank">
+                    <a href="https://github.com/obsessiondb/rudel" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Claude #GitHub</span>
-                        <span>📊 114 points · 2026-03-12 00:05</span>
+                        <span>🏷️ #AI #Claude</span>
+                        <span>📊 135 points · 2026-03-12 14:05</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/google-ai-edge/LiteRT" target="_blank" title="谷歌AI边缘/LiteRT - LiteRT作为TensorFlow Lite的继任者，是谷歌面向边缘平台的设备端高性能机器学习与生成式AI部署框架，通过...">谷歌AI边缘/LiteRT - LiteRT作为TensorFlow Lite的继任者，是谷歌面向边缘平台的设备端高性能机器学习与生成式AI部署框架，通过...</a>
+                        <a href="https://claude.com/blog/claude-builds-visuals" target="_blank" title="Claude 现可创建交互式图表、图解和可视化内容">Claude 现可创建交互式图表、图解和可视化内容</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-1" onclick="toggleNews('global-1')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 1,574 stars</span>
-                    <span>🕐 2026-03-12</span>
+                    <span class="source-badge">Hacker News</span>
+                    <span>🔥 207 points</span>
+                    <span>🕐 2026-03-12 17:05</span>
                 </div>
-                <p class="news-card-summary">谷歌AI团队在GitHub上开源了LiteRT项目，作为TensorFlow Lite的继任者，这是一个专为边缘平台设计的设备端框架，旨在通过高效的转换、运行时和优化技术，实现高性能机器学习和生成式AI的部署。，LiteRT延续了TensorFlow Lite作为可靠、高性能设备端AI运行时的传统。...</p>
+                <p class="news-card-summary">Claude现可在对话中创建交互式图表、图表和可视化内容。去年秋季，Anthropic曾预览“Imagine with Claude”功能，这是一种无需代码即可实时构建视觉内容的新方式。如今，该功能的测试版已正式集成至Claude的聊天对话中。，Claude能够在回复中直接生成自定义图表、示意图和其...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">谷歌AI团队在GitHub上开源了LiteRT项目，作为TensorFlow Lite的继任者，这是一个专为边缘平台设计的设备端框架，旨在通过高效的转换、运行时和优化技术，实现高性能机器学习和生成式AI的部署。，LiteRT延续了TensorFlow Lite作为可靠、高性能设备端AI运行时的传统。其核心目标是让设备端的ML推理变得比以往更加容易，同时为生成式AI提供强大支持。框架的核心优势在于其先进的计算加速和性能优化能力。，该框架引入了多项关键新特性。首先是全新的LiteRT Compiled Model API，它通过自动化加速器选择、真正的异步执行以及高效的I/O缓冲区处理来简化开发流程。开发者无需再显式创建委托，系统可自动选择最佳加速器；异步执行能缩短整体运行时间；同时，它还简化了NPU运行时和模型分发，并优化了缓冲区管理。，其次，LiteRT提供了统一的NPU加速支持。它能够无缝接入各大芯片供应商的NPU，为开发者提供一致的开发体验。此前处于早期访问计划的LiteRT NPU现已向所有用户开放。，此外，框架具备一流的GPU性能，利用最先进的GPU加速技术来提升设备端ML任务的速度。新的缓冲区互操作性设计进一步增强了效率。，总体而言，LiteRT通过其高效的转换工具、优化的运行时系统以及对多种硬件加速器（GPU/NPU）的统一支持，致力于在资源受限的边缘设备上实现高性能、低延迟的ML和GenAI模型部署，简化开发者的工作流程并提升应用性能。</div>
+                        <div class="summary-content">Claude现可在对话中创建交互式图表、图表和可视化内容。去年秋季，Anthropic曾预览“Imagine with Claude”功能，这是一种无需代码即可实时构建视觉内容的新方式。如今，该功能的测试版已正式集成至Claude的聊天对话中。，Claude能够在回复中直接生成自定义图表、示意图和其他可视化内容，并随着对话的深入，对其创作进行调整和修改。与Claude已有的“工件”（可共享或下载的永久性工具和文档）不同，这些可视化内容旨在辅助用户理解当前讨论的主题。它们以内联形式直接出现在对话流中，而非侧边面板，并且是临时性的——会随着对话进展而改变或消失。，例如，用户可以询问Claude复利如何运作，它将生成一条可交互的曲线供用户探索；或者询问元素周期表，Claude会创建一个交互式可视化界面，用户可点击获取更多细节。，该功能默认开启。Claude会自动判断何时需要构建可视化内容，用户也可直接提出要求（例如使用“将其绘制成图表”或“可视化展示其随时间的变化”等指令）。创建后，用户可请求进行调整或深入挖掘。，此功能是Claude近期一系列响应改进的一部分。今年早些时候，Claude已开始为特定主题使用定制化格式：例如食谱会以食材和步骤的格式呈现，询问天气时也会提供可视化图表。此外，用户还能在对话中直接与Figma、Canva和Slack等应用进行交互。，该功能目前面向所有订阅计划用户开放。</div>
                     </div>
-                    <a href="https://github.com/google-ai-edge/LiteRT" class="original-link" target="_blank">
+                    <a href="https://claude.com/blog/claude-builds-visuals" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #GitHub</span>
-                        <span>📊 1,574 stars · 2026-03-12</span>
+                        <span>🏷️ #Claude</span>
+                        <span>📊 207 points · 2026-03-12 17:05</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/anthropics/claude-plugins-official" target="_blank" title="anthropics/claude-plugins-official - 官方、由Anthropic管理的高质量Claude代码插件目录。">anthropics/claude-plugins-official - 官方、由Anthropic管理的高质量Claude代码插件目录。</a>
+                        <a href="https://github.com/promptfoo/promptfoo" target="_blank" title="promptfoo/promptfoo - 测试您的提示词、智能体和RAG系统。面向AI的红队演练/渗透测试/漏洞扫描。对比GPT、Claude、Gemi...">promptfoo/promptfoo - 测试您的提示词、智能体和RAG系统。面向AI的红队演练/渗透测试/漏洞扫描。对比GPT、Claude、Gemi...</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-2" onclick="toggleNews('global-2')">
                         展开详情 ▼
@@ -101,21 +101,79 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 9,951 stars</span>
-                    <span>🕐 2026-03-12</span>
+                    <span>🔥 14,611 stars</span>
+                    <span>🕐 2026-03-13</span>
                 </div>
-                <p class="news-card-summary">Anthropic在GitHub上正式推出了官方管理的Claude Code插件目录（anthropics/claude-plugins-official），这是一个经过精心筛选的高质量Claude Code插件集合。该目录旨在为用户提供一个可信赖的插件来源，以扩展Claude Code的功能。，目...</p>
+                <p class="news-card-summary">promptfoo是一个用于评估和红队测试LLM应用程序的CLI工具与库。该项目旨在帮助开发者摆脱反复试错的开发模式，从而构建安全可靠的AI应用。其核心功能包括测试提示词（prompts）、智能体（agents）和检索增强生成（RAG）系统，并提供针对AI的红队测试、渗透测试和漏洞扫描能力。，该工具...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Anthropic在GitHub上正式推出了官方管理的Claude Code插件目录（anthropics/claude-plugins-official），这是一个经过精心筛选的高质量Claude Code插件集合。该目录旨在为用户提供一个可信赖的插件来源，以扩展Claude Code的功能。，目录结构清晰，主要分为两部分：`/plugins`目录包含由Anthropic内部开发和维护的官方插件；`/external_plugins`目录则收录来自合作伙伴和社区的第三方插件。所有外部插件在纳入市场前都必须满足一定的质量和安全标准，并通过提交表单进行申请。，每个插件都遵循标准化的文件结构，核心配置文件包括`.claude-plugin/plugin.json`（必需的插件元数据）和可选的`.mcp.json`（MCP服务器配置）。插件还可以包含`commands/`（斜杠命令）、`agents/`（智能体定义）、`skills/`（技能定义）等目录，并需提供`README.md`文档。，用户可以直接通过Claude Code的插件系统从该市场安装插件。安装方式有两种：在聊天界面运行`/plugin install {plugin-name}@claude-plugin-directory`命令，或在`/plugin > Discover`中浏览并选择。，Anthropic特别发出重要安全提醒：用户在安装、更新或使用任何插件前，务必确认其可信度。Anthropic并不控制插件所包含的MCP服务器、文件或其他软件，也无法验证其功能是否符合预期或保证其内容不会发生变化。用户应参考每个插件主页的详细信息以进行评估。，该项目为开发者提供了参考实现（`/plugins/example-plugin`），并引导他们查阅官方文档以获取更全面的插件开发指南。该官方目录的推出，标志着Claude Code的插件生态系统朝着更加规范、安全和易于发现的方向迈出了重要一步。</div>
+                        <div class="summary-content">promptfoo是一个用于评估和红队测试LLM应用程序的CLI工具与库。该项目旨在帮助开发者摆脱反复试错的开发模式，从而构建安全可靠的AI应用。其核心功能包括测试提示词（prompts）、智能体（agents）和检索增强生成（RAG）系统，并提供针对AI的红队测试、渗透测试和漏洞扫描能力。，该工具允许用户在一个统一的框架内，便捷地比较不同大型语言模型（如GPT、Claude、Gemini、Llama等）的性能表现。它采用简单的声明式配置，支持命令行操作，并能无缝集成到CI/CD流程中，便于自动化测试和持续评估。，用户可以通过npm、Homebrew或pip等多种方式快速安装。项目提供了丰富的入门示例和详细文档，帮助用户快速上手。通过定义测试用例和期望的输出标准，开发者可以系统性地评估不同提示词或模型组合的效果、识别潜在的安全漏洞（如提示词注入），并确保AI应用行为的可靠性与一致性。，总的来说，promptfoo为AI开发工作流引入了工程化的测试与评估环节，是提升LLM应用质量和安全性的重要工具。</div>
+                    </div>
+                    <a href="https://github.com/promptfoo/promptfoo" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #LLM #GPT #Claude #智能体</span>
+                        <span>📊 14,611 stars · 2026-03-13</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-global-3">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://github.com/anthropics/claude-plugins-official" target="_blank" title="Anthropic/Claude插件官方 - 由Anthropic管理的高质量Claude代码插件官方目录。">Anthropic/Claude插件官方 - 由Anthropic管理的高质量Claude代码插件官方目录。</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-global-3" onclick="toggleNews('global-3')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 10,582 stars</span>
+                    <span>🕐 2026-03-13</span>
+                </div>
+                <p class="news-card-summary">Anthropic在GitHub上正式发布了官方管理的Claude Code插件目录（anthropics/claude-plugins-official），这是一个经过精心筛选的高质量Claude Code插件集合。该项目旨在为开发者提供一个可靠、集中的插件资源库，以扩展Claude Code的功...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">Anthropic在GitHub上正式发布了官方管理的Claude Code插件目录（anthropics/claude-plugins-official），这是一个经过精心筛选的高质量Claude Code插件集合。该项目旨在为开发者提供一个可靠、集中的插件资源库，以扩展Claude Code的功能。，该目录包含两个主要部分：由Anthropic内部团队开发和维护的官方插件（位于/plugins目录），以及来自合作伙伴和社区的第三方插件（位于/external_plugins目录）。所有插件都遵循统一的结构，核心配置文件为.claude-plugin/plugin.json，并可选择性地包含MCP服务器配置（.mcp.json）、斜杠命令（commands/）、智能体定义（agents/）和技能定义（skills/）等模块。，用户可以直接通过Claude Code的插件系统从该市场安装插件。安装方式包括运行特定命令（如/plugin install {plugin-name}@claude-plugin-directory）或在插件管理界面中浏览发现。Anthropic特别强调安全注意事项，提醒用户在安装、更新或使用任何插件前务必确认其可信度，因为Anthropic无法控制插件所包含的MCP服务器、文件或其他软件，也无法验证其功能是否符合预期或是否会发生变更。，对于第三方开发者，项目开放了外部插件提交渠道。外部插件需满足一定的质量和安全标准才能获准纳入市场，开发者可通过指定的提交表单进行申请。同时，项目提供了参考实现（/plugins/example-plugin）和官方开发文档，以辅助插件创建。，该项目在GitHub上已获得显著关注，拥有超过1万个Star和1千多个Fork，体现了开发者社区对Claude生态扩展工具的强烈兴趣。其核心价值在于通过官方管理的精选目录，降低用户寻找和评估插件的成本，同时为生态贡献者提供了一个规范的发布平台，有助于推动Claude Code插件生态的健康发展。</div>
                     </div>
                     <a href="https://github.com/anthropics/claude-plugins-official" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
                         <span>🏷️ #Claude #GitHub #智能体</span>
-                        <span>📊 9,951 stars · 2026-03-12</span>
+                        <span>📊 10,582 stars · 2026-03-13</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-global-4">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://github.com/google-ai-edge/LiteRT" target="_blank" title="谷歌AI边缘/LiteRT - LiteRT作为TensorFlow Lite的继任者，是谷歌面向边缘平台的设备端框架，通过高效转换、运行时和优化实现高性...">谷歌AI边缘/LiteRT - LiteRT作为TensorFlow Lite的继任者，是谷歌面向边缘平台的设备端框架，通过高效转换、运行时和优化实现高性...</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-global-4" onclick="toggleNews('global-4')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 1,778 stars</span>
+                    <span>🕐 2026-03-13</span>
+                </div>
+                <p class="news-card-summary">谷歌AI团队在GitHub上开源了LiteRT项目，这是TensorFlow Lite的继任者，旨在成为用于边缘平台的高性能机器学习和生成式AI部署的端侧框架。它通过高效的模型转换、运行时和优化技术，为设备端AI推理提供强大支持。，LiteRT延续了TensorFlow Lite作为可靠、高性能设备...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">谷歌AI团队在GitHub上开源了LiteRT项目，这是TensorFlow Lite的继任者，旨在成为用于边缘平台的高性能机器学习和生成式AI部署的端侧框架。它通过高效的模型转换、运行时和优化技术，为设备端AI推理提供强大支持。，LiteRT延续了TensorFlow Lite作为可靠、高性能设备端AI运行时的传统，其核心目标是让设备端ML推理变得比以往更加容易。该框架集成了先进的GPU/NPU加速能力，以提供卓越的ML与GenAI性能。，项目的主要新特性与核心价值包括：首先，引入了全新的LiteRT Compiled Model API。该API旨在简化开发流程，具备自动加速器选择、真正的异步执行以及高效的I/O缓冲区处理能力。开发者无需再显式创建委托（delegate），系统可自动选择最佳加速器；异步执行有助于缩短整体执行时间；同时，它还简化了NPU运行时和模型分发，并优化了缓冲区交互。，其次，提供了统一的NPU加速支持。LiteRT NPU（此前处于早期访问计划中）现已向所有用户开放，能够无缝接入来自主要芯片供应商的NPU，为开发者提供一致的开发体验。，第三，具备一流的GPU性能。LiteRT利用先进的GPU加速技术，新的缓冲区互操作性实现了零拷贝，并最大限度地减少了跨不同GPU缓冲区类型的延迟，从而提升设备端ML效率。，最后，专注于实现卓越的生成式AI推理。框架通过高效的运行时和优化，专门针对生成式AI工作负载进行了增强，以在资源受限的边缘设备上实现高性能的GenAI模型部署。，总而言之，LiteRT作为一个全面的端侧AI框架，通过其高效的转换工具、优化的运行时以及对GPU/NPU硬件的统一且高性能的抽象，致力于降低开发门槛，推动高性能机器学习和生成式AI在边缘计算平台的广泛应用。</div>
+                    </div>
+                    <a href="https://github.com/google-ai-edge/LiteRT" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #GitHub</span>
+                        <span>📊 1,778 stars · 2026-03-13</span>
                     </div>
                 </div>
             </article>
@@ -131,65 +189,65 @@
             <article class="news-card collapsed" id="news-tech-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/langflow-ai/openrag" target="_blank" title="langflow-ai/openrag - OpenRAG是一个基于Langflow、Docling和Opensearch构建的综合性单包检索增强生成平台。">langflow-ai/openrag - OpenRAG是一个基于Langflow、Docling和Opensearch构建的综合性单包检索增强生成平台。</a>
+                        <a href="https://github.com/jrswab/axe" target="_blank" title="Show HN：Axe——一个12MB的二进制文件，可替代你的AI框架">Show HN：Axe——一个12MB的二进制文件，可替代你的AI框架</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-0" onclick="toggleNews('tech-0')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 1,087 stars</span>
-                    <span>🕐 2026-03-12</span>
+                    <span class="source-badge">Hacker News</span>
+                    <span>🔥 195 points</span>
+                    <span>🕐 2026-03-12 14:05</span>
                 </div>
-                <p class="news-card-summary">OpenRAG是一个基于Langflow、Docling和OpenSearch构建的综合性、一体化检索增强生成平台。该项目旨在提供一个开箱即用的RAG解决方案，使用户能够通过AI驱动的智能对话界面进行文档上传、处理和查询。，该平台的核心架构整合了多项关键技术：利用Langflow实现文档摄取、检索工...</p>
+                <p class="news-card-summary">Axe 是一个轻量级命令行工具，用于管理和运行基于 LLM 的智能体。其核心设计理念是摒弃庞大、全能的 AI 框架，转而采用 Unix 哲学：每个智能体应小而专一，做好一件事。它仅是一个约 12MB 的独立二进制文件，无需后台守护进程、图形界面或复杂的框架依赖。，用户通过 TOML 配置文件定义功能...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">OpenRAG是一个基于Langflow、Docling和OpenSearch构建的综合性、一体化检索增强生成平台。该项目旨在提供一个开箱即用的RAG解决方案，使用户能够通过AI驱动的智能对话界面进行文档上传、处理和查询。，该平台的核心架构整合了多项关键技术：利用Langflow实现文档摄取、检索工作流和智能引导，提供可视化的拖放式工作流构建器，支持快速迭代；通过Docling处理杂乱的真实世界数据，进行智能解析；后端则依靠OpenSearch提供企业级、可扩展的语义搜索能力，确保生产环境的高性能。，OpenRAG的主要特点包括：一体化封装，所有核心工具预先配置，安装后即可运行；支持智能体驱动的RAG工作流，具备重新排序和多智能体协调等高级编排功能；强大的文档摄取能力，能处理复杂的现实数据；提供模块化的企业附加组件，便于按需扩展功能。，其工作流程经过简化：用户上传文档后，系统自动进行解析、分块和向量化处理，并将其存储到OpenSearch向量数据库中。当用户通过聊天界面提问时，平台会执行语义检索，获取相关上下文，并交由大型语言模型生成准确、基于上下文的回答。，该项目由FastAPI和Next.js技术栈构建，在GitHub上开源，目前已获得大量关注。它为开发者和企业提供了一个功能全面、易于部署的RAG平台，显著降低了构建智能文档搜索与对话系统的门槛。</div>
+                        <div class="summary-content">Axe 是一个轻量级命令行工具，用于管理和运行基于 LLM 的智能体。其核心设计理念是摒弃庞大、全能的 AI 框架，转而采用 Unix 哲学：每个智能体应小而专一，做好一件事。它仅是一个约 12MB 的独立二进制文件，无需后台守护进程、图形界面或复杂的框架依赖。，用户通过 TOML 配置文件定义功能聚焦的智能体。每个配置可指定系统提示词、选择的 AI 模型（支持 Anthropic 的 Claude、OpenAI 的 GPT 以及本地 Ollama 模型）、技能文件、上下文文件、工作目录和持久化记忆等。智能体之间支持通过 LLM 工具调用进行子代理委托，并具备深度限制和并行执行能力。，Axe 本身是执行器，而非调度器。它专为与标准 Unix 工具链（如管道、cron 定时任务、git hooks、CI/CD 流程或文件监视器）无缝集成而设计。例如，用户可以直接将 `git diff` 的输出通过管道传递给 Axe 智能体进行分析（`git diff | axe run reviewer`）。，其主要特性包括：基于 TOML 的声明式可版本控制配置；支持多 AI 提供商；具备 LLM 辅助模式分析和修剪功能的内存垃圾回收机制；可跨智能体复用的技能系统；用于在不调用 LLM 的情况下检查上下文的干运行模式；以及结构化的 JSON 输出。，该项目旨在将 LLM 能力转化为可组合、可脚本化的实用工具，使其像传统 Unix 命令一样，在自动化流程和开发工作中发挥专注、高效的作用。</div>
                     </div>
-                    <a href="https://github.com/langflow-ai/openrag" class="original-link" target="_blank">
+                    <a href="https://github.com/jrswab/axe" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #GitHub #智能体</span>
-                        <span>📊 1,087 stars · 2026-03-12</span>
+                        <span>🏷️ #AI #LLM #GPT #Claude #OpenAI</span>
+                        <span>📊 195 points · 2026-03-12 14:05</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/vectorize-io/hindsight" target="_blank" title="vectorize-io/hindsight - Hindsight：具备学习能力的智能体记忆系统">vectorize-io/hindsight - Hindsight：具备学习能力的智能体记忆系统</a>
+                        <a href="https://github.com/onecli/onecli" target="_blank" title="Show HN：OneCLI – 基于 Rust 的 AI 代理密钥保险库">Show HN：OneCLI – 基于 Rust 的 AI 代理密钥保险库</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-1" onclick="toggleNews('tech-1')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 2,796 stars</span>
-                    <span>🕐 2026-03-12</span>
+                    <span class="source-badge">Hacker News</span>
+                    <span>🔥 152 points</span>
+                    <span>🕐 2026-03-12 17:05</span>
                 </div>
-                <p class="news-card-summary">Hindsight是一个旨在创建能够随时间学习的智能体的记忆系统。与大多数专注于回忆对话历史的代理记忆系统不同，Hindsight的核心目标是让智能体具备学习能力，而不仅仅是记忆。它消除了RAG和知识图谱等替代技术的缺点，并在长期记忆任务上提供了最先进的性能。，根据基准测试，Hindsight是迄今...</p>
+                <p class="news-card-summary">OneCLI是一个用Rust编写的开源凭证保险库，专为AI Agent设计。其核心功能是作为AI Agent与外部服务API之间的安全网关，让Agent能够调用各种服务，而无需直接接触或存储真实的API密钥，从而解决AI Agent广泛集成第三方服务时的密钥管理安全风险。，项目的主要价值在于集中化的...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Hindsight是一个旨在创建能够随时间学习的智能体的记忆系统。与大多数专注于回忆对话历史的代理记忆系统不同，Hindsight的核心目标是让智能体具备学习能力，而不仅仅是记忆。它消除了RAG和知识图谱等替代技术的缺点，并在长期记忆任务上提供了最先进的性能。，根据基准测试，Hindsight是迄今为止测试过的最准确的代理记忆系统。它在广泛用于评估各种对话AI场景下记忆系统性能的LongMemEval基准测试中，取得了最先进的性能。截至2026年1月的数据显示，其性能优于其他解决方案。该基准性能数据已由弗吉尼亚理工大学Sanghani人工智能与数据分析中心以及《华盛顿邮报》的研究合作者独立复现，而其他分数则由软件供应商自行报告。，Hindsight目前已在财富500强企业和越来越多的AI初创公司中投入生产使用。其核心价值在于通过持续学习，使AI智能体能够积累和利用经验，从而在长期互动中变得更智能、更高效。项目提供了丰富的资源，包括文档、研究论文、示例教程（Cookbook）以及Hindsight Cloud服务，方便开发者集成和使用。</div>
+                        <div class="summary-content">OneCLI是一个用Rust编写的开源凭证保险库，专为AI Agent设计。其核心功能是作为AI Agent与外部服务API之间的安全网关，让Agent能够调用各种服务，而无需直接接触或存储真实的API密钥，从而解决AI Agent广泛集成第三方服务时的密钥管理安全风险。，项目的主要价值在于集中化的凭证管理和注入机制。开发者无需在每个Agent中硬编码API密钥，只需将真实凭证一次性存储到OneCLI的加密存储中。AI Agent在发起HTTP请求时，使用占位符密钥（如FAKE_KEY）并通过OneCLI网关进行调用。网关会拦截出站请求，根据请求的主机和路径模式匹配对应的真实凭证，动态地将占位符替换为解密后的真实密钥并注入请求头，随后将请求转发至目标服务。整个过程中，Agent始终接触不到真实的敏感信息。，其技术架构包含三个核心组件：1. Rust编写的HTTP网关，负责拦截请求和凭证注入，性能高效；2. 基于Next.js的Web仪表板，用于管理Agent、密钥和权限，并提供网关解析凭证所需的API；3. 采用AES-256-GCM加密的密钥存储系统，凭证仅在请求时被解密和注入。，该方案的优势在于提供了统一的安全管控点，便于进行密钥轮换、访问权限管理和审计所有Agent的调用行为。项目提供了便捷的本地启动方式，支持通过Docker快速运行。</div>
                     </div>
-                    <a href="https://github.com/vectorize-io/hindsight" class="original-link" target="_blank">
+                    <a href="https://github.com/onecli/onecli" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #人工智能 #智能体</span>
-                        <span>📊 2,796 stars · 2026-03-12</span>
+                        <span>🏷️ #AI #Rust</span>
+                        <span>📊 152 points · 2026-03-12 17:05</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/alibaba/page-agent" target="_blank" title="阿里巴巴/page-agent - JavaScript 页面图形用户界面代理。用自然语言控制网页界面。">阿里巴巴/page-agent - JavaScript 页面图形用户界面代理。用自然语言控制网页界面。</a>
+                        <a href="https://github.com/langflow-ai/openrag" target="_blank" title="langflow-ai/openrag - OpenRAG是一个基于Langflow、Docling和Opensearch构建的综合性单包检索增强生成平台。">langflow-ai/openrag - OpenRAG是一个基于Langflow、Docling和Opensearch构建的综合性单包检索增强生成平台。</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-2" onclick="toggleNews('tech-2')">
                         展开详情 ▼
@@ -197,28 +255,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 5,466 stars</span>
-                    <span>🕐 2026-03-12</span>
+                    <span>🔥 1,960 stars</span>
+                    <span>🕐 2026-03-13</span>
                 </div>
-                <p class="news-card-summary">阿里巴巴开源项目 page-agent 是一个基于 JavaScript 的网页内 GUI 智能体，允许用户通过自然语言控制网页界面。该项目旨在简化网页交互，无需依赖浏览器扩展、Python 脚本或无头浏览器，所有操作均在当前网页内通过 JavaScript 完成。，核心功能与特点包括：易于集成，开...</p>
+                <p class="news-card-summary">OpenRAG是一个基于Langflow、Docling和OpenSearch构建的综合性、一体化检索增强生成平台。该项目旨在提供一个开箱即用的RAG解决方案，使用户能够通过AI驱动的智能对话界面进行文档上传、处理和查询。，该平台的核心功能是提供智能文档搜索和AI对话能力。它利用大型语言模型和语义搜...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">阿里巴巴开源项目 page-agent 是一个基于 JavaScript 的网页内 GUI 智能体，允许用户通过自然语言控制网页界面。该项目旨在简化网页交互，无需依赖浏览器扩展、Python 脚本或无头浏览器，所有操作均在当前网页内通过 JavaScript 完成。，核心功能与特点包括：易于集成，开发者只需在网页中引入一行脚本即可快速部署；采用基于文本的 DOM 操作，无需截图或多模态 LLM，也无需特殊权限；支持用户自带 LLM（如 GPT、Claude 等），并提供了美观的人机交互界面。此外，项目还提供了一个可选的 Chrome 扩展，用于处理跨浏览器标签页的多页面任务。，主要应用场景涵盖：为 SaaS 产品快速嵌入 AI Copilot 功能，无需重写后端；将复杂的多步骤表单填写流程简化为一句自然语言指令，适用于 ERP、CRM 等管理系统；提升网页可访问性，让用户通过自然语言或语音命令操作任何网络应用；以及通过扩展实现跨页面的智能体任务执行。，项目提供了快速入门方式，包括通过 CDN 链接直接引入演示脚本（附有全球和中国镜像），或通过 NPM 安装并调用 PageAgent API 进行编程式集成。开发者需要配置自己的 LLM 模型（如 qwen3.5-plus）、API 基址和密钥来初始化智能体实例，随后即可使用 `execute` 方法执行自然语言指令。，page-agent 强调开源协作，欢迎社区贡献，并提供了详细的使用文档和演示示例。该项目为网页交互自动化提供了一种轻量、灵活且功能强大的解决方案。</div>
+                        <div class="summary-content">OpenRAG是一个基于Langflow、Docling和OpenSearch构建的综合性、一体化检索增强生成平台。该项目旨在提供一个开箱即用的RAG解决方案，使用户能够通过AI驱动的智能对话界面进行文档上传、处理和查询。，该平台的核心功能是提供智能文档搜索和AI对话能力。它利用大型语言模型和语义搜索技术，允许用户与自己的文档数据进行交互。系统采用Langflow来处理文档摄取、检索工作流并提供智能引导，从而打造无缝的RAG体验。，OpenRAG的主要特点包括：它是一个预打包且可直接运行的平台，所有核心工具均已集成，安装后即可使用；支持智能体驱动的RAG工作流，具备重新排序和多智能体协调等高级编排功能；其文档摄取模块能够通过智能解析处理混乱的真实世界数据；提供由Langflow支持的可视化拖放式工作流构建器，便于快速迭代；采用模块化企业级附加组件，可按需扩展功能；底层由OpenSearch驱动，能够实现任何规模的企业级搜索，并具备生产级性能。，在技术架构上，OpenRAG遵循一个简化的流程，将用户文档转化为可智能搜索的知识库。它基于FastAPI和Next.js构建，并由OpenSearch、Langflow和Docling提供核心能力支持。该项目在GitHub上开源，提供了完整的代码、文档和快速入门指南，方便开发者部署和使用。</div>
                     </div>
-                    <a href="https://github.com/alibaba/page-agent" class="original-link" target="_blank">
+                    <a href="https://github.com/langflow-ai/openrag" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GPT #Claude #Python</span>
-                        <span>📊 5,466 stars · 2026-03-12</span>
+                        <span>🏷️ #AI #GitHub #智能体</span>
+                        <span>📊 1,960 stars · 2026-03-13</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-3">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/NousResearch/hermes-agent" target="_blank" title="NousResearch/hermes-agent - 与你共同成长的智能体">NousResearch/hermes-agent - 与你共同成长的智能体</a>
+                        <a href="https://github.com/lightpanda-io/browser" target="_blank" title="lightpanda-io/browser - Lightpanda：专为AI和自动化设计的无头浏览器">lightpanda-io/browser - Lightpanda：专为AI和自动化设计的无头浏览器</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-3" onclick="toggleNews('tech-3')">
                         展开详情 ▼
@@ -226,21 +284,21 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 5,814 stars</span>
-                    <span>🕐 2026-03-12</span>
+                    <span>🔥 14,411 stars</span>
+                    <span>🕐 2026-03-13</span>
                 </div>
-                <p class="news-card-summary">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心创新在于内置了持续学习循环机制，能够从交互经验中自主创建技能，并在使用过程中不断优化这些技能。系统会主动提示自身保存关键知识，支持检索过往对话历史，并能跨会话持续构建并深化对用户个...</p>
+                <p class="news-card-summary">Lightpanda是一款专为AI和自动化设计的开源无头浏览器，在GitHub上开源。该项目旨在为AI智能体、LLM训练、网页抓取和测试提供高效的Web自动化解决方案。，其核心功能包括支持JavaScript执行和部分Web API（开发中），并能通过Chrome DevTools Protocol...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心创新在于内置了持续学习循环机制，能够从交互经验中自主创建技能，并在使用过程中不断优化这些技能。系统会主动提示自身保存关键知识，支持检索过往对话历史，并能跨会话持续构建并深化对用户个性化需求的理解模型。，该智能体设计注重实用性与灵活性，支持在多种基础设施上部署，包括成本低廉的5美元VPS、GPU集群或闲置时成本近乎为零的无服务器架构。它不依赖于本地设备，用户可以通过Telegram等应用与运行在云虚拟机上的智能体进行交互。，在模型支持上，Hermes Agent具有高度的开放性。它兼容包括Nous Portal、OpenRouter（提供超过200个模型）、z.ai/GLM、Kimi/Moonshot、MiniMax、OpenAI在内的多种模型服务，也支持用户自定义的API端点。用户可以通过简单的`hermes model`命令切换模型，无需修改代码，有效避免了供应商锁定。，项目提供了功能完整的终端用户界面（TUI），支持多行编辑、斜杠命令自动补全、对话历史查看、任务中断与重定向以及流式工具输出。其网关进程能够统一接入Telegram、Discord、Slack、WhatsApp、Signal等多种通讯平台及CLI，实现跨平台对话连续性。此外，它还集成了语音备忘录转录等便捷功能。，简而言之，Hermes Agent是一个旨在伴随用户共同成长、可自我改进、且部署与使用高度灵活的AI智能体框架。</div>
+                        <div class="summary-content">Lightpanda是一款专为AI和自动化设计的开源无头浏览器，在GitHub上开源。该项目旨在为AI智能体、LLM训练、网页抓取和测试提供高效的Web自动化解决方案。，其核心功能包括支持JavaScript执行和部分Web API（开发中），并能通过Chrome DevTools Protocol与Playwright、Puppeteer、chromedp等主流自动化工具兼容。Lightpanda的主要特点是极致的性能与资源效率。根据项目提供的基准测试，在AWS EC2 m5.large实例上，其内存占用比Chrome低9倍，执行速度比Chrome快11倍，并且能够实现瞬时启动，显著提升了自动化任务的执行效率。，项目提供了多种便捷的安装和启动方式。用户可以直接从夜间构建中下载适用于Linux x86_64和macOS aarch64的二进制文件，也可以通过官方Docker镜像进行部署，该镜像支持Linux的amd64和arm64架构，并默认在9222端口暴露CDP服务器。此外，Lightpanda也能在Windows系统的WSL2环境中运行。，一个简单的使用示例是通过命令行工具直接抓取并输出指定URL的内容，命令支持设置是否遵守robots协议、日志格式和级别等参数。这展示了其作为自动化基础工具的灵活性和易用性。总体而言，Lightpanda通过其开源、高性能和低资源消耗的特性，为开发者和研究人员进行大规模的Web交互与数据提取提供了一个强大的专用工具。</div>
                     </div>
-                    <a href="https://github.com/NousResearch/hermes-agent" class="original-link" target="_blank">
+                    <a href="https://github.com/lightpanda-io/browser" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #OpenAI #GitHub #智能体</span>
-                        <span>📊 5,814 stars · 2026-03-12</span>
+                        <span>🏷️ #AI #LLM #JavaScript #GitHub #智能体</span>
+                        <span>📊 14,411 stars · 2026-03-13</span>
                     </div>
                 </div>
             </article>
@@ -255,21 +313,108 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 32,055 stars</span>
-                    <span>🕐 2026-03-12</span>
+                    <span>🔥 38,018 stars</span>
+                    <span>🕐 2026-03-13</span>
                 </div>
-                <p class="news-card-summary">GitHub项目“msitarzewski/agency-agents”提供了一个完整的AI智能体集合，旨在将专业的人工智能助手能力置于用户指尖。该项目被描述为一个“完整的AI机构”，其智能体覆盖广泛的专业领域，从前端开发专家到Reddit社区管理高手，从创意灵感注入者到现实核查员。每个智能体都是一...</p>
+                <p class="news-card-summary">GitHub项目“msitarzewski/agency-agents”提供了一个完整的AI代理集合，旨在将专业的人工智能助手团队置于用户指尖。该项目源自Reddit社区的讨论和数月的迭代，现已发展成一个精心设计的AI智能体角色库。每个代理都扮演着高度专业化的专家角色，覆盖从前端开发、Reddit社...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">GitHub项目“msitarzewski/agency-agents”提供了一个完整的AI智能体集合，旨在将专业的人工智能助手能力置于用户指尖。该项目被描述为一个“完整的AI机构”，其智能体覆盖广泛的专业领域，从前端开发专家到Reddit社区管理高手，从创意灵感注入者到现实核查员。每个智能体都是一个拥有独特个性、标准化流程和经过验证交付成果的专项专家。，该项目的核心价值在于其高度专业化和即用性。每个智能体并非通用的提示模板，而是在特定领域（如工程设计、市场营销、产品管理、游戏开发、空间计算等）具备深厚专业知识的AI角色。它们被设计为具有独特的沟通风格、工作方法和明确的任务导向，能够产出实际的代码、流程和可衡量的成果。项目强调其“生产就绪”特性，意味着这些智能体及其工作流程都经过实战检验并附有成功指标。，项目提供了多种便捷的使用方式。推荐的方式是与Claude Code配合使用，用户只需将智能体文件复制到指定目录，即可在会话中激活并使用特定专家模式，例如激活“前端开发人员”模式来协助构建React组件。此外，用户也可以将智能体文件作为参考库，直接浏览和适配所需的工作流程与代码示例。项目还支持与其他主流开发工具（如Cursor、Aider、Windsurf等）集成，通过提供的脚本可一键生成集成文件并完成安装。，该项目起源于一个Reddit讨论，并经过数月迭代，目前仍在不断扩展其智能体阵容。它本质上是一个精心策划的AI专家团队集合，旨在为用户提供永不疲倦、即时可用的专业化AI辅助，从而彻底改变工作流程。</div>
+                        <div class="summary-content">GitHub项目“msitarzewski/agency-agents”提供了一个完整的AI代理集合，旨在将专业的人工智能助手团队置于用户指尖。该项目源自Reddit社区的讨论和数月的迭代，现已发展成一个精心设计的AI智能体角色库。每个代理都扮演着高度专业化的专家角色，覆盖从前端开发、Reddit社区管理到创意激发和现实核查等多种职能。，核心特点在于每个代理都具备深度专业领域知识、独特的个性与沟通风格，并专注于产出实际可交付成果，如真实代码、流程文档和可衡量的结果。这些代理并非通用的提示模板，而是经过实战检验、可直接用于生产环境的专业化工作流。，项目提供了多种使用方式：用户可将其代理直接集成到Claude Code中，通过简单命令激活特定专家模式；也可将其作为参考库，浏览并适配所需代理的详细配置文件，其中包含身份设定、核心任务、技术交付示例及成功指标；此外，还支持通过脚本工具与Cursor、Aider、Windsurf、Gemini CLI、OpenCode等其他开发工具链集成。，该仓库按职能分类组织，包含设计、工程、营销、产品管理、销售、测试等十余个专业目录，实质上构建了一个“永不疲倦、从不抱怨、始终交付”的AI专家团队框架，帮助开发者或团队快速引入专业化的AI协作能力，提升工作流程效率。</div>
                     </div>
                     <a href="https://github.com/msitarzewski/agency-agents" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
                         <span>🏷️ #AI #Claude #GitHub #人工智能 #智能体</span>
-                        <span>📊 32,055 stars · 2026-03-12</span>
+                        <span>📊 38,018 stars · 2026-03-13</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-tech-5">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://github.com/alibaba/page-agent" target="_blank" title="阿里巴巴/page-agent - JavaScript 页面内图形用户界面代理。用自然语言控制网页界面。">阿里巴巴/page-agent - JavaScript 页面内图形用户界面代理。用自然语言控制网页界面。</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-tech-5" onclick="toggleNews('tech-5')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 6,947 stars</span>
+                    <span>🕐 2026-03-13</span>
+                </div>
+                <p class="news-card-summary">阿里巴巴开源项目 page-agent 是一款运行在网页内的 JavaScript GUI 智能体，允许用户通过自然语言指令直接控制网页界面。该项目旨在简化AI助手与Web产品的集成，无需依赖浏览器扩展、Python环境或无头浏览器，所有操作均在页面内通过JavaScript完成。，其核心功能与特点...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">阿里巴巴开源项目 page-agent 是一款运行在网页内的 JavaScript GUI 智能体，允许用户通过自然语言指令直接控制网页界面。该项目旨在简化AI助手与Web产品的集成，无需依赖浏览器扩展、Python环境或无头浏览器，所有操作均在页面内通过JavaScript完成。，其核心功能与特点包括：易于集成，开发者仅需引入一行脚本即可在网页中嵌入AI Copilot功能，无需重写后端。它采用基于文本的DOM操作，不依赖截图或多模态LLM，也无需特殊权限。项目支持用户自带LLM（如通过API配置Qwen等模型），并提供了美观的人机交互界面。此外，还提供了一个可选的Chrome扩展程序，以支持跨浏览器标签页的多页面任务处理。，主要应用场景涵盖：为SaaS产品快速集成AI副驾驶，将复杂的多点击工作流（如ERP、CRM系统表单填写）简化为一句自然语言指令，以及通过自然语言交互提升Web应用的无障碍访问能力。，项目提供了快速入门方式，包括通过CDN链接直接体验演示版本，或通过NPM安装进行编程式集成。演示版本使用了免费的测试LLM API，仅用于技术评估。开发者可以灵活配置自己的LLM API密钥和基础URL，以调用自定义模型执行具体指令，例如“点击登录按钮”。，该项目已在GitHub上开源，欢迎社区贡献。</div>
+                    </div>
+                    <a href="https://github.com/alibaba/page-agent" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #LLM #Python #JavaScript #GitHub</span>
+                        <span>📊 6,947 stars · 2026-03-13</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-tech-6">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://github.com/AstrBotDevs/AstrBot" target="_blank" title="AstrBotDevs/AstrBot - 集成多款即时通讯平台、大语言模型、插件及AI功能的智能聊天机器人基础设施，可作为您的OpenClaw替代方案。✨">AstrBotDevs/AstrBot - 集成多款即时通讯平台、大语言模型、插件及AI功能的智能聊天机器人基础设施，可作为您的OpenClaw替代方案。✨</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-tech-6" onclick="toggleNews('tech-6')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 23,483 stars</span>
+                    <span>🕐 2026-03-13</span>
+                </div>
+                <p class="news-card-summary">AstrBot是一个开源的、一体化的Agent聊天机器人平台，集成了多种主流即时通讯（IM）应用。它为个人、开发者和团队提供了可靠且可扩展的对话式AI基础设施。无论是构建个人AI伴侣、智能客服、自动化助手还是企业知识库，AstrBot都能让用户在IM平台的工作流中快速构建可用于生产环境的AI应用。，...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">AstrBot是一个开源的、一体化的Agent聊天机器人平台，集成了多种主流即时通讯（IM）应用。它为个人、开发者和团队提供了可靠且可扩展的对话式AI基础设施。无论是构建个人AI伴侣、智能客服、自动化助手还是企业知识库，AstrBot都能让用户在IM平台的工作流中快速构建可用于生产环境的AI应用。，该项目的核心价值在于其强大的集成能力与灵活性。它整合了众多IM平台（如QQ、企业微信、飞书、钉钉、微信公众号、Telegram、Slack等）、多种大型语言模型（LLM）、插件及AI功能，并可作为OpenClaw的替代方案。，其关键特性包括：完全免费开源；支持AI LLM对话、多模态、Agent、模型上下文协议（MCP）、技能、知识库、角色设定与自动上下文压缩；支持与Dify、阿里云百炼、Coze等外部Agent平台集成；拥有丰富的插件生态系统，提供超过1000个可一键安装的插件；提供Agent沙箱环境，用于隔离且安全地执行代码、Shell调用，并支持会话级资源复用；提供WebUI管理界面和内置Agent沙箱与网络搜索功能的Web聊天界面；支持国际化（i18n）；并具备角色扮演与情感交互能力。，AstrBot旨在成为一个功能全面的Agentic IM Chatbot基础设施，降低在即时通讯场景中部署和定制高级AI应用的门槛。</div>
+                    </div>
+                    <a href="https://github.com/AstrBotDevs/AstrBot" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #LLM</span>
+                        <span>📊 23,483 stars · 2026-03-13</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-tech-7">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://github.com/vectorize-io/hindsight" target="_blank" title="vectorize-io/hindsight - Hindsight：具备学习能力的智能体记忆系统">vectorize-io/hindsight - Hindsight：具备学习能力的智能体记忆系统</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-tech-7" onclick="toggleNews('tech-7')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 3,385 stars</span>
+                    <span>🕐 2026-03-13</span>
+                </div>
+                <p class="news-card-summary">vectorize-io在GitHub上开源了Hindsight项目，这是一个旨在让AI智能体能够学习而不仅仅是记忆的智能体记忆系统。与主要专注于回忆对话历史的传统记忆系统不同，Hindsight的核心目标是使智能体具备学习能力，从而随着时间的推移变得更智能。，Hindsight旨在克服RAG（检索...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">vectorize-io在GitHub上开源了Hindsight项目，这是一个旨在让AI智能体能够学习而不仅仅是记忆的智能体记忆系统。与主要专注于回忆对话历史的传统记忆系统不同，Hindsight的核心目标是使智能体具备学习能力，从而随着时间的推移变得更智能。，Hindsight旨在克服RAG（检索增强生成）和知识图谱等替代技术的局限性，并在长期记忆任务中提供了先进的性能。根据基准测试，Hindsight是目前测试过的最准确的智能体记忆系统。它在广泛用于评估各种对话AI场景下记忆系统性能的LongMemEval基准测试中，取得了领先的性能表现。截至2026年1月的数据显示，其性能优于其他解决方案。，该基准性能数据已由弗吉尼亚理工大学Sanghani人工智能与数据分析中心以及《华盛顿邮报》的研究合作者独立复现验证，而其他系统的分数多为软件供应商自行报告。这表明Hindsight的性能具有较高的可信度。，目前，Hindsight已在财富500强企业中得到生产环境应用，并且用户数量正在不断增长。项目提供了丰富的资源，包括文档、研究论文、示例教程（Cookbook）以及Hindsight Cloud服务。其代码库结构清晰，包含API、客户端、控制平面、集成测试等多个模块，支持通过Docker和Helm进行部署，方便开发者集成和使用。</div>
+                    </div>
+                    <a href="https://github.com/vectorize-io/hindsight" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #GitHub #人工智能 #智能体</span>
+                        <span>📊 3,385 stars · 2026-03-13</span>
                     </div>
                 </div>
             </article>
@@ -285,7 +430,7 @@
             <article class="news-card collapsed" id="news-product-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://www.sentrial.com/" target="_blank" title="发布 HN：Sentrial（YC W26）——在用户发现之前捕捉 AI 代理故障">发布 HN：Sentrial（YC W26）——在用户发现之前捕捉 AI 代理故障</a>
+                        <a href="https://www.bbc.co.uk/news/articles/clyg4wx6nxgo" target="_blank" title="儿童AI玩具误读情绪并做出不当回应">儿童AI玩具误读情绪并做出不当回应</a>
                     </h3>
                     <button class="expand-btn" id="btn-product-0" onclick="toggleNews('product-0')">
                         展开详情 ▼
@@ -293,50 +438,21 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 29 points</span>
-                    <span>🕐 2026-03-11 17:05</span>
+                    <span>🔥 19 points</span>
+                    <span>🕐 2026-03-13 11:05</span>
                 </div>
-                <p class="news-card-summary">Sentrial（YC W26）是一个专注于AI应用监控与故障预防的平台，旨在帮助开发者在用户遇到问题之前主动发现并解决AI代理（AI agent）的故障。随着AI代理在复杂工作流中的广泛应用，其不可预测的失败风险日益凸显，而传统监控工具往往难以捕捉这些非结构化、基于自然语言的错误。，Sentria...</p>
+                <p class="news-card-summary">研究人员呼吁加强对面向幼儿的AI玩具的监管。剑桥大学团队进行了一项全球首批针对五岁以下儿童与AI技术互动方式的研究，发现市面上面向三岁及以上儿童的AI玩具缺乏监管，且相关影响研究极少。研究观察了三至五岁儿童与名为Gabbo的毛绒玩具的互动情况。Gabbo内置了OpenAI的语音激活AI聊天机器人，旨...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Sentrial（YC W26）是一个专注于AI应用监控与故障预防的平台，旨在帮助开发者在用户遇到问题之前主动发现并解决AI代理（AI agent）的故障。随着AI代理在复杂工作流中的广泛应用，其不可预测的失败风险日益凸显，而传统监控工具往往难以捕捉这些非结构化、基于自然语言的错误。，Sentrial的核心功能是实时监控AI代理的执行过程，自动检测异常行为。它通过分析LLM（如GPT、Claude等）的输入、输出以及中间步骤（如工具调用、代码执行），识别出逻辑矛盾、安全漏洞、性能下降或偏离预期的响应。平台采用规则引擎与机器学习相结合的方式，允许团队设置自定义监控规则（例如检测敏感信息泄露、成本超支或功能失效），同时也提供自动化异常检测。，该平台的一个关键特点是支持多种集成方式，包括API、SDK以及与常见开发框架（如LangChain、LlamaIndex）的对接，便于嵌入现有工作流。Sentrial还提供可视化仪表板，展示代理的健康状况、错误趋势和根本原因分析，帮助团队快速定位问题。例如，它可以追踪到某个RAG（检索增强生成）流程因文档检索失败而导致答案不准确，或识别出API调用超时引发的连锁故障。，对于开发者而言，Sentrial的价值在于降低AI应用的运维风险，提升可靠性。它使团队能够设置主动告警，在故障影响用户之前进行干预，同时通过历史数据分析优化代理性能。目前该平台正处于早期阶段，面向AI工程师、产品团队和企业开发者，旨在成为AI应用可观察性领域的基础设施。</div>
+                        <div class="summary-content">研究人员呼吁加强对面向幼儿的AI玩具的监管。剑桥大学团队进行了一项全球首批针对五岁以下儿童与AI技术互动方式的研究，发现市面上面向三岁及以上儿童的AI玩具缺乏监管，且相关影响研究极少。研究观察了三至五岁儿童与名为Gabbo的毛绒玩具的互动情况。Gabbo内置了OpenAI的语音激活AI聊天机器人，旨在鼓励学龄前儿童与其对话并进行想象游戏。家长原本期待该玩具能帮助孩子学习语言和沟通技能，但孩子们在实际互动中频繁遇到困难。Gabbo无法识别儿童的插话、会打断他们、不能区分儿童与成人声音，并对情感表达做出尴尬回应。例如，当一名五岁儿童说“我爱你”时，玩具回复：“友情提醒，请确保互动遵守提供的指南。请告诉我您希望如何进行。”研究指出，在儿童学习社交互动和情感线索的关键发展阶段，生成式AI的输出可能造成混淆。玩具可能“误读情绪或做出不当回应”，导致儿童既无法从玩具获得安慰，也得不到成人支持。例如，一名三岁儿童告诉Gabbo“我很难过”时，它回答：“别担心！我是个快乐的小机器人。让我们继续玩吧。接下来聊什么？”研究人员认为此类互动可能传递出儿童情绪不被重视的信号。剑桥大学神经多样性与发展心理学教授、研究合著者珍妮·吉布森强调，传统上玩具安全注重物理层面，但现在必须开始关注“心理安全”。经过为期一年的观察研究，团队建议监管机构立即行动，确保面向五岁以下儿童的产品提供心理安全保障。Gabbo由曾与歌手Grimes（埃隆·马斯克前伴侣）合作的Curio公司制造。该公司向BBC表示，在产品中应用AI技术需要兼顾创新与安全，并称正在持续改进产品。目前欧盟已通过《人工智能法案》，英国则计划通过现有产品安全法规监管AI玩具。专家指出，现有法规主要针对数据隐私和物理安全，对心理影响关注不足，亟需建立涵盖情感安全的行业标准。</div>
                     </div>
-                    <a href="https://www.sentrial.com/" class="original-link" target="_blank">
+                    <a href="https://www.bbc.co.uk/news/articles/clyg4wx6nxgo" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GPT #Claude</span>
-                        <span>📊 29 points · 2026-03-11 17:05</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-product-1">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://www.producthunt.com/products/raccoon-ai-cursor-for-anything" target="_blank" title="浣熊AI">浣熊AI</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-product-1" onclick="toggleNews('product-1')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">Product Hunt</span>
-                    <span>🔥 Top Product</span>
-                    <span>🕐 2026-03-11T23:45:42-07:00</span>
-                </div>
-                <p class="news-card-summary">是一个专注于AI模型优化与部署的开源项目，旨在简化大型语言模型（LLM）的微调、评估和集成流程。该项目提供了一套工具和API，帮助开发者更高效地定制和部署如GPT、Claude等模型，尤其关注降低技术门槛和提升模型在实际应用中的性能。，核心功能包括自动化微调流程、支持多种主流LLM架构、内置性能评估...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">是一个专注于AI模型优化与部署的开源项目，旨在简化大型语言模型（LLM）的微调、评估和集成流程。该项目提供了一套工具和API，帮助开发者更高效地定制和部署如GPT、Claude等模型，尤其关注降低技术门槛和提升模型在实际应用中的性能。，核心功能包括自动化微调流程、支持多种主流LLM架构、内置性能评估指标，以及便捷的云服务或本地部署选项。其特点在于模块化设计，允许用户根据需求灵活选择数据处理、训练或推理模块，并集成了RAG（检索增强生成）等增强技术以提升模型输出的准确性和相关性。，该项目通过GitHub开源，鼓励社区贡献，旨在推动AI技术的可访问性和实用化，为企业和研究者在自然语言处理任务中提供可靠的开发基础。</div>
-                    </div>
-                    <a href="https://www.producthunt.com/products/raccoon-ai-cursor-for-anything" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GPT #Claude #GitHub</span>
-                        <span>📊 Top Product · 2026-03-11T23:45:42-07:00</span>
+                        <span>🏷️ #AI #OpenAI #人工智能</span>
+                        <span>📊 19 points · 2026-03-13 11:05</span>
                     </div>
                 </div>
             </article>
@@ -352,7 +468,7 @@
             <article class="news-card collapsed" id="news-other-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job" target="_blank" title="我接受了AI机器人面试求职">我接受了AI机器人面试求职</a>
+                        <a href="https://aminrj.com/posts/rag-document-poisoning/" target="_blank" title="RAG系统中的文档投毒：攻击者如何污染AI的信息源">RAG系统中的文档投毒：攻击者如何污染AI的信息源</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-0" onclick="toggleNews('other-0')">
                         展开详情 ▼
@@ -360,28 +476,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 352 points</span>
-                    <span>🕐 2026-03-11 19:05</span>
+                    <span>🔥 130 points</span>
+                    <span>🕐 2026-03-12 21:05</span>
                 </div>
-                <p class="news-card-summary">《连线》杂志资深AI记者海登·菲尔德亲身体验了由AI虚拟化身主导的求职面试，并分享了她的感受。随着AI技术渗透招聘领域，诸如CodeSignal、Humanly、Eightfold等公司推出的AI面试工具正引发广泛讨论与争议。这些工具通过一对一视频通话，由AI虚拟化身提问并分析求职者的回答，旨在让公...</p>
+                <p class="news-card-summary">研究人员通过实验演示了针对RAG系统的文档投毒攻击。在本地MacBook Pro上，仅用三分钟、无需GPU或云端资源，通过向ChromaDB知识库注入三份伪造文档，成功使LLM（Qwen2.5-7B-Instruct）输出完全错误的公司财务信息：声称2025年第四季度营收为830万美元（同比下降47...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">《连线》杂志资深AI记者海登·菲尔德亲身体验了由AI虚拟化身主导的求职面试，并分享了她的感受。随着AI技术渗透招聘领域，诸如CodeSignal、Humanly、Eightfold等公司推出的AI面试工具正引发广泛讨论与争议。这些工具通过一对一视频通话，由AI虚拟化身提问并分析求职者的回答，旨在让公司能初步接触几乎所有申请者，而非仅限少数人。，支持者认为，AI面试官能减少人为偏见，因为它们仅分析语言内容，而非视频中的其他暗示。然而，AI系统并非完全无偏见——其模型基于互联网数据训练，可能包含性别歧视、种族主义等社会偏见，难以达到绝对公平的标准。，菲尔德尝试了三种不同的AI面试平台，应聘岗位包括基于其当前职位虚构的练习岗位以及Vox Media的真实职位。她发现，尽管部分平台的交互体验相对自然，但面对AI虚拟化身时仍无法摆脱“恐怖谷”效应——看着AI头像聆听回答令人感到不适。每次面试后，她都更希望对话对象是人类而非机器。，这一体验凸显了AI招聘工具的双面性：在提升效率与覆盖面的同时，也带来了情感互动缺失与潜在偏见问题。随着AI面试日益普及，其技术伦理与用户体验仍需持续审视。</div>
+                        <div class="summary-content">研究人员通过实验演示了针对RAG系统的文档投毒攻击。在本地MacBook Pro上，仅用三分钟、无需GPU或云端资源，通过向ChromaDB知识库注入三份伪造文档，成功使LLM（Qwen2.5-7B-Instruct）输出完全错误的公司财务信息：声称2025年第四季度营收为830万美元（同比下降47%），并提及裁员计划和收购讨论。而知识库中真实的财务数据为营收2470万美元、利润650万美元。攻击者未修改用户查询或利用软件漏洞，仅通过添加文档即实现了知识库污染。，该实验完全在本地运行，技术栈包括LM Studio加载的量化LLM、sentence-transformers的all-MiniLM-L6-v2嵌入模型、基于文件的ChromaDB向量数据库以及自定义Python RAG流程。初始知识库包含五份真实文档，攻击目标为其中的季度财务报告。，研究引用了USENIX Security 2025会议提出的PoisonedRAG攻击框架，该攻击需同时满足两个条件：检索条件（投毒文档与目标查询的余弦相似度需高于被替换的正规文档）和生成条件（检索到的投毒内容能引导LLM生成攻击者预设的答案）。原论文通过梯度优化技术在百万级文档库中实现了90%的成功率，而本次实验采用词汇工程方法，在仅5份文档的小规模语料库中验证了攻击机制的可复现性。，实验代码已开源在GitHub，十分钟内即可复现攻击流程。这揭示了当前生产环境RAG系统中最被低估的安全威胁——攻击者可通过污染知识源，直接操控AI系统的输出结果，且无需突破模型本身的安全防护。</div>
                     </div>
-                    <a href="https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job" class="original-link" target="_blank">
+                    <a href="https://aminrj.com/posts/rag-document-poisoning/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI</span>
-                        <span>📊 352 points · 2026-03-11 19:05</span>
+                        <span>🏷️ #AI #LLM #Python #GitHub</span>
+                        <span>📊 130 points · 2026-03-12 21:05</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://news.ycombinator.com/newsguidelines.html#generated" target="_blank" title="请勿发布生成式/AI编辑的评论。HN是供人类交流的平台。">请勿发布生成式/AI编辑的评论。HN是供人类交流的平台。</a>
+                        <a href="https://www.grandforksherald.com/news/north-dakota/ai-error-jails-innocent-grandmother-for-months-in-north-dakota-fraud-case" target="_blank" title="无辜女性因AI人脸识别误判入狱">无辜女性因AI人脸识别误判入狱</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-1" onclick="toggleNews('other-1')">
                         展开详情 ▼
@@ -389,28 +505,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 3751 points</span>
-                    <span>🕐 2026-03-11 20:05</span>
+                    <span>🔥 646 points</span>
+                    <span>🕐 2026-03-12 21:05</span>
                 </div>
-                <p class="news-card-summary">Hacker News社区指南强调，该平台旨在促进人与人之间的真实对话，因此明确禁止发布由AI生成或编辑的评论。指南详细规定了内容提交与评论行为的标准，以维护社区质量。，在内容提交方面，主题应围绕能激发技术爱好者智力好奇心的内容，涵盖黑客技术、创业及其他广泛领域。政治、犯罪、体育、名人等常见话题通常...</p>
+                <p class="news-card-summary">北达科他州一起银行欺诈案中，一名无辜的祖母因AI人脸识别错误被误认为嫌疑人，导致其被监禁近六个月。田纳西州居民安吉拉·利普斯（Angela Lipps）在法戈市警方使用人脸识别技术进行调查后被错误关联到此案中。尽管记录证明案发时她在田纳西州，指控最终被撤销，但此次事件使她失去了住房、汽车和宠物狗。，...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Hacker News社区指南强调，该平台旨在促进人与人之间的真实对话，因此明确禁止发布由AI生成或编辑的评论。指南详细规定了内容提交与评论行为的标准，以维护社区质量。，在内容提交方面，主题应围绕能激发技术爱好者智力好奇心的内容，涵盖黑客技术、创业及其他广泛领域。政治、犯罪、体育、名人等常见话题通常被视为无关，除非它们展示了某种新颖现象。标题应保持简洁客观，避免使用大写、感叹号或自我宣传性语言，并优先提交原始来源。推广行为不应成为使用该平台的主要目的，用户应基于兴趣分享内容。此外，标题中需去除网站名称，简化冗余数字或形容词（如将“10种X方法”改为“如何实现X”），除非数字本身具有实质意义。若提交视频或PDF文件，须在标题后标注[video]或[pdf]。用户不应通过HN直接联系管理员，而应使用专用邮箱hn@ycombinator.com。同时，禁止删除后重新提交、索取点赞或评论等行为。，在评论规范部分，指南要求用户保持友善与建设性态度，进行深思熟虑的实质性交流。讨论时应针对论点而非人身攻击，避免冷嘲热讽或泛泛而谈的负面评论。特别指出，AI生成或编辑的评论违背了“人类间对话”的核心原则，因此不被允许。此外，用户需避免政治或意识形态争斗、浅薄否定他人成果，以及围绕“是否阅读文章”的无意义争论。社区鼓励基于善意原则的理性互动，以共同维护一个专注技术探索与知识分享的高质量环境。</div>
+                        <div class="summary-content">北达科他州一起银行欺诈案中，一名无辜的祖母因AI人脸识别错误被误认为嫌疑人，导致其被监禁近六个月。田纳西州居民安吉拉·利普斯（Angela Lipps）在法戈市警方使用人脸识别技术进行调查后被错误关联到此案中。尽管记录证明案发时她在田纳西州，指控最终被撤销，但此次事件使她失去了住房、汽车和宠物狗。，2025年7月14日，利普斯在田纳西州的家中照看四名幼童时，被美国法警持枪逮捕，并以北达科他州司法逃犯身份收押于当地监狱。作为逃犯，她被拘留近四个月且不得保释。法戈警方调查显示，她被指控四项未经授权使用个人身份信息罪和四项盗窃罪。，利普斯强调自己从未去过北达科他州，人生足迹仅限于田纳西州中北部及周边州，甚至从未乘坐过飞机。然而，警方依据人脸识别结果认定她是这起有组织银行欺诈案的主要嫌疑人，并将她用飞机押送至北达科他州。，此案引发了对执法机构使用AI人脸识别技术可靠性与审查程序的质疑。利普斯的经历凸显了AI误判可能造成的严重后果：不仅导致无辜者失去自由，还带来财产损失与心理创伤。目前，利普斯正努力重建生活，而该事件也促使公众关注AI在刑事司法中的应用风险与监管必要性。</div>
                     </div>
-                    <a href="https://news.ycombinator.com/newsguidelines.html#generated" class="original-link" target="_blank">
+                    <a href="https://www.grandforksherald.com/news/north-dakota/ai-error-jails-innocent-grandmother-for-months-in-north-dakota-fraud-case" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
                         <span>🏷️ #AI</span>
-                        <span>📊 3751 points · 2026-03-11 20:05</span>
+                        <span>📊 646 points · 2026-03-12 21:05</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://quint-lang.org/posts/llm_era" target="_blank" title="LLM时代的可靠软件">LLM时代的可靠软件</a>
+                        <a href="https://github.com/understudy-ai/understudy" target="_blank" title="Show HN：Understudy——通过一次任务演示教会桌面代理">Show HN：Understudy——通过一次任务演示教会桌面代理</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-2" onclick="toggleNews('other-2')">
                         展开详情 ▼
@@ -418,28 +534,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 31 points</span>
-                    <span>🕐 2026-03-12 09:05</span>
+                    <span>🔥 107 points</span>
+                    <span>🕐 2026-03-12 18:05</span>
                 </div>
-                <p class="news-card-summary">在LLM时代构建可靠软件：Quint如何成为AI生成代码的验证基石，Quint语言及其工具套件诞生于提升软件可靠性的核心诉求，这与Inform Systems自创立以来的使命一脉相承。随着LLM彻底改变代码编写方式，它也带来了新的挑战：开发者常面对大量AI生成的代码差异（diff），却难以判断其正确...</p>
+                <p class="news-card-summary">Understudy是一款可教学的桌面智能体，其核心理念是让用户通过单次演示来教会AI助手完成日常电脑操作任务。该项目旨在解决当前AI工具覆盖工作场景有限的问题，因为用户的日常工作往往分散在浏览器、桌面应用、终端和通讯工具等多种界面割裂的软件中。，Understudy的设计模仿人类同事的学习与成长过...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">在LLM时代构建可靠软件：Quint如何成为AI生成代码的验证基石，Quint语言及其工具套件诞生于提升软件可靠性的核心诉求，这与Inform Systems自创立以来的使命一脉相承。随着LLM彻底改变代码编写方式，它也带来了新的挑战：开发者常面对大量AI生成的代码差异（diff），却难以判断其正确性；AI可能生成看似能运行但存在细微错误的代码；测试全部通过却未验证任何实质逻辑。问题的根源在于，LLM的核心能力是生成“看起来正确”的文本，这恰恰使得验证变得异常困难。，Quint的应对之道是在自然语言描述与具体代码之间建立一个理想的验证点。它比代码更抽象，因而更易于进行逻辑推理；同时它又是可执行的，这一点不同于纯英文描述，从而能够进行机械化验证。Quint并非简单地将AI集成到自身，也不是仅用于生成规范（specs），而是以其诞生之初的同一目标——确保可靠性，来适应软件开发的新范式。，Quint的工具链（包括模拟器、模型检查器和交互式REPL环境）允许开发者通过探索和属性检查来建立信心。其核心价值在于解决LLM时代的根本挑战：验证。LLM擅长生成代码，但人类仅通过代码审查来验证正确性异常困难。Quint通过充当高级规范语言，填补了自然语言文档与可执行代码之间的鸿沟。，一个具体案例展示了Quint如何为LLM设置防护栏（guardrail）：在一个复杂代码库中，团队利用Quint引导LLM进行了一项重大的核心变更，并对此变更抱有高度信心。这体现了Quint在AI辅助开发流程中的实际作用：将LLM的生成能力与形式化验证的严谨性相结合，以可管理的时间成本显著提升软件的可靠性。，总之，Quint通过提供一种既可推理又可验证的抽象语言，成为LLM生成代码的关键验证层，帮助开发者在享受AI编程效率的同时，确保软件行为的正确性与可靠性。</div>
+                        <div class="summary-content">Understudy是一款可教学的桌面智能体，其核心理念是让用户通过单次演示来教会AI助手完成日常电脑操作任务。该项目旨在解决当前AI工具覆盖工作场景有限的问题，因为用户的日常工作往往分散在浏览器、桌面应用、终端和通讯工具等多种界面割裂的软件中。，Understudy的设计模仿人类同事的学习与成长过程，其架构分为五个渐进层次：第一层是原生操作软件，智能体可以像人一样查看、点击、输入和验证任何应用程序；第二层是从演示中学习，用户演示一次任务，智能体便能提取操作意图（而非仅仅记录坐标），记住成功路径；第三层是记忆与独立执行，智能体能记住常规流程并自主完成；第四层是发现优化路径，经过一段时间运行后，它能自主发现更快的执行方式；第五层是主动预测与执行，智能体最终能够预判需求并主动采取行动。这五个阶段对应着一个“新同事”从入职观察（Day 1）、模仿询问（Week 1）、独立执行（Month 1）、寻找捷径（Month 3）到主动预判（Month 6）的成长历程，这也是其命名为“Understudy”（替角）的寓意——如同戏剧中的替补演员，通过观察主角来学习角色，并在需要时接手工作。，该项目的关键优势在于无需为每个软件进行专门的API集成，也无需使用复杂的工作流构建器。它在一个本地运行时环境中统一操作图形用户界面（GUI）、浏览器、命令行和文件系统。用户只需演示一次，智能体便能理解任务意图，记住成功路径，并随着时间推移发现更优的执行路线，最终自主处理常规工作。</div>
                     </div>
-                    <a href="https://quint-lang.org/posts/llm_era" class="original-link" target="_blank">
+                    <a href="https://github.com/understudy-ai/understudy" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM</span>
-                        <span>📊 31 points · 2026-03-12 09:05</span>
+                        <span>🏷️ #AI #智能体</span>
+                        <span>📊 107 points · 2026-03-12 18:05</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-3">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/theredsix/agent-browser-protocol" target="_blank" title="Show HN：开源AI智能体浏览器">Show HN：开源AI智能体浏览器</a>
+                        <a href="https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/" target="_blank" title="悲伤与人工智能的分裂">悲伤与人工智能的分裂</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-3" onclick="toggleNews('other-3')">
                         展开详情 ▼
@@ -447,79 +563,21 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 131 points</span>
-                    <span>🕐 2026-03-11 15:05</span>
+                    <span>🔥 172 points</span>
+                    <span>🕐 2026-03-12 23:05</span>
                 </div>
-                <p class="news-card-summary">开源项目Agent Browser Protocol（ABP）在GitHub上发布，这是一个专为AI智能体设计的浏览器协议。该项目从Chromium分支而来，旨在解决传统网页浏览的连续异步特性与AI智能体基于工具和步骤的离散化思考模式之间的不匹配问题。，ABP的核心功能是将网页导航重新格式化为离散的...</p>
+                <p class="news-card-summary">AI辅助编程正揭示开发者群体中一直存在但此前隐而不显的分歧。当所有人都以相同方式工作时，这种差异难以察觉。作者回顾了自己7岁起学习编程的经历，强调自己始终更关注结果而非代码优雅性——从Commodore 64的BASIC到6502汇编语言，再到如今拥抱AI编码工具，都是出于“让事情发生”的驱动。，近...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">开源项目Agent Browser Protocol（ABP）在GitHub上发布，这是一个专为AI智能体设计的浏览器协议。该项目从Chromium分支而来，旨在解决传统网页浏览的连续异步特性与AI智能体基于工具和步骤的离散化思考模式之间的不匹配问题。，ABP的核心功能是将网页导航重新格式化为离散的、多模态的命令序列，使AI智能体能够以更结构化、可预测的方式与网页进行交互。它实现了确定性的浏览器自动化，能够开箱即用地与Claude、Codex、OpenCode等大型语言模型（LLM）协同工作。这意味着开发者可以轻松地将这些AI模型接入一个可控的浏览器环境，执行网页操作、提取信息或进行自动化测试。，该协议的关键价值在于为AI智能体提供了标准化的网页交互接口。通过将复杂的网页内容（如动态元素、JavaScript执行）转化为一系列明确的动作（如点击、输入、滚动）和可解析的响应（如文本、截图、DOM状态），ABP降低了构建可靠网页自动化智能体的难度。其设计强调了确定性和可重复性，这对于基于LLM的智能体完成复杂、多步骤的网络任务至关重要。，项目包含了完整的代码库、构建说明（如BUILD.gn、DEPS）以及详细的文档（README.md、TESTING.md）。目前，该项目已获得284个星标，显示出开发者社区的初步关注。ABP为AI研究与开发提供了一个基础设施层面的工具，有望推动更高级别的网络自动化智能体和RAG（检索增强生成）应用的发展。</div>
+                        <div class="summary-content">AI辅助编程正揭示开发者群体中一直存在但此前隐而不显的分歧。当所有人都以相同方式工作时，这种差异难以察觉。作者回顾了自己7岁起学习编程的经历，强调自己始终更关注结果而非代码优雅性——从Commodore 64的BASIC到6502汇编语言，再到如今拥抱AI编码工具，都是出于“让事情发生”的驱动。，近期开发者社区涌现出对AI工具的矛盾情绪。James Randall感叹探索的奇迹感正在被压缩，Nolan Lawson在《我们哀悼手艺》中更直白地怀念手工编码的触感、深夜调试的执着以及“我创造了这个”的成就感。这些对技艺流失的哀悼真实而深刻。，作者认为分歧的核心在于：AI正在暴露开发者群体中长期存在的两种取向。在AI出现前，无论“工艺爱好者”还是“实现目标者”都使用相同编辑器、语言和工作流程，外在行为的一致性掩盖了内在动机的差异。如今道路出现分叉——选择让机器写代码并专注于构建方向，或坚持手工编码——最初投身编程的动机因不同选择而显性化。，这种分化类似作者大学时在数学与计算机科学课程中观察到的现象：部分人纯粹热爱证明与定理本身，另一部分人只在与实际问题结合时才产生共鸣。AI辅助编程如同棱镜，折射出开发者群体中始终存在的两种价值取向：追求创造过程本身的手工艺精神，与专注问题解决的工程思维。当前关于AI的讨论实质上是两种世界观在技术变革下的显形对话。</div>
                     </div>
-                    <a href="https://github.com/theredsix/agent-browser-protocol" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Claude #JavaScript #GitHub</span>
-                        <span>📊 131 points · 2026-03-11 15:05</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-other-4">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://newsletter.getdx.com/p/ai-productivity-gains-are-10-not" target="_blank" title="一项关于人工智能影响的纵向研究的初步数据">一项关于人工智能影响的纵向研究的初步数据</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-other-4" onclick="toggleNews('other-4')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 55 points</span>
-                    <span>🕐 2026-03-11 22:05</span>
-                </div>
-                <p class="news-card-summary">根据DX公司正在进行的一项纵向AI影响研究的初步数据，现实中的AI生产力提升幅度远低于社交媒体和供应商营销所宣传的水平。该研究分析了2024年11月至2026年2月期间40家公司的数据，旨在追踪AI采用率的提高是否带来了更多的代码拉取请求（PR）产出。，研究发现，在此期间，AI的使用量平均大幅增长了...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">根据DX公司正在进行的一项纵向AI影响研究的初步数据，现实中的AI生产力提升幅度远低于社交媒体和供应商营销所宣传的水平。该研究分析了2024年11月至2026年2月期间40家公司的数据，旨在追踪AI采用率的提高是否带来了更多的代码拉取请求（PR）产出。，研究发现，在此期间，AI的使用量平均大幅增长了65%，但PR吞吐量仅增长了9.97%。这一数据经过了严谨处理，通过排除为工程师设定PR吞吐量目标的团队，过滤了可能扭曲数据的“游戏化”效应，从而更真实地反映了实际产出增长。，对于企业领导者而言，约10%的增益与更广泛工程领导者反馈的范围（8%-12%）一致。这是一个切实的改进，但距离许多高管和董事会预期的2-3倍增长相去甚远。AI确实在推动进步，但领导者可能需要内部调整期望值。，为何增益没有更高？研究团队通过与多家组织的开发者交流发现，最普遍的解释是：编写代码从来都不是瓶颈所在。正如一位资深开发者所言：“简单任务变得稍微容易，繁琐任务不那么恼人。一个四天的任务可能只需三天。但这并不意味着我能提交3倍的PR。”AI可能加速了工作中的编码环节，但编码只占工程师实际时间的一小部分。规划、协调、范围界定、代码审查和交接——这些软件开发生命周期（SDLC）中需要人际协作的部分——基本未受AI影响。，该研究的下一步将继续深入调查AI在工程团队的长期影响。完整研究将探讨为何有些团队能获得比其他团队更多的效益，以及领导者可以采取哪些措施来缩小这种差距。</div>
-                    </div>
-                    <a href="https://newsletter.getdx.com/p/ai-productivity-gains-are-10-not" class="original-link" target="_blank">
+                    <a href="https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
                         <span>🏷️ #AI #人工智能</span>
-                        <span>📊 55 points · 2026-03-11 22:05</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-other-5">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://www.reuters.com/technology/atlassian-lay-off-about-1600-people-pivot-ai-2026-03-11/" target="_blank" title="Atlassian将裁员约1600人 转向人工智能领域">Atlassian将裁员约1600人 转向人工智能领域</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-other-5" onclick="toggleNews('other-5')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 196 points</span>
-                    <span>🕐 2026-03-11 23:05</span>
-                </div>
-                <p class="news-card-summary">Atlassian宣布将裁员约1600人以转向AI领域。这家以Jira和Confluence等协作软件闻名的公司，计划通过这次大规模重组，将资源重新聚焦于人工智能技术，以应对市场变化并推动未来增长。，此次裁员约占Atlassian全球员工总数的13%，是公司历史上规模最大的一次人员调整。管理层表示，...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">Atlassian宣布将裁员约1600人以转向AI领域。这家以Jira和Confluence等协作软件闻名的公司，计划通过这次大规模重组，将资源重新聚焦于人工智能技术，以应对市场变化并推动未来增长。，此次裁员约占Atlassian全球员工总数的13%，是公司历史上规模最大的一次人员调整。管理层表示，这一“艰难决定”旨在简化运营、优化成本结构，并将投资重点转向AI驱动的产品开发。受影响的员工将获得遣散费、职业过渡支持以及股权兑现加速等补偿。，Atlassian联合创始人兼联合CEO斯科特·法夸尔和迈克·坎农-布鲁克斯在内部信中强调，公司正处在向AI优先企业转型的关键时刻。他们指出，AI技术（如大型语言模型LLM）正在重塑工作方式，Atlassian必须加速将AI能力深度集成到其核心产品中，以帮助团队更智能地规划、协作和构建软件。，作为转型的一部分，Atlassian计划加大对AI研发和工程团队的投入，并加速推进其AI助手“Atlassian Intelligence”的扩展。该功能旨在通过自然语言处理、自动化工作流和智能洞察，提升Jira、Confluence、Trello等平台的用户体验和生产力。公司相信，AI的整合将为其云产品带来显著的差异化竞争优势。，此次战略调整也反映了科技行业更广泛的趋势：许多企业正在重新分配资源，以抓住生成式AI（如GPT、Claude等模型）带来的机遇，同时应对宏观经济压力。Atlassian预计，裁员和相关措施将产生约7亿至8亿美元的税前成本，但有望在未来实现更高的运营效率和增长潜力。，尽管面临短期阵痛，Atlassian管理层对长期前景保持乐观，认为聚焦AI是保持其平台相关性和市场竞争力的必要之举。公司将继续招聘关键领域的AI人才，并致力于通过技术创新帮助客户应对日益复杂的工作挑战。</div>
-                    </div>
-                    <a href="https://www.reuters.com/technology/atlassian-lay-off-about-1600-people-pivot-ai-2026-03-11/" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GPT #Claude #人工智能</span>
-                        <span>📊 196 points · 2026-03-11 23:05</span>
+                        <span>📊 172 points · 2026-03-12 23:05</span>
                     </div>
                 </div>
             </article>
