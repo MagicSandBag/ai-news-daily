@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News Daily - 2026年3月31日</title>
+    <title>AI News Daily - 2026年4月1日</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="header-inner">
             <div class="logo">AI News <span>Daily</span></div>
-            <div class="header-meta">2026年3月31日 · 星期二</div>
+            <div class="header-meta">2026年4月1日 · 星期三</div>
             <nav class="nav-links">
                 <a href="archive.html">📅 归档</a>
                 <a href="#" onclick="location.reload(); return false;">🔄 刷新</a>
@@ -20,7 +20,7 @@
 
     <main>
         <div class="date-header">
-            <div class="date">2026年3月31日</div>
+            <div class="date">2026年4月1日</div>
             <div class="subtitle"><span class="emoji">☕</span> 早安，这是今天的 AI 每日速递</div>
         </div>
 
@@ -35,7 +35,7 @@
             <article class="news-card collapsed" id="news-global-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://twitter.com/Fried_rice/status/2038894956459290963" target="_blank" title="Claude Code源代码通过其NPM注册表中的映射文件遭泄露">Claude Code源代码通过其NPM注册表中的映射文件遭泄露</a>
+                        <a href="https://ccunpacked.dev/" target="_blank" title="Claude代码解析：可视化指南">Claude代码解析：可视化指南</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-0" onclick="toggleNews('global-0')">
                         展开详情 ▼
@@ -43,28 +43,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 560 points</span>
-                    <span>🕐 2026-03-31 09:23</span>
+                    <span>🔥 659 points</span>
+                    <span>🕐 2026-04-01 05:25</span>
                 </div>
-                <p class="news-card-summary">近日，Anthropic公司旗下AI编程助手Claude Code的源代码疑似通过NPM注册表中的映射文件意外泄露。这一事件引发了开发者社区对AI工具代码安全性和供应链风险的关注。，根据披露的信息，泄露的源代码可能包含Claude Code的核心逻辑、内部API调用结构以及模型交互机制。尽管Anth...</p>
+                <p class="news-card-summary">Claude Code Unpacked：一份可视化指南，当你在Claude Code中输入信息时，背后发生了什么？这份指南直接从源代码出发，揭示了其内部运作机制，包括智能体循环、超过50种工具、多智能体编排以及一些未发布的功能。，核心流程：智能体循环，从按键到渲染响应，整个过程被分解为11个步骤：...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">近日，Anthropic公司旗下AI编程助手Claude Code的源代码疑似通过NPM注册表中的映射文件意外泄露。这一事件引发了开发者社区对AI工具代码安全性和供应链风险的关注。，根据披露的信息，泄露的源代码可能包含Claude Code的核心逻辑、内部API调用结构以及模型交互机制。尽管Anthropic尚未发布官方声明，但技术社区分析指出，泄露内容可能涉及专有的提示工程模板、代码生成流水线配置以及与Claude系列LLM集成的关键参数。这些技术细节若被公开，可能让竞争对手深入了解其代码生成策略，甚至复制其工作流程。，Claude Code作为基于Claude模型的专用编程工具，其价值在于能够理解上下文、生成高质量代码片段并提供智能调试建议。此次泄露事件特别值得关注的是，源代码可能通过构建过程中生成的source map文件被暴露，这类文件通常用于调试，但若配置不当会将压缩后的代码映射回原始可读形式。安全研究人员提醒，在NPM等公共注册表发布包时，务必排除.map等非必要文件，或对敏感内容进行混淆处理。，该事件也凸显了AI驱动开发工具面临的安全挑战：一方面，企业需要平衡代码透明度与知识产权保护；另一方面，开发者生态依赖开源组件和公共注册表，如何防止敏感信息意外泄露成为重要课题。目前尚不清楚泄露范围及是否包含训练数据或模型权重等核心资产，但事件已促使多家AI公司重新评估其代码发布流程的安全措施。</div>
+                        <div class="summary-content">Claude Code Unpacked：一份可视化指南，当你在Claude Code中输入信息时，背后发生了什么？这份指南直接从源代码出发，揭示了其内部运作机制，包括智能体循环、超过50种工具、多智能体编排以及一些未发布的功能。，核心流程：智能体循环，从按键到渲染响应，整个过程被分解为11个步骤：1. 用户输入；2. 消息处理；3. 历史记录；4. 系统指令；5. API调用；6. 令牌处理；7. 工具判断；8. 循环执行；9. 渲染输出；10. 钩子函数；11. 等待交互。在交互模式下，输入来自Ink的TextInput组件；在非交互模式下，则从标准输入（stdin）读取。，架构总览，项目包含超过数千行代码和数百个文件，主要模块包括：，- 工具与命令：核心功能集。，- 核心处理：主要的逻辑处理层。，- UI层：用户界面组件。，- 基础设施：底层支持服务。，- 支持与工具类：实用功能。，- 个性与用户体验：交互与体验优化。，工具系统详解，Claude Code内置了超过50种工具，按功能分类：，- 文件操作：包括FileRead、FileEdit、FileWrite、Glob、Grep、NotebookEdit等6种工具。，- 执行：包含Bash、PowerShell、REPL等3种工具。，- 搜索与获取：包括WebBrowser（需授权）、WebFetch、WebSearch、ToolSearch等4种工具。，- 智能体与任务：包含Agent、SendMessage、TaskCreate、TaskGet、TaskList、TaskUpdate、TaskStop、TaskOutput、TeamCreate、TeamDelete、ListPeers（需授权）等11种工具。，- 规划：包含EnterPlanMode、ExitPlanMode、EnterWorktree、ExitWorktree、VerifyPlanExecution（需授权）等5种工具。，- MCP：包含mcp、ListMcpResources、ReadMcpResource、McpAuth等4种工具。，- 系统：包含AskUserQuestion、TodoWrite、Skill、Config、RemoteTrigger（需授权）等11种工具。，- 实验性功能：包含Sleep、SendUserMessage、StructuredOutput（需授权）等8种工具。，命令目录，Claude Code提供了丰富的斜杠命令，主要类别包括：，- 设置与配置：如 /init, /login, /config, /model, /mcp 等12个命令。，- 日常工作流：如 /compact, /memory, /plan, /files, /summary, /tasks, /agents 等24个命令。，- 代码审查与Git：如 /review, /commit, /diff, /pr_comments, /security-review 等13个命令。，- 调试与诊断：如 /status, /stats, /cost, /think-back, /debug-tool-call 等23个命令。，该项目通过清晰的架构、丰富的工具集和命令系统，构建了一个功能强大且可深度探索的AI编程助手环境。</div>
                     </div>
-                    <a href="https://twitter.com/Fried_rice/status/2038894956459290963" class="original-link" target="_blank">
+                    <a href="https://ccunpacked.dev/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Claude</span>
-                        <span>📊 560 points · 2026-03-31 09:23</span>
+                        <span>🏷️ #AI #Claude #智能体</span>
+                        <span>📊 659 points · 2026-04-01 05:25</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/drona23/claude-token-efficient" target="_blank" title="通用 Claude.md – 削减 Claude 输出令牌">通用 Claude.md – 削减 Claude 输出令牌</a>
+                        <a href="https://github.com/califio/publications/blob/main/MADBugs/CVE-2026-4747/write-up.md" target="_blank" title="Claude编写了完整的FreeBSD远程内核RCE漏洞利用程序并获取Root权限（CVE-2026-4747）">Claude编写了完整的FreeBSD远程内核RCE漏洞利用程序并获取Root权限（CVE-2026-4747）</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-1" onclick="toggleNews('global-1')">
                         展开详情 ▼
@@ -72,28 +72,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 363 points</span>
-                    <span>🕐 2026-03-31 02:23</span>
+                    <span>🔥 95 points</span>
+                    <span>🕐 2026-04-01 06:25</span>
                 </div>
-                <p class="news-card-summary">GitHub项目“claude-token-efficient”提供了一个名为“Universal CLAUDE.md”的解决方案，旨在显著减少Claude AI模型输出内容的冗余，从而节省输出token消耗。该项目核心是一个可即插即用的配置文件，用户只需将其放入项目根目录，无需修改任何代码即可生效...</p>
+                <p class="news-card-summary">近日，安全研究人员披露了FreeBSD内核中的一个高危漏洞CVE-2026-4747。该漏洞存在于`kgssapi.ko`内核模块的RPCSEC_GSS实现中，是一个栈缓冲区溢出漏洞，可导致远程内核代码执行并最终获得root权限的交互式shell。受影响的版本包括FreeBSD 13.5（p11之前...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">GitHub项目“claude-token-efficient”提供了一个名为“Universal CLAUDE.md”的解决方案，旨在显著减少Claude AI模型输出内容的冗余，从而节省输出token消耗。该项目核心是一个可即插即用的配置文件，用户只需将其放入项目根目录，无需修改任何代码即可生效。据基准测试，该方案能将Claude的输出冗余降低约63%。，该工具主要针对Claude默认输出模式中常见的低价值内容进行优化，例如：每次回应开头的“Sure!”、“Great question!”等客套语；结尾的“I hope this helps!”等固定结语；过度使用破折号、智能引号等可能破坏解析器的Unicode字符；在回答问题前复述用户问题；添加未请求的额外建议；对代码进行不必要的过度抽象设计；以及盲目附和错误陈述等。这些冗余内容不仅增加了token消耗，也影响了输出的简洁性和可解析性。，项目文件CLAUDE.md会被Claude Code功能自动读取并立即改变模型行为。它特别适用于高输出量的自动化流程（如简历生成机器人、智能体循环、代码生成）、需要重复执行结构化任务的场景，以及需要跨会话保持输出格式一致且易于解析的团队协作环境。，但开发者指出，该方案主要优化输出token，而大部分Claude使用成本来自输入token。因此，它对于单次短查询或临时性使用可能并不划算，因为文件本身需要加载到上下文，在低输出量场景下可能导致token净增加。此外，它无法解决更深层的问题，如模型幻觉或架构漂移，这类问题需要更复杂的钩子、门控和机制来约束。，该项目目前主要针对Claude模型进行了基准测试，但其规则设计是模型无关的，理论上适用于任何能读取上下文的模型，不过在Llama.cpp、Mistral等本地模型上的效果尚未经过验证。</div>
+                        <div class="summary-content">近日，安全研究人员披露了FreeBSD内核中的一个高危漏洞CVE-2026-4747。该漏洞存在于`kgssapi.ko`内核模块的RPCSEC_GSS实现中，是一个栈缓冲区溢出漏洞，可导致远程内核代码执行并最终获得root权限的交互式shell。受影响的版本包括FreeBSD 13.5（p11之前）、14.3（p10之前）、14.4（p1之前）和15.0（p5之前）。攻击面为加载了`kgssapi.ko`模块的NFS服务器（端口2049/TCP）。，漏洞的根本原因位于`sys/rpc/rpcsec_gss/svc_rpcsec_gss.c`文件的`svc_rpc_gss_validate()`函数中。该函数在验证GSS-API签名时，会先将32字节的固定RPC头部字段写入一个128字节的栈缓冲区（`rpchdr[]`），然后紧接着将整个RPCSEC_GSS凭证体（`oa_length`字节）复制到剩余空间中。问题在于，复制前缺少对`oa_length`的边界检查。栈缓冲区在存放32字节头部后，仅剩96字节空间用于存放凭证体。如果攻击者构造的凭证体长度超过96字节，就会导致栈缓冲区溢出，覆盖栈上的局部变量、被调用者保存的寄存器以及函数返回地址，从而在后续调用`gss_verify_mic()`之前就实现了控制流劫持。，在修复版本（如14.4-RELEASE-p1）中，补丁在复制操作前添加了边界检查：`if (oa->oa_length > sizeof(rpchdr) - 32) return (FALSE);`，确保凭证体长度不会超出可用空间。，此漏洞的特别之处在于，整个漏洞的发现、分析和利用代码的撰写过程均由Anthropic的AI助手Claude完成。研究人员仅提供了初始的漏洞公告和补丁链接，Claude便自主完成了对补丁的逆向分析、漏洞原理的深入理解，并最终编写出完整的远程内核利用代码。该利用代码能够绕过ASLR（地址空间布局随机化）和SMAP（管理模式访问保护），在目标系统上实现稳定的远程代码执行，并返回一个root权限的交互式shell。这一案例展示了高级LLM在漏洞研究和利用开发领域的潜在能力。</div>
                     </div>
-                    <a href="https://github.com/drona23/claude-token-efficient" class="original-link" target="_blank">
+                    <a href="https://github.com/califio/publications/blob/main/MADBugs/CVE-2026-4747/write-up.md" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
-                        <span>📊 363 points · 2026-03-31 02:23</span>
+                        <span>🏷️ #AI #LLM #Claude</span>
+                        <span>📊 95 points · 2026-04-01 06:25</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/" target="_blank" title="Anthropic：Claude Code用户使用量"远超预期"触及上限">Anthropic：Claude Code用户使用量"远超预期"触及上限</a>
+                        <a href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" target="_blank" title="Claude代码源泄露事件：虚假工具、挫败正则表达式与卧底模式">Claude代码源泄露事件：虚假工具、挫败正则表达式与卧底模式</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-2" onclick="toggleNews('global-2')">
                         展开详情 ▼
@@ -101,28 +101,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 35 points</span>
-                    <span>🕐 2026-03-31 12:23</span>
+                    <span>🔥 1245 points</span>
+                    <span>🕐 2026-03-31 17:25</span>
                 </div>
-                <p class="news-card-summary">Anthropic公司近日承认，其AI编程助手Claude Code的用户正以“远超预期”的速度耗尽使用配额，导致工作流程中断。该公司表示正在积极调查此问题，并将其列为团队首要任务。，用户反馈显示，订阅Claude Pro服务（年费200美元）的用户在Discord论坛上抱怨，其配额“每周一就用完，...</p>
+                <p class="news-card-summary">近日，Anthropic公司旗下Claude Code工具的源代码因.map文件意外泄露，其npm包中包含了完整的可读CLI源代码。尽管该包已被撤回，但代码已被广泛镜像和解析。这已是Anthropic一周内第二次意外泄露（此前模型规格也已泄露）。此次泄露恰逢Anthropic向OpenCode发出法...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Anthropic公司近日承认，其AI编程助手Claude Code的用户正以“远超预期”的速度耗尽使用配额，导致工作流程中断。该公司表示正在积极调查此问题，并将其列为团队首要任务。，用户反馈显示，订阅Claude Pro服务（年费200美元）的用户在Discord论坛上抱怨，其配额“每周一就用完，周六才重置”，导致“30天里只能用12天”。Reddit上的Anthropic论坛也涌现大量投诉，有开发者称每月100美元的Max 5套餐“1小时内就耗尽了配额，而以前能工作8小时”。，造成配额快速消耗的可能原因包括：首先，Anthropic上周宣布将在高峰时段降低配额，工程师Thariq Shihipar称此举会影响约7%的用户，同时声称“已通过效率提升进行补偿”。其次，3月28日结束的Claude促销活动曾将非高峰时段（6小时外）的使用限额翻倍，促销结束后恢复正常限额。第三，Claude Code可能存在增加token消耗的漏洞。有用户通过逆向工程发现两个独立漏洞会导致提示缓存失效，无声地将成本提高10-20倍。部分用户证实降级到旧版本（如2.1.34）能显著改善情况。，技术细节方面，提示缓存功能本应“显著降低重复任务或具有一致元素的提示的处理时间和成本”，但缓存有效期仅5分钟。这意味着短暂休息或暂停使用几分钟后恢复工作，都会因缓存失效导致成本上升。虽然开发者可将缓存有效期延长至1小时，但文档注明“1小时缓存写入token的价格是基础输入token的2倍”，而缓存读取token价格为基础的0.1倍，这成为成本优化的关键点。，目前Anthropic未明确公布各套餐的具体使用限额。例如Pro套餐仅承诺“每会话使用量至少是免费服务的5倍”，标准团队套餐承诺“每会话使用量比Pro套餐多1.25倍”，这种模糊表述使开发者难以准确预估资源消耗。此次配额问题暴露了AI辅助编程工具在规模化应用中面临的计费透明度和技术稳定性挑战。</div>
+                        <div class="summary-content">近日，Anthropic公司旗下Claude Code工具的源代码因.map文件意外泄露，其npm包中包含了完整的可读CLI源代码。尽管该包已被撤回，但代码已被广泛镜像和解析。这已是Anthropic一周内第二次意外泄露（此前模型规格也已泄露）。此次泄露恰逢Anthropic向OpenCode发出法律威胁，要求其移除内置Claude认证，因第三方工具利用Claude Code内部API以订阅费率访问Opus模型，而非按token付费。，泄露的代码揭示了多项技术细节与内部机制。最引人注目的是“反蒸馏”技术：当启用ANTI_DISTILLATION_CC标志时，Claude Code会在API请求中发送anti_distillation: ['fake_tools']，指示服务器在系统提示中静默注入虚假工具定义。此举旨在污染竞争对手通过记录API流量获取的训练数据。该功能受GrowthBook功能标志控制，仅在第一方CLI会话中激活。另一项反蒸馏机制位于betas.ts中，通过服务器端连接器文本摘要实现：API会在工具调用间缓冲助手文本，生成加密签名的摘要返回，后续轮次可通过签名恢复原文，从而防止完整推理链被记录。，代码中还包含“卧底模式”，使AI能够隐藏其AI身份，以及通过正则表达式检测用户挫败感的技术。此外，存在原生客户端认证机制，运行于JavaScript运行时之下，并提及每日约25万次API调用被浪费。泄露内容还涉及未发布的自主代理模式KAIROS。，这些发现揭示了AI公司在保护核心技术与应对数据抓取方面的策略，包括主动污染训练数据、控制推理链可见性等。尽管反蒸馏机制可通过分析激活逻辑规避，但其反映了行业对模型蒸馏与数据复制的防御态势。此次泄露为外界提供了罕见视角，以观察领先AI公司如何在实际产品中实施技术保护与用户体验管理。</div>
                     </div>
-                    <a href="https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/" class="original-link" target="_blank">
+                    <a href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude</span>
-                        <span>📊 35 points · 2026-03-31 12:23</span>
+                        <span>🏷️ #AI #Claude #JavaScript</span>
+                        <span>📊 1245 points · 2026-03-31 17:25</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-3">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://claude.nagdy.me/" target="_blank" title="通过实践而非阅读来学习Claude代码">通过实践而非阅读来学习Claude代码</a>
+                        <a href="https://github.com/jdcodes1/claude-sh" target="_blank" title="Show HN：Claude Code 重写为 bash 脚本">Show HN：Claude Code 重写为 bash 脚本</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-3" onclick="toggleNews('global-3')">
                         展开详情 ▼
@@ -130,57 +130,57 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 250 points</span>
-                    <span>🕐 2026-03-30 21:23</span>
+                    <span>🔥 32 points</span>
+                    <span>🕐 2026-04-01 00:25</span>
                 </div>
-                <p class="news-card-summary">《》是一篇介绍Claude Code交互式学习平台的科技文章。该平台由Ahmed Nagdy创建，旨在通过实践操作而非单纯阅读来帮助开发者掌握Claude Code的使用。平台核心特点是提供11个从入门到高级的互动学习模块，涵盖Slash Commands、Memory & CLAUDE.md、Pr...</p>
+                <p class="news-card-summary">项目“claude-sh”将Claude Code工具重写为Bash脚本，代码量约1500行，无需任何npm依赖包，仅需curl和jq即可运行。原版Claude Code包含约38万行TypeScript代码和266个npm依赖，而此版本在Bash环境下实现了相同的核心功能。，核心功能包括：通过FI...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">《》是一篇介绍Claude Code交互式学习平台的科技文章。该平台由Ahmed Nagdy创建，旨在通过实践操作而非单纯阅读来帮助开发者掌握Claude Code的使用。平台核心特点是提供11个从入门到高级的互动学习模块，涵盖Slash Commands、Memory & CLAUDE.md、Project Setup、Commands Deep Dive、Skills等内容，学习时长从30分钟到1小时不等。，平台设计强调零门槛上手，无需安装或配置API密钥。关键工具包括终端模拟器，允许用户在浏览器中直接练习Slash Commands、hooks和skills；交互式配置构建器，可生成CLAUDE.md、hooks和插件配置，并支持一键复制到项目；以及每个模块附带的测验功能，答错时提供详细解释而非单纯答案。，此外，平台还提供多种辅助工具：专用终端沙盒Playground用于深化命令练习；Config Builder支持生成skills、agents、hooks、MCP服务器和插件配置；可打印的速查表汇总常用命令、快捷键和文件；功能索引支持按类型、难度、类别和模块搜索全部特性。资源部分还提供模板包、外部指南和社区链接，形成完整的学习生态系统。该平台通过“边做边学”的交互模式，有效降低了Claude Code的学习曲线，提升开发者的实践能力。</div>
+                        <div class="summary-content">项目“claude-sh”将Claude Code工具重写为Bash脚本，代码量约1500行，无需任何npm依赖包，仅需curl和jq即可运行。原版Claude Code包含约38万行TypeScript代码和266个npm依赖，而此版本在Bash环境下实现了相同的核心功能。，核心功能包括：通过FIFO管道实现实时流式输出，文本随Claude生成逐字显示；提供6种工具（Bash、Read、Edit、Write、Glob、Grep），支持每轮最多25次工具调用链式操作；在运行非安全命令前进行权限提示（y/n/a）；支持沿目录树向上读取CLAUDE.md文件以加载项目指令；集成Git感知上下文，在系统提示中包含分支、状态和近期提交信息；支持会话保存与恢复（退出时自动保存，可通过--resume <id>恢复）；在遇到429/529速率限制时采用指数退避重试机制；提供每轮及会话总成本跟踪；保留原始风格的动态提示词（如“Clauding”）；内置多种斜杠命令（/help、/cost、/model、/clear、/save、/resume、/commit、/diff等）；支持管道模式（如echo "explain this" | ./claude.sh）。，安装方式简单，通过git克隆仓库并赋予执行权限即可。必需依赖为curl和jq，ripgrep（rg）和python3为可选依赖，用于增强搜索和编辑工具功能。使用前需设置环境变量ANTHROPIC_API_KEY（Anthropic API密钥），并可自定义模型、最大输出令牌数等参数。，项目架构清晰：主脚本claude.sh负责REPL循环、斜杠命令处理和轮次流程；lib/目录下的api.sh处理Anthropic API调用及SSE流式传输；json.sh负责消息构建、会话持久化及Git上下文；tools.sh则实现6种工具的具体逻辑。该工具为在轻量级Bash环境中高效利用Claude的代码生成与分析能力提供了简洁而强大的解决方案。</div>
                     </div>
-                    <a href="https://claude.nagdy.me/" class="original-link" target="_blank">
+                    <a href="https://github.com/jdcodes1/claude-sh" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #Claude</span>
-                        <span>📊 250 points · 2026-03-30 21:23</span>
+                        <span>🏷️ #AI #Claude #Python</span>
+                        <span>📊 32 points · 2026-04-01 00:25</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-4">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/luongnv89/claude-howto" target="_blank" title="luongnv89/claude-howto - 从基础概念到高级智能体，通过可视化示例驱动指南和即用模板快速掌握Claude代码开发。">luongnv89/claude-howto - 从基础概念到高级智能体，通过可视化示例驱动指南和即用模板快速掌握Claude代码开发。</a>
+                        <a href="https://www.droppedasbaby.com/posts/2602-01/" target="_blank" title="意外用Claude Code创建了我的第一个fork炸弹">意外用Claude Code创建了我的第一个fork炸弹</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-4" onclick="toggleNews('global-4')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 11,624 stars</span>
-                    <span>🕐 2026-03-31</span>
+                    <span class="source-badge">Hacker News</span>
+                    <span>🔥 70 points</span>
+                    <span>🕐 2026-03-31 17:25</span>
                 </div>
-                <p class="news-card-summary">GitHub项目“luongnv89/claude-howto”是一个针对Claude Code的视觉化、示例驱动的综合指南。该项目旨在帮助用户从基础概念快速过渡到高级代理（agents）的构建，其核心价值在于提供了大量可直接复制粘贴的模板，让开发者能立即获得实用价值。，该项目解决了Claude C...</p>
+                <p class="news-card-summary">2026年2月，一位工程师因使用Claude Code意外创建了首个fork bomb，并产生了3800美元的Claude API账单。事件始于2月27日上午11点左右，作者发现电脑完全无响应且机身发热，强制重启后登录系统，打开终端输入claude命令时，系统再次变慢。检查Activity Moni...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">GitHub项目“luongnv89/claude-howto”是一个针对Claude Code的视觉化、示例驱动的综合指南。该项目旨在帮助用户从基础概念快速过渡到高级代理（agents）的构建，其核心价值在于提供了大量可直接复制粘贴的模板，让开发者能立即获得实用价值。，该项目解决了Claude Code新用户在入门后常见的困惑：官方文档仅描述功能，但缺乏如何将这些功能（如斜杠命令、记忆、钩子、子代理等）组合成高效工作流的实战指导。指南通过结构化的学习路径，引导用户系统性地掌握技能，避免了零散学习导致的效率低下。，项目内容涵盖广泛，从基础的斜杠命令（Slash Commands）、记忆（Memory）功能，到高级的技能（Skills）、子代理（Subagents）、模型上下文协议（MCP）服务器、钩子（Hooks）、插件（Plugins）和检查点（Checkpoints）等。其特色是采用视觉化教程和具体示例，而非简单的“Hello World”演示，例如指导用户构建一个集成了记忆、专用代理和自动安全扫描的生产级代码审查流水线。，项目结构清晰，提供了快速入门指南、功能目录、学习路线图（Learning Roadmap）和快速参考手册，方便不同水平的用户找到适合自己的起点。用户可在15分钟内开始实践，并逐步学习如何协调代理、钩子、技能和MCP服务器，最终实现能节省大量时间的自动化工作流。该项目在GitHub上已获得大量关注，拥有超过1.1万个星标，体现了开发者社区对其实用性的认可。</div>
+                        <div class="summary-content">2026年2月，一位工程师因使用Claude Code意外创建了首个fork bomb，并产生了3800美元的Claude API账单。事件始于2月27日上午11点左右，作者发现电脑完全无响应且机身发热，强制重启后登录系统，打开终端输入claude命令时，系统再次变慢。检查Activity Monitor发现内存压力显示为红色，并有数百个CC（Claude Code）进程实例。，作者意识到问题源于前一晚（2月27日凌晨2点）创建的SessionStart钩子（hook）。该钩子使用claude -p命令在后台生成两个CC实例，而每个实例又会遵循正常启动序列，导致进程指数级增长：1→2→4→8→16→32→2^N，形成典型的fork bomb。由于进程生成速度远超终止速度，即使尝试通过Activity Monitor强制退出或使用ghostty + pkill命令，系统仍无法响应，最终只能强制重启机器。，问题解决后，作者从~/.claude/settings.json中移除了故障钩子，并谨慎地重新测试claude命令，确认系统恢复正常。此次事件不仅导致电脑暂时“变砖”，还因API调用激增产生了高额账单。作者反思称，这是自己近二十年来首次意外创建fork bomb，突显了在自动化工具（如Claude Code）中设置递归或自复制钩子时可能带来的风险。</div>
                     </div>
-                    <a href="https://github.com/luongnv89/claude-howto" class="original-link" target="_blank">
+                    <a href="https://www.droppedasbaby.com/posts/2602-01/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #Claude #GitHub #智能体</span>
-                        <span>📊 11,624 stars · 2026-03-31</span>
+                        <span>🏷️ #Claude</span>
+                        <span>📊 70 points · 2026-03-31 17:25</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-5">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/microsoft/VibeVoice" target="_blank" title="微软/VibeVoice - 开源前沿语音人工智能">微软/VibeVoice - 开源前沿语音人工智能</a>
+                        <a href="https://github.com/anthropics/claude-code" target="_blank" title="Anthropic/Claude Code - Claude Code是一款智能终端编程工具，它能理解您的代码库，通过自然语言指令执行常规任务、解释复杂代...">Anthropic/Claude Code - Claude Code是一款智能终端编程工具，它能理解您的代码库，通过自然语言指令执行常规任务、解释复杂代...</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-5" onclick="toggleNews('global-5')">
                         展开详情 ▼
@@ -188,28 +188,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 32,370 stars</span>
-                    <span>🕐 2026-03-31</span>
+                    <span>🔥 97,035 stars</span>
+                    <span>🕐 2026-04-01</span>
                 </div>
-                <p class="news-card-summary">微软开源项目VibeVoice是一个前沿的语音AI研究框架，旨在推动语音合成领域的协作。该项目包含多个核心模块，最新进展主要集中在VibeVoice-ASR（自动语音识别）和VibeVoice-Realtime-0.5B（实时文本转语音）模型上。，VibeVoice-ASR是一个统一的语音转文本模型...</p>
+                <p class="news-card-summary">Anthropic公司在GitHub上开源了Claude Code项目，这是一个基于命令行的智能编码工具。它能够深入理解用户的代码库，并通过自然语言指令帮助开发者提升编码效率。该工具可直接在终端、IDE或GitHub平台上（通过@claude标签）使用。，Claude Code的核心功能包括：执行日...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">微软开源项目VibeVoice是一个前沿的语音AI研究框架，旨在推动语音合成领域的协作。该项目包含多个核心模块，最新进展主要集中在VibeVoice-ASR（自动语音识别）和VibeVoice-Realtime-0.5B（实时文本转语音）模型上。，VibeVoice-ASR是一个统一的语音转文本模型，其突出特点是能够单次处理长达60分钟的长篇音频，并生成结构化的转录结果，包含说话人身份（Who）、时间戳（When）和内容（What）。该模型原生支持超过50种语言，并允许用户提供自定义上下文以提升识别准确性。其微调代码已开源，并已集成至Hugging Face Transformers库，方便开发者直接调用。为提升推理速度，项目还支持通过vLLM进行高效推理。目前，该模型已被开源社区采用，例如语音输入法“Vibing”就基于其构建。，在语音合成方面，VibeVoice-Realtime-0.5B是一个支持流式文本输入的实时文本转语音（TTS）模型，能够生成稳健的长篇语音。项目为其添加了实验性说话人，包括九种语言（如德语、法语、日语等）的多语言声音和11种不同风格的英语声音，未来将继续扩展。，值得注意的是，项目早期开源的VibeVoice-TTS（一个能合成长达90分钟语音、支持最多4位不同说话人的长篇多说话人TTS模型）代码因发现存在与初衷不符的使用情况，出于对AI负责任使用的考虑，已从代码库中移除。该模型的研究论文已被ICLR 2026接收为口头报告。，总体而言，VibeVoice项目通过开源先进的ASR和实时TTS模型，为语音AI社区提供了强大的工具和研究基础，同时体现了对技术负责任部署的重视。</div>
+                        <div class="summary-content">Anthropic公司在GitHub上开源了Claude Code项目，这是一个基于命令行的智能编码工具。它能够深入理解用户的代码库，并通过自然语言指令帮助开发者提升编码效率。该工具可直接在终端、IDE或GitHub平台上（通过@claude标签）使用。，Claude Code的核心功能包括：执行日常编码任务、解释复杂代码逻辑、以及处理git工作流。用户只需用自然语言描述需求，例如“为当前文件添加错误处理”或“解释这个函数的算法”，工具即可自动完成相应操作。其“智能体”特性体现在能够结合代码库上下文进行精准操作，而非简单的代码片段生成。，安装方式已从早期的npm安装转为更稳定的系统级安装方案。推荐方法包括：MacOS/Linux系统使用curl脚本安装，Windows系统使用PowerShell脚本安装，也可通过Homebrew或WinGet包管理器安装。用户安装后进入项目目录运行`claude`命令即可启动。，该项目支持插件扩展机制，开源仓库中提供了多个官方插件，用户可通过自定义命令和智能体进一步扩展功能。社区支持方面，开发者可通过内置的`/bug`命令直接提交问题反馈，也可参与GitHub Issues讨论或加入Discord开发者社区进行交流。，关于数据使用，Anthropic明确说明会收集使用反馈数据（包括代码接受/拒绝记录、相关对话内容及bug报告），这些数据将用于改进产品，同时公司承诺已实施隐私保护措施。详细政策可查阅官方数据使用说明文档。</div>
                     </div>
-                    <a href="https://github.com/microsoft/VibeVoice" class="original-link" target="_blank">
+                    <a href="https://github.com/anthropics/claude-code" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #人工智能</span>
-                        <span>📊 32,370 stars · 2026-03-31</span>
+                        <span>🏷️ #Claude #GitHub #智能体</span>
+                        <span>📊 97,035 stars · 2026-04-01</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-6">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/Yeachan-Heo/oh-my-claudecode" target="_blank" title="Yeachan-Heo/oh-my-claudecode - 面向团队的Claude Code多智能体编排平台">Yeachan-Heo/oh-my-claudecode - 面向团队的Claude Code多智能体编排平台</a>
+                        <a href="https://github.com/microsoft/VibeVoice" target="_blank" title="微软/VibeVoice - 开源前沿语音人工智能">微软/VibeVoice - 开源前沿语音人工智能</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-6" onclick="toggleNews('global-6')">
                         展开详情 ▼
@@ -217,21 +217,21 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 18,150 stars</span>
-                    <span>🕐 2026-03-31</span>
+                    <span>🔥 33,960 stars</span>
+                    <span>🕐 2026-04-01</span>
                 </div>
-                <p class="news-card-summary">GitHub项目“oh-my-claudecode”是一个专为Claude Code设计的团队优先多智能体编排框架。该项目旨在简化Claude Code的使用流程，让开发者无需深入学习Claude Code本身，即可通过该框架快速构建应用，实现“零学习曲线”的体验。，其核心功能是提供一套多智能体编排...</p>
+                <p class="news-card-summary">微软开源项目VibeVoice是一个前沿的语音AI研究框架，旨在推动语音合成领域的协作。该项目包含多个核心组件，重点关注语音识别（ASR）和实时文本转语音（TTS）技术。，VibeVoice-ASR是一个统一的语音转文本模型，其突出特点是能够单次处理长达60分钟的长篇音频，并生成包含说话人（Who）...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">GitHub项目“oh-my-claudecode”是一个专为Claude Code设计的团队优先多智能体编排框架。该项目旨在简化Claude Code的使用流程，让开发者无需深入学习Claude Code本身，即可通过该框架快速构建应用，实现“零学习曲线”的体验。，其核心功能是提供一套多智能体编排系统，能够自动协调多个AI智能体共同完成复杂的开发任务。用户只需通过简单的命令即可启动项目，例如使用“/deep-interview”命令进行需求深度访谈，该功能会通过苏格拉底式提问帮助用户在编写代码前澄清想法，从而明确需求。另一个关键命令是“autopilot”，可以自动构建诸如任务管理应用REST API之类的功能。，项目提供了便捷的安装方式，Claude Code用户可以通过插件市场直接安装，也支持通过npm CLI进行全局安装。安装后，用户通过“/setup”或“/omc-setup”命令进行初始化设置，之后便可开始构建。，该框架强调自动化，许多流程在启动后会自动运行。它面向团队协作场景设计，提供了工作流、迁移指南等详细文档和CLI参考。项目在GitHub上获得了极高的关注度，拥有超过1.8万个星标，显示了其在开发者社区的受欢迎程度。总体而言，oh-my-claudecode通过抽象底层复杂性，为开发者提供了一个高效、直观的多智能体开发编排平台。</div>
+                        <div class="summary-content">微软开源项目VibeVoice是一个前沿的语音AI研究框架，旨在推动语音合成领域的协作。该项目包含多个核心组件，重点关注语音识别（ASR）和实时文本转语音（TTS）技术。，VibeVoice-ASR是一个统一的语音转文本模型，其突出特点是能够单次处理长达60分钟的长篇音频，并生成包含说话人（Who）、时间戳（When）和内容（What）的结构化转录。该模型原生支持超过50种语言，并允许用户提供自定义上下文以优化识别效果。其微调代码已开源，并支持通过vLLM进行更快的推理。该模型已被集成至Hugging Face Transformers库，便于开发者直接调用。开源社区已开始采用该技术，例如语音输入法Vibing就构建于VibeVoice-ASR之上。，在语音合成方面，项目开源了VibeVoice-Realtime-0.5B模型，这是一个支持流式文本输入的实时文本转语音模型，能够生成稳健的长篇语音。该模型已添加了实验性说话人，包括九种语言（如德语、法语、日语等）的多语言语音和11种不同风格的英语语音。此前，项目还曾发布过VibeVoice-TTS，这是一个长篇多说话人TTS模型，能合成长达90分钟、最多包含4个不同说话人的语音，该工作已被ICLR 2026接收为口头报告。需要注意的是，出于对AI负责任使用的考虑，微软已从代码库中移除了VibeVoice-TTS的代码。，总体而言，VibeVoice项目通过开源先进的语音识别与合成模型，为研究和应用社区提供了强大的工具，并特别强调了处理长篇音频和实时流式生成的能力。</div>
                     </div>
-                    <a href="https://github.com/Yeachan-Heo/oh-my-claudecode" class="original-link" target="_blank">
+                    <a href="https://github.com/microsoft/VibeVoice" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
-                        <span>📊 18,150 stars · 2026-03-31</span>
+                        <span>🏷️ #AI #LLM #人工智能</span>
+                        <span>📊 33,960 stars · 2026-04-01</span>
                     </div>
                 </div>
             </article>
@@ -246,28 +246,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 27,549 stars</span>
-                    <span>🕐 2026-03-31</span>
+                    <span>🔥 29,924 stars</span>
+                    <span>🕐 2026-04-01</span>
                 </div>
-                <p class="news-card-summary">GitHub项目“claude-code-best-practice”是一个专注于提升Claude代码助手使用效率的实践指南库，旨在通过系统化的方法“让练习使Claude趋于完美”。该项目获得了27.6k星标，体现了开发者社区的广泛关注。，项目核心围绕一套结构化的概念体系来优化与Claude的协作，...</p>
+                <p class="news-card-summary">GitHub项目“claude-code-best-practice”是一个专注于提升Claude AI在编程环境中应用效果的实践指南库，其核心理念是“实践使Claude臻于完美”。该项目由开发者shanraisshan维护，已获得29.9k星标，体现了社区的广泛关注。，项目系统地组织了一系列最佳实...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">GitHub项目“claude-code-best-practice”是一个专注于提升Claude代码助手使用效率的实践指南库，旨在通过系统化的方法“让练习使Claude趋于完美”。该项目获得了27.6k星标，体现了开发者社区的广泛关注。，项目核心围绕一套结构化的概念体系来优化与Claude的协作，主要包括三大组件：智能体（Agents）、命令（Commands）和技能（Skills）。智能体被定义为在独立上下文中运行的自主执行者，拥有自定义工具、权限、模型和持久身份。命令是注入到现有上下文中的知识，作为用户调用的简单提示模板，用于编排工作流。技能同样是可注入的知识，但具备可配置、可预加载、可自动发现等特性，支持上下文分叉和渐进式披露。，此外，项目还集成了工作流编排、事件钩子（Hooks）、以及通过模型上下文协议（MCP）连接外部工具、数据库和API的能力。它支持可分发插件包，包含技能、子智能体、钩子和MCP服务器。配置系统采用分层设计，涵盖权限、模型配置、输出风格、沙箱环境和快捷键等。状态栏可自定义显示上下文使用量、模型、成本和会话信息。，项目强调“记忆”的持久化，通过CLAUDE.md文件和@路径导入实现，并支持基于Git的自动检查点功能，允许用户回退文件编辑或进行针对性总结。它也提供了命令行标志和交互模式，并引入了“智能体工程”、“上下文工程”和“氛围编码”等AI协作最佳实践理念。总体而言，该项目为开发者提供了一套全面、可扩展的框架，以工程化思维充分利用Claude进行高效编码。</div>
+                        <div class="summary-content">GitHub项目“claude-code-best-practice”是一个专注于提升Claude AI在编程环境中应用效果的实践指南库，其核心理念是“实践使Claude臻于完美”。该项目由开发者shanraisshan维护，已获得29.9k星标，体现了社区的广泛关注。，项目系统地组织了一系列最佳实践，旨在帮助开发者更高效地利用Claude进行代码编写、调试和项目开发。其核心架构围绕几个关键概念构建：子代理（Subagents）、命令（Commands）、技能（Skills）、工作流（Workflows）和钩子（Hooks）。子代理作为独立的自主执行者，拥有自定义工具、权限和持久身份；命令是用于工作流编排的简单提示模板；技能则是可配置、可自动发现的知识模块，支持上下文分叉和渐进式披露。项目还集成了模型上下文协议（MCP）服务器，用于连接外部工具、数据库和API，并支持通过插件市场分发功能包。，技术特点上，项目提供了分层配置系统、权限管理、模型配置、沙箱环境以及可自定义的状态栏，用于显示上下文使用情况、模型和成本等信息。它强调“上下文工程”和“代理工程”，通过CLAUDE.md文件和规则目录实现持久化记忆管理，并具备基于Git的自动检查点功能，支持文件编辑跟踪和回退操作。，该资源库的价值在于为开发者提供了一个结构化、可扩展的框架，将Claude深度集成到开发工作流中，通过模块化设计提升AI辅助编程的可靠性、可控性和效率，是探索AI编程助手前沿应用的实用参考。</div>
                     </div>
                     <a href="https://github.com/shanraisshan/claude-code-best-practice" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
-                        <span>📊 27,549 stars · 2026-03-31</span>
+                        <span>🏷️ #AI #Claude #GitHub</span>
+                        <span>📊 29,924 stars · 2026-04-01</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-8">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/microsoft/agent-lightning" target="_blank" title="微软/Agent-Lightning - 点亮AI智能体的终极训练器">微软/Agent-Lightning - 点亮AI智能体的终极训练器</a>
+                        <a href="https://github.com/luongnv89/claude-howto" target="_blank" title="luongnv89/claude-howto - 从基础概念到高级智能体，通过可视化示例驱动指南和即用模板快速掌握Claude代码开发。">luongnv89/claude-howto - 从基础概念到高级智能体，通过可视化示例驱动指南和即用模板快速掌握Claude代码开发。</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-8" onclick="toggleNews('global-8')">
                         展开详情 ▼
@@ -275,175 +275,50 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 16,099 stars</span>
-                    <span>🕐 2026-03-31</span>
+                    <span>🔥 14,808 stars</span>
+                    <span>🕐 2026-04-01</span>
                 </div>
-                <p class="news-card-summary">微软开源项目Agent Lightning是一个旨在高效训练和优化AI智能体的框架，其核心目标是让开发者能够以极低的代码改动成本，提升智能体的性能。该项目在GitHub上已获得大量关注。，Agent Lightning的核心特点是其广泛的兼容性与灵活的优化能力。它支持与多种主流AI智能体框架无缝集成...</p>
+                <p class="news-card-summary">GitHub项目“luongnv89/claude-howto”是一个面向Claude Code的视觉化、示例驱动的综合指南。该项目旨在帮助用户从基础概念快速过渡到掌握高级代理（agents）的构建与应用，其核心价值在于提供了大量可直接复制粘贴的模板，让开发者能立即获得实用价值。，该项目精准定位了开...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">微软开源项目Agent Lightning是一个旨在高效训练和优化AI智能体的框架，其核心目标是让开发者能够以极低的代码改动成本，提升智能体的性能。该项目在GitHub上已获得大量关注。，Agent Lightning的核心特点是其广泛的兼容性与灵活的优化能力。它支持与多种主流AI智能体框架无缝集成，包括LangChain、OpenAI Agent SDK、AutoGen、CrewAI以及微软自家的Agent Framework等，甚至可以直接用于基于Python OpenAI库构建的简易智能体，实现了“开箱即用”。在多智能体系统中，它允许用户选择性地优化其中一个或多个特定的智能体，而不影响其他部分。，在技术层面，该框架集成了多种先进的优化算法。它主要采用强化学习（Reinforcement Learning）作为核心训练方法，同时也支持自动提示优化（Automatic Prompt Optimization）、监督微调（Supervised Fine-tuning）等算法，旨在将智能体训练成更强大的“优化野兽”。项目强调，通过其设计，用户几乎无需修改原有智能体的业务代码即可开始优化训练，大幅降低了使用门槛。，安装过程简便，可通过pip直接安装稳定版。对于希望体验最前沿功能的开发者，也提供了从Test PyPI安装夜间构建版本的选项。项目提供了详细的文档、安装指南和丰富的示例代码，帮助用户快速上手。，此外，项目团队通过博客、Medium文章、arXiv论文等多种渠道分享了其技术细节与应用案例。这些资料涵盖了训练加速方法（如轨迹级聚合）、与Tinker工具的集成实践、在OpenAI兼容API中处理Token ID以避免重标记漂移的重要性，以及训练AI智能体编写并自我修正SQL等具体应用场景，展示了框架的实际价值与潜力。项目也拥有活跃的社区，例如Discord频道，供用户交流。</div>
+                        <div class="summary-content">GitHub项目“luongnv89/claude-howto”是一个面向Claude Code的视觉化、示例驱动的综合指南。该项目旨在帮助用户从基础概念快速过渡到掌握高级代理（agents）的构建与应用，其核心价值在于提供了大量可直接复制粘贴的模板，让开发者能立即获得实用价值。，该项目精准定位了开发者在学习Claude Code时面临的普遍痛点：官方文档仅孤立介绍功能，缺乏如何将斜杠命令（slash commands）、记忆（memory）、钩子（hooks）、子代理（subagents）以及模型上下文协议（MCP）服务器等功能组合成高效工作流的实战指导。同时，缺乏清晰的学习路径和超越“Hello World”级别的深度示例，导致学习者难以构建可用于实际生产的复杂应用。，为此，“claude-howto”提供了结构化的解决方案。它包含一个详细的功能目录和循序渐进的学习路线图，引导用户从斜杠命令入门，逐步学习记忆管理、技能（skills）创建、多代理协作、MCP集成等高级主题。项目内容以丰富的视觉教程和实际代码示例呈现，覆盖了构建自动化代码审查流水线、集成安全检查等真实场景。，其核心特点包括：模块化的知识组织，将复杂概念分解为可管理的章节；提供即用型模板，极大降低了上手门槛；以及强调功能间的组合与集成，教授用户如何打造能真正节省时间的智能工作流。该项目在GitHub上已获得大量关注（14.8k星），成为Claude Code开发者快速提升技能的重要实践资源。</div>
                     </div>
-                    <a href="https://github.com/microsoft/agent-lightning" class="original-link" target="_blank">
+                    <a href="https://github.com/luongnv89/claude-howto" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #OpenAI #Python #GitHub #智能体</span>
-                        <span>📊 16,099 stars · 2026-03-31</span>
+                        <span>🏷️ #Claude #GitHub #智能体</span>
+                        <span>📊 14,808 stars · 2026-04-01</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-9">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://www.producthunt.com/products/claude" target="_blank" title="Claude代码中的计算机使用">Claude代码中的计算机使用</a>
+                        <a href="https://github.com/openai/codex" target="_blank" title="OpenAI/Codex - 在终端中运行的轻量级编码助手">OpenAI/Codex - 在终端中运行的轻量级编码助手</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-9" onclick="toggleNews('global-9')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">Product Hunt</span>
-                    <span>🔥 Top Product</span>
-                    <span>🕐 2026-03-30T19:52:44-07:00</span>
-                </div>
-                <p class="news-card-summary">Anthropic公司为其AI助手Claude推出了名为“计算机使用”（Computer Use）的新功能，该功能允许Claude直接操作计算机，执行网页浏览、软件使用和数据输入等任务。这一功能标志着AI从单纯的语言处理向实际环境交互迈出了重要一步。，核心功能上，“计算机使用”使Claude能够通过...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">Anthropic公司为其AI助手Claude推出了名为“计算机使用”（Computer Use）的新功能，该功能允许Claude直接操作计算机，执行网页浏览、软件使用和数据输入等任务。这一功能标志着AI从单纯的语言处理向实际环境交互迈出了重要一步。，核心功能上，“计算机使用”使Claude能够通过模拟的计算机界面（包括键盘、鼠标和显示屏）与数字环境进行交互。用户可以通过自然语言下达指令，例如“查找最新的AI研究论文”或“将这份数据填入电子表格”，Claude便能自主规划并执行一系列操作步骤来完成目标。这类似于为Claude配备了一个虚拟的“手和眼睛”，使其能够主动探索和操作数字世界。，技术实现上，该功能基于Claude 3.5 Sonnet模型，并采用了专门的训练方法。Anthropic通过让Claude观察大量的计算机屏幕录像和相应的操作日志（如点击、滚动、输入），训练其理解屏幕上的视觉元素（如按钮、文本框、链接）与可执行动作之间的关联。这使Claude学会了一套“数字常识”，能够像人类一样解读界面并采取合理行动。目前，该功能在一个受控的模拟浏览器环境中运行，以确保安全性和稳定性。，主要特点与价值在于其自主性和实用性。Claude可以分解复杂任务，进行多步骤推理（例如，先搜索网站，再定位下载链接，最后整理信息），显著提升了处理现实世界任务的效率。它不仅能自动执行重复性工作（如数据录入、信息收集），还能进行探索性学习（如研究一个新软件的功能）。这为自动化办公、研究和辅助工具开发开辟了新的可能性。，当前，该功能作为研究预览版发布，主要面向开发者和企业客户通过API进行测试和构建应用程序。这体现了Anthropic将AI作为智能体（Agent）融入工作流的愿景，是向更通用、更实用的AI系统演进的关键探索。</div>
-                    </div>
-                    <a href="https://www.producthunt.com/products/claude" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #智能体</span>
-                        <span>📊 Top Product · 2026-03-30T19:52:44-07:00</span>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <!-- 科技与开发 -->
-        <section class="section">
-            <div class="section-header">
-                <span class="emoji">💻</span>
-                <span class="title">科技与开发</span>
-                <span class="badge blue">Tech & Dev</span>
-            </div>
-
-            <article class="news-card collapsed" id="news-tech-0">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/NousResearch/hermes-agent" target="_blank" title="NousResearch/hermes-agent - 与你共同成长的智能体">NousResearch/hermes-agent - 与你共同成长的智能体</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-0" onclick="toggleNews('tech-0')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 19,597 stars</span>
-                    <span>🕐 2026-03-31</span>
+                    <span>🔥 71,099 stars</span>
+                    <span>🕐 2026-04-01</span>
                 </div>
-                <p class="news-card-summary">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心特点是内置了持续学习循环机制，能够从交互经验中自主创建技能，并在使用过程中不断优化这些技能。系统会主动推动自身持久化知识，支持检索过往对话历史，并能跨会话构建并深化对用户个性化需求...</p>
+                <p class="news-card-summary">OpenAI在GitHub上开源了Codex项目，这是一个轻量级的编码代理，可直接在终端中运行。用户可以通过npm或Homebrew等包管理器全局安装，安装命令分别为`npm install -g @openai/codex`和`brew install --cask codex`。安装后，在终端输...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心特点是内置了持续学习循环机制，能够从交互经验中自主创建技能，并在使用过程中不断优化这些技能。系统会主动推动自身持久化知识，支持检索过往对话历史，并能跨会话构建并深化对用户个性化需求的理解模型。，该智能体设计灵活，部署选项广泛，既可在成本低廉的VPS或GPU集群上运行，也支持闲置时成本近乎为零的无服务器架构。它不依赖于本地设备，用户可通过Telegram等平台与部署在云虚拟机上的智能体进行交互。，在模型支持方面，Hermes Agent具有高度的开放性和兼容性。它允许用户自由选择后端模型，支持通过Nous Portal、OpenRouter（接入超过200个模型）、智谱AI/GLM、Kimi/Moonshot、MiniMax、OpenAI等多种平台或API，也支持连接用户自有的模型端点。用户可以通过`hermes model`命令轻松切换所用模型。，项目提供了丰富的工具集与技能库，并计划集成更多高级功能，例如针对复杂任务的规划与执行工作流。其架构旨在成为一个可成长、可定制的AI助手基础平台，为开发者和研究者构建具备长期学习和适应能力的智能体系统提供了重要参考。</div>
+                        <div class="summary-content">OpenAI在GitHub上开源了Codex项目，这是一个轻量级的编码代理，可直接在终端中运行。用户可以通过npm或Homebrew等包管理器全局安装，安装命令分别为`npm install -g @openai/codex`和`brew install --cask codex`。安装后，在终端输入`codex`即可启动该工具。，Codex的核心定位是一个本地运行的AI编程助手。它基于OpenAI的模型，旨在理解自然语言指令并执行相关的编码任务，例如生成代码、解释代码片段或协助完成开发工作流。项目提供了多种安装方式以满足不同用户的需求：除了终端CLI版本，开发者还可以在VS Code、Cursor等代码编辑器中安装插件以获得集成体验，或通过运行`codex app`命令使用桌面应用程序。，该项目在GitHub上获得了极高的关注，拥有超过7.1万个星标和近1万个分支，显示了开发者社区的浓厚兴趣。仓库结构清晰，包含了CLI工具、Rust实现、SDK、文档以及用于构建和测试的配置文件（如Bazel和pnpm）。发布版本为不同平台提供了预编译的二进制文件，包括macOS（Apple Silicon和x86_64架构）和Linux（x86_64与arm64架构），用户可直接从GitHub Release页面下载对应的压缩包使用。，Codex的价值在于将强大的AI编程能力引入本地开发环境，提供了一种快速、便捷的交互方式，帮助开发者直接在终端中提升编码效率，而无需依赖云端服务的网络延迟或复杂的配置过程。</div>
                     </div>
-                    <a href="https://github.com/NousResearch/hermes-agent" class="original-link" target="_blank">
+                    <a href="https://github.com/openai/codex" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #OpenAI #GitHub #智能体</span>
-                        <span>📊 19,597 stars · 2026-03-31</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-1">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/PaddlePaddle/PaddleOCR" target="_blank" title="PaddlePaddle/PaddleOCR - 将任意PDF或图像文档转化为结构化数据，赋能AI应用。这是一款强大轻量的OCR工具包，弥合图像/PDF与...">PaddlePaddle/PaddleOCR - 将任意PDF或图像文档转化为结构化数据，赋能AI应用。这是一款强大轻量的OCR工具包，弥合图像/PDF与...</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-1" onclick="toggleNews('tech-1')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 73,878 stars</span>
-                    <span>🕐 2026-03-31</span>
-                </div>
-                <p class="news-card-summary">PaddleOCR是由PaddlePaddle开源的一个功能强大且轻量化的OCR工具包，旨在将任何PDF或图像文档转化为可供AI使用的结构化数据，从而弥合图像/PDF与大型语言模型（LLM）之间的鸿沟。该项目在GitHub上已获得超过7.3万颗星，被Dify、RAGFlow、Cherry Studi...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">PaddleOCR是由PaddlePaddle开源的一个功能强大且轻量化的OCR工具包，旨在将任何PDF或图像文档转化为可供AI使用的结构化数据，从而弥合图像/PDF与大型语言模型（LLM）之间的鸿沟。该项目在GitHub上已获得超过7.3万颗星，被Dify、RAGFlow、Cherry Studio等顶级项目所采用，是构建智能RAG和Agentic应用的基石。，其核心功能与特点包括：首先，提供智能文档解析，专为LLM时代设计，能将杂乱的视觉内容转化为结构化数据。这依托于其领先的轻量级视觉语言模型PaddleOCR-VL-1.5（0.9B参数），该模型在应对文档弯曲、扫描件、屏幕截图、光照不均和倾斜这五大“真实世界”挑战时表现出色，并能输出Markdown和JSON格式的结构化结果。其次，通过PP-StructureV3驱动，实现结构感知的转换，可将复杂的PDF和图像无缝转换为Markdown或JSON格式，并提供比VL系列模型更细粒度的坐标信息，如表格单元格坐标和文本坐标。第三，具备生产就绪的高效性，在公开基准测试中超越了许多闭源解决方案，同时保持超小的资源占用，适合边缘计算和云端部署。此外，它还提供通用文本识别（场景OCR）能力，并支持超过100种语言。，该项目提供了丰富的部署选项，包括Python pip包、命令行工具、RESTful API、LangChain集成以及MCP服务器，方便开发者快速集成到现有工作流中。其代码库结构清晰，包含模型、配置、部署、文档以及与其他框架（如LangChain）集成的专门目录。PaddleOCR定位为全球领先的OCR工具包与文档AI引擎，致力于为开发者提供将非结构化文档数据转化为AI可用格式的可靠基础设施。</div>
-                    </div>
-                    <a href="https://github.com/PaddlePaddle/PaddleOCR" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Python #GitHub</span>
-                        <span>📊 73,878 stars · 2026-03-31</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-2">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/vas3k/TaxHacker" target="_blank" title="vas3k/TaxHacker - 自托管AI会计应用。具备自定义提示和分类的收据、发票、交易LLM分析器">vas3k/TaxHacker - 自托管AI会计应用。具备自定义提示和分类的收据、发票、交易LLM分析器</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-2" onclick="toggleNews('tech-2')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 3,504 stars</span>
-                    <span>🕐 2026-03-31</span>
-                </div>
-                <p class="news-card-summary">开源项目TaxHacker是一个自托管的AI会计应用程序，专为自由职业者、独立开发者和中小企业设计，旨在利用现代AI技术自动化追踪支出与收入，以节省时间。用户可上传收据照片、发票或PDF文件，应用将自动识别并提取会计所需的所有关键数据，包括产品名称、金额、条目、日期、商户、税费等，并将其保存至类似E...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">开源项目TaxHacker是一个自托管的AI会计应用程序，专为自由职业者、独立开发者和中小企业设计，旨在利用现代AI技术自动化追踪支出与收入，以节省时间。用户可上传收据照片、发票或PDF文件，应用将自动识别并提取会计所需的所有关键数据，包括产品名称、金额、条目、日期、商户、税费等，并将其保存至类似Excel的结构化数据库中。用户甚至能通过自定义AI提示创建专属字段，以提取所需的任何特定信息。，该应用核心功能包括基于交易当日历史汇率的自动货币转换（支持加密货币），并内置筛选、多项目支持、导入/导出能力以及自定义分类，从而简化报告流程，让报税更便捷。项目强调隐私与可控性，所有数据均存储在用户自己的服务器上，避免依赖第三方云服务。，技术层面，TaxHacker利用LLM（如GPT或Claude）分析文档，结合RAG技术增强上下文理解，并支持通过API扩展集成。其架构采用Docker容器化部署，提供完整的自托管解决方案，包含预配置的Nginx、数据库等组件。项目目前处于早期开发阶段，作者建议用户自行承担使用风险，并可通过GitHub关注更新与修复。</div>
-                    </div>
-                    <a href="https://github.com/vas3k/TaxHacker" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GPT #Claude #GitHub</span>
-                        <span>📊 3,504 stars · 2026-03-31</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-3">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/OpenBMB/ChatDev" target="_blank" title="OpenBMB/ChatDev - ChatDev 2.0：通过LLM驱动的多智能体协作实现全程开发">OpenBMB/ChatDev - ChatDev 2.0：通过LLM驱动的多智能体协作实现全程开发</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-3" onclick="toggleNews('tech-3')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 32,303 stars</span>
-                    <span>🕐 2026-03-31</span>
-                </div>
-                <p class="news-card-summary">OpenBMB/ChatDev项目正式发布了ChatDev 2.0版本，其核心理念是“Dev All through LLM-powered Multi-Agent Collaboration”。该版本标志着该项目从一个专注于软件开发的专用多智能体系统，演进为一个全面的、零代码的多智能体编排平台，旨...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">OpenBMB/ChatDev项目正式发布了ChatDev 2.0版本，其核心理念是“Dev All through LLM-powered Multi-Agent Collaboration”。该版本标志着该项目从一个专注于软件开发的专用多智能体系统，演进为一个全面的、零代码的多智能体编排平台，旨在让用户能够“开发一切”。，ChatDev 2.0（又称DevAll）是一个零代码多智能体平台。用户无需编写代码，仅通过简单的配置即可快速构建和执行定制化的多智能体系统。用户可以定义智能体（Agent）、工作流（Workflow）和任务，从而编排复杂的应用场景，例如数据可视化、3D生成和深度研究等。，作为对比，经典的ChatDev 1.0版本（现已移至chatdev1.0分支维护）被设计为一个“虚拟软件公司”。它通过模拟CEO、CTO、程序员等多种角色智能体参与专业的功能研讨会，来自动化整个软件开发生命周期，包括设计、编码、测试和文档编写。这一模式为基于交流的智能体协作奠定了范式基础。，ChatDev 2.0的发布是该项目的一个重要里程碑。其核心价值在于降低了多智能体系统构建的门槛，使得非技术用户也能利用LLM驱动的多智能体协作能力来解决多样化的问题。项目团队的相关论文《Multi-Agent Collaboration via Evolving Orchestration》也已被NeurIPS 2025接收。</div>
-                    </div>
-                    <a href="https://github.com/OpenBMB/ChatDev" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #LLM #智能体</span>
-                        <span>📊 32,303 stars · 2026-03-31</span>
+                        <span>🏷️ #AI #OpenAI #Rust #GitHub</span>
+                        <span>📊 71,099 stars · 2026-04-01</span>
                     </div>
                 </div>
             </article>
@@ -459,7 +334,7 @@
             <article class="news-card collapsed" id="news-other-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/virpo/pegboard" target="_blank" title="Show HN：我用AI助手将草图转化为3D打印的儿童挂板">Show HN：我用AI助手将草图转化为3D打印的儿童挂板</a>
+                        <a href="https://radiologybusiness.com/topics/artificial-intelligence/ceo-americas-largest-public-hospital-system-says-hes-ready-replace-radiologists-ai" target="_blank" title="最大公立医院CEO表示已准备好用AI取代放射科医生">最大公立医院CEO表示已准备好用AI取代放射科医生</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-0" onclick="toggleNews('other-0')">
                         展开详情 ▼
@@ -467,28 +342,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 50 points</span>
-                    <span>🕐 2026-03-31 02:23</span>
+                    <span>🔥 7 points</span>
+                    <span>🕐 2026-04-01</span>
                 </div>
-                <p class="news-card-summary">一位开发者利用AI代理，将手绘草图转化为可3D打印的儿童钉板玩具，并将项目开源在GitHub上。该项目名为“pegboard”，核心流程是：用户提供一张与孩子共同绘制的粗略马克笔草图，并向AI（具体使用了Codex）指定两个关键尺寸——孔距为4厘米，钉柱直径为8毫米。AI在一分钟内生成了首批可打印的...</p>
+                <p class="news-card-summary">新加坡最大公立医疗集团的新任首席执行官表示，他已准备好用人工智能取代放射科医生。这一表态引发了医疗行业关于AI在放射学领域角色的广泛讨论。，该CEO指出，当前AI在图像分析方面的能力已足够成熟，能够执行许多传统上由放射科医生完成的任务，例如解读X光、CT和MRI扫描结果。他认为，AI系统可以更快、更...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">一位开发者利用AI代理，将手绘草图转化为可3D打印的儿童钉板玩具，并将项目开源在GitHub上。该项目名为“pegboard”，核心流程是：用户提供一张与孩子共同绘制的粗略马克笔草图，并向AI（具体使用了Codex）指定两个关键尺寸——孔距为4厘米，钉柱直径为8毫米。AI在一分钟内生成了首批可打印的零件文件。，开发者随后进行了简单的“打印-测试-调整”迭代，优化了钉柱的松紧度、手感以及齿轮的转动流畅性。项目中的所有模型均由精简的Python代码生成，而非手动编辑的网格文件，这使得调整尺寸和设计变体变得非常便捷。这种方法节省了在传统CAD软件中绘制每个变体所耗费的时间，让开发者能将更多时间用于实际打印、测试以及与孩子互动。，当前套件是一个基于40毫米孔距的系统，包含七个可玩零件、一个校准钉柱、四个齿轮和两块可打印的板。项目仓库结构清晰，包含最终用于3D打印的STL文件。其突出特点是易于通过编程AI代理进行修改和扩展。项目文档（AGENTS.md）列出了当前尺寸、文件夹布局和扩展规则，用户可指示AI代理完成多种定制，例如制作更大的6x6钉板、调整钉柱长度、为不同的钉柱组合添加新零件、整体缩放系统或生成不同松紧度的测试变体。，该项目的价值在于展示了一种快速原型制作的工作流：结合人类创意（手绘草图）、关键约束（少数尺寸参数）和AI的生成能力，快速将想法转化为可触摸、可测试的实体玩具，并保留了高度的可定制性。</div>
+                        <div class="summary-content">新加坡最大公立医疗集团的新任首席执行官表示，他已准备好用人工智能取代放射科医生。这一表态引发了医疗行业关于AI在放射学领域角色的广泛讨论。，该CEO指出，当前AI在图像分析方面的能力已足够成熟，能够执行许多传统上由放射科医生完成的任务，例如解读X光、CT和MRI扫描结果。他认为，AI系统可以更快、更准确地分析医学影像，减少人为错误，并缓解放射科医生短缺的压力。，技术层面，此类AI通常基于深度学习模型，经过大量标注的医学影像数据训练，能够检测异常、识别病变并提供初步诊断建议。一些先进的AI工具甚至能整合患者病史和其他临床数据，以支持更全面的评估。，然而，这一激进愿景也面临挑战。包括诊断责任归属、患者对AI诊断的接受度、系统在复杂或罕见病例中的可靠性，以及放射科医生角色转型等问题仍需解决。许多专家强调，AI更可能作为辅助工具增强放射科医生的工作效率，而非完全取代人类专业判断。，该言论凸显了医疗AI快速发展的趋势及其对传统医疗岗位的潜在冲击。未来，医疗体系可能需要重新定义放射科医生的职责，并建立相应的AI监管与临床应用标准。</div>
                     </div>
-                    <a href="https://github.com/virpo/pegboard" class="original-link" target="_blank">
+                    <a href="https://radiologybusiness.com/topics/artificial-intelligence/ceo-americas-largest-public-hospital-system-says-hes-ready-replace-radiologists-ai" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Python #GitHub</span>
-                        <span>📊 50 points · 2026-03-31 02:23</span>
+                        <span>🏷️ #AI #人工智能</span>
+                        <span>📊 7 points · 2026-04-01</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/JasonHonKL/PardusBrowser/tree/main" target="_blank" title="Show HN：Pardus浏览器——一款无需Chromium的AI智能体专用浏览器">Show HN：Pardus浏览器——一款无需Chromium的AI智能体专用浏览器</a>
+                        <a href="https://news.future-shock.ai/the-weight-of-remembering/" target="_blank" title="从每令牌300KB到69KB：LLM架构如何解决KV缓存问题">从每令牌300KB到69KB：LLM架构如何解决KV缓存问题</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-1" onclick="toggleNews('other-1')">
                         展开详情 ▼
@@ -496,108 +371,21 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 6 points</span>
-                    <span>🕐 2026-03-31 11:23</span>
+                    <span>🔥 141 points</span>
+                    <span>🕐 2026-03-31 16:25</span>
                 </div>
-                <p class="news-card-summary">Pardus Browser 是一款专为 AI 代理设计的无头浏览器，其核心在于摒弃了传统的 Chromium 渲染引擎，不处理像素或生成截图，而是专注于为 AI 提供结构化的语义化页面状态。，该项目旨在解决 AI Agent 在网页交互中的根本需求：理解页面内容、识别可交互元素并明确可导航路径。P...</p>
+                <p class="news-card-summary">从每令牌300KB到69KB：LLM架构如何解决KV缓存问题，KV缓存本质上是大语言模型（LLM）用于记录对话历史的物理内存状态。当用户输入被转换为令牌后，模型会为每个令牌计算并存储查询、键和值三个向量。这些键值对（KV）驻留在GPU内存中，构成了模型对当前会话的“记忆”。其核心价值在于避免冗余计算...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Pardus Browser 是一款专为 AI 代理设计的无头浏览器，其核心在于摒弃了传统的 Chromium 渲染引擎，不处理像素或生成截图，而是专注于为 AI 提供结构化的语义化页面状态。，该项目旨在解决 AI Agent 在网页交互中的根本需求：理解页面内容、识别可交互元素并明确可导航路径。Pardus Browser 通过获取 URL、解析 HTML，并在毫秒级时间内输出一个清晰的语义树来实现这一目标。该树状结构包含了 ARIA 角色、标题、地标、链接、按钮、表单及其可执行操作等关键信息。，其核心特点与价值包括：，1. 高效轻量：采用纯 Rust 编写，无需依赖 Chrome/Chromium 二进制文件、Docker 或 GPU，仅通过 HTTP 请求和 HTML 解析工作，典型响应时间在 200 毫秒以内。，2. 结构化输出：提供三种输出格式——默认的 Markdown 树状结构、原始树格式以及包含导航图的 JSON 格式。导航图能清晰展示内部路由、外部链接和带字段的表单描述符。，3. 专注交互：提供“仅交互模式”，可过滤静态内容，只呈现可操作元素，帮助 AI 代理快速聚焦。，4. 动作标注：每个交互元素（如链接、按钮、输入框）都会被标注上相应的操作类型，例如 `navigate`（导航）、`click`（点击）、`fill`（填写）、`toggle`（切换）或 `select`（选择），为 AI 代理提供明确的行动指令。，5. 易于集成：可通过 Rust 的 Cargo 工具从源码安装，并支持通过命令行直接调用，也可通过其 API 集成到 AI 代理的工作流中。，总之，Pardus Browser 为 AI Agent 的网页自动化任务提供了一个快速、轻量且信息结构化的专用工具，通过直接解析语义而非渲染像素，显著提升了代理理解与操作网页的效率和精度。</div>
+                        <div class="summary-content">从每令牌300KB到69KB：LLM架构如何解决KV缓存问题，KV缓存本质上是大语言模型（LLM）用于记录对话历史的物理内存状态。当用户输入被转换为令牌后，模型会为每个令牌计算并存储查询、键和值三个向量。这些键值对（KV）驻留在GPU内存中，构成了模型对当前会话的“记忆”。其核心价值在于避免冗余计算：若无KV缓存，生成每个新令牌都需要从头重新处理之前的所有令牌，导致计算量呈二次方增长；而有了缓存，计算量降至线性，只需关注已存储的键值对。，然而，KV缓存带来了显著的内存开销。根据Sebastian Raschka的LLM架构对比数据，GPT-2的KV缓存成本高达每令牌300KB。这意味着一次4000令牌的对话仅缓存就需要占用约1.2GB的GPU内存，这直接转化为硬件成本、能耗和运营费用。，过去六年中，KV缓存的处理方式经历了四代演进，反映了设计者对效率与性能的权衡：，1. GPT-2（2019）采用标准的多头注意力机制，每个注意力头独立维护一套键值对，无共享，成本为每令牌300KB。，2. Llama 3（2024）全面采用分组查询注意力（GQA），让多个查询头共享同一组键值，将成本降低至每令牌128KB，在几乎不影响质量的前提下将内存占用减半。，3. 进一步优化中，一些架构通过更激进的共享策略（如MQA）或创新设计（如Transformer的滑动窗口注意力），将成本降至约69KB每令牌。，这些架构演进表明，LLM正从“记住一切”的初始设计转向更高效、集约的内存管理。KV缓存优化不仅是技术挑战，也直接关系到AI服务的可扩展性与经济性，体现了模型设计中“性能与成本”的核心平衡。</div>
                     </div>
-                    <a href="https://github.com/JasonHonKL/PardusBrowser/tree/main" class="original-link" target="_blank">
+                    <a href="https://news.future-shock.ai/the-weight-of-remembering/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Rust #智能体</span>
-                        <span>📊 6 points · 2026-03-31 11:23</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-other-2">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://www.newscientist.com/article/2521256-ai-data-centres-can-warm-surrounding-areas-by-up-to-9-1c/" target="_blank" title="人工智能数据中心可使周边区域升温高达9.1摄氏度">人工智能数据中心可使周边区域升温高达9.1摄氏度</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-other-2" onclick="toggleNews('other-2')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 12 points</span>
-                    <span>🕐 2026-03-31 11:23</span>
-                </div>
-                <p class="news-card-summary">AI数据中心可使周边区域升温高达9.1°C。随着全球数据中心数量激增，其运行产生的巨大热量正形成“数据中心热岛”，已可能影响多达3.4亿人。房地产公司JLL预测，2025至2030年间数据中心容量将翻倍，其中AI预计将占一半需求。，英国剑桥大学的Andrea Marinoni及其团队注意到，数据中心...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">AI数据中心可使周边区域升温高达9.1°C。随着全球数据中心数量激增，其运行产生的巨大热量正形成“数据中心热岛”，已可能影响多达3.4亿人。房地产公司JLL预测，2025至2030年间数据中心容量将翻倍，其中AI预计将占一半需求。，英国剑桥大学的Andrea Marinoni及其团队注意到，数据中心能耗近期持续上升且未来几年可能“爆炸式”增长，因此希望量化其环境影响。研究人员通过卫星测量了过去20年的地表温度，并与8400多个AI数据中心的地理坐标进行交叉分析。为排除其他干扰因素，研究聚焦于远离人口密集区的数据中心。，研究发现，AI数据中心开始运营后的数月内，周边地表温度平均上升2°C（3.6°F），极端情况下升温可达9.1°C（16.4°F）。热影响范围并不局限于数据中心紧邻区域：团队发现10公里外仍能检测到温度上升，7公里处的热强度仅降低30%。Marinoni表示：“结果令人惊讶，这可能演变为一个严重问题。”，基于人口数据估算，超过3.4亿人居住在数据中心10公里范围内，这意味着他们的居住环境因数据中心存在而变得更热。研究指出，墨西哥巴希奥地区和西班牙阿拉贡省在2004至2024年间出现了无法用其他原因解释的2°C温升。，英国布里斯托大学的Chris Preist认为实际情况可能更复杂：“需要后续研究来区分热量究竟来自计算过程还是建筑本身——例如建筑物吸收阳光辐射的影响。”但Marinoni强调，无论热源如何，数据中心确实导致了地表升温。他呼吁：“关键信息是必须谨慎设计和开发数据中心。”，该研究警示，在AI产业高速扩张的背景下，数据中心的热排放已成为不可忽视的环境因素，亟需在规划阶段纳入热管理策略。相关论文已发布于arXiv平台（编号：arXiv:2603.20897）。</div>
-                    </div>
-                    <a href="https://www.newscientist.com/article/2521256-ai-data-centres-can-warm-surrounding-areas-by-up-to-9-1c/" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #人工智能</span>
-                        <span>📊 12 points · 2026-03-31 11:23</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-other-3">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://negroniventurestudios.com/2026/03/19/the-ladder-is-missing-rungs/" target="_blank" title="阶梯缺失了横档——当AI吞噬中层时的工程进阶之路">阶梯缺失了横档——当AI吞噬中层时的工程进阶之路</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-other-3" onclick="toggleNews('other-3')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 89 points</span>
-                    <span>🕐 2026-03-30 14:23</span>
-                </div>
-                <p class="news-card-summary">在2026年3月伦敦QCon大会上，演讲者Alasdair Allan指出，AI正在完美执行那些原本构成工程师职业生涯头十年核心的任务。这些任务不仅是工作，更是培养判断力、直觉以及监督如今被委托给AI的系统能力的关键机制。当前的问题不仅是职业阶梯缺失了中间层级，更是缺失了培养出建造这些阶梯的人才的整...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">在2026年3月伦敦QCon大会上，演讲者Alasdair Allan指出，AI正在完美执行那些原本构成工程师职业生涯头十年核心的任务。这些任务不仅是工作，更是培养判断力、直觉以及监督如今被委托给AI的系统能力的关键机制。当前的问题不仅是职业阶梯缺失了中间层级，更是缺失了培养出建造这些阶梯的人才的整个过程。，去年，Anthropic联合创始人Dario Amodei曾预测，AI将在三到六个月内编写90%的代码，并在十二个月内编写几乎所有代码。六个月后，他声称在Anthropic内部，90%的指标“绝对属实”。然而，一年后的现实并未完全应验。Redwood Research的详细分析指出，若仅统计提交至代码仓库的代码，AI生成比例接近50%，这仍是一个惊人的数字。90%的比例仅当计入一次性脚本、探索性代码和所有短暂有用的AI生成文本时才成立。同时，Google报告其内部代码约25%为AI生成，Microsoft约为30%，GitHub Copilot的企业建议采纳率大致在30%。这些数据在过去六个月中未有显著变化，远未达到“几乎所有”的程度。，尽管如此，AI确实在编写大量代码，开发者的工作 landscape 已发生巨变。Anthropic内部数据显示，工程师59%的日常工作使用Claude，并报告了50%的生产力提升。约4%的公共GitHub提交由Claude Code生成。工具是真实的，生产力提升在特定背景下也是真实的。，但核心问题在于，“编写代码”从来不是目的。当前公众讨论聚焦于AI写代码，而真正应探讨的是：当软件工程师无需编写代码时，软件工程将变成什么样？更深层的问题是双方都忽略的结构性挑战：如果AI接管了原本用于训练工程师的工作，下一代工程师将从何而来？，Amodei对其预测的补充说明恰恰点明了关键：程序员仍需负责总体设计、代码协作方式及安全性评估。他将“编写”与“工程”分离。然而，直到最近，编写代码正是人们学习工程的方式。AI正在吞噬职业阶梯的中间层级，这引发了关于未来工程师培养路径的严峻拷问。</div>
-                    </div>
-                    <a href="https://negroniventurestudios.com/2026/03/19/the-ladder-is-missing-rungs/" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub</span>
-                        <span>📊 89 points · 2026-03-30 14:23</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-other-4">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://wallstreetcn.com/articles/3768880" target="_blank" title="AI 加速，短剧比想象中更短命">AI 加速，短剧比想象中更短命</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-other-4" onclick="toggleNews('other-4')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">Wall Street CN</span>
-                    
-                    <span>🕐 2026-03-31</span>
-                </div>
-                <p class="news-card-summary">华尔街见闻</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">华尔街见闻</div>
-                    </div>
-                    <a href="https://wallstreetcn.com/articles/3768880" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI</span>
-                        <span>📊  · 2026-03-31</span>
+                        <span>🏷️ #AI #LLM #GPT</span>
+                        <span>📊 141 points · 2026-03-31 16:25</span>
                     </div>
                 </div>
             </article>
