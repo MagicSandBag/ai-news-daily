@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News Daily - 2026年4月6日</title>
+    <title>AI News Daily - 2026年4月7日</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="header-inner">
             <div class="logo">AI News <span>Daily</span></div>
-            <div class="header-meta">2026年4月6日 · 星期一</div>
+            <div class="header-meta">2026年4月7日 · 星期二</div>
             <nav class="nav-links">
                 <a href="archive.html">📅 归档</a>
                 <a href="#" onclick="location.reload(); return false;">🔄 刷新</a>
@@ -20,7 +20,7 @@
 
     <main>
         <div class="date-header">
-            <div class="date">2026年4月6日</div>
+            <div class="date">2026年4月7日</div>
             <div class="subtitle"><span class="emoji">☕</span> 早安，这是今天的 AI 每日速递</div>
         </div>
 
@@ -35,7 +35,7 @@
             <article class="news-card collapsed" id="news-global-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://ai.georgeliu.com/p/running-google-gemma-4-locally-with" target="_blank" title="使用LM Studio全新无头CLI和Claude Code本地运行Gemma 4">使用LM Studio全新无头CLI和Claude Code本地运行Gemma 4</a>
+                        <a href="https://github.com/anthropics/claude-code/issues/42796" target="_blank" title="问题：Claude Code 在二月更新后无法用于复杂工程任务">问题：Claude Code 在二月更新后无法用于复杂工程任务</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-0" onclick="toggleNews('global-0')">
                         展开详情 ▼
@@ -43,86 +43,86 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 307 points</span>
-                    <span>🕐 2026-04-05 18:13</span>
+                    <span>🔥 1194 points</span>
+                    <span>🕐 2026-04-06 14:21</span>
                 </div>
-                <p class="news-card-summary">LM Studio 0.4.0版本引入了llmster和lms CLI（命令行界面）。本文详细介绍了如何在macOS系统上本地部署Google Gemma 4 26B模型进行推理，并将其与Claude Code结合使用。，本地运行模型具有诸多优势：可避免云AI API的速率限制、使用成本、隐私顾虑和...</p>
+                <p class="news-card-summary">在GitHub的Claude Code项目（Issue #42796）中，用户stellaraccident报告称，自2026年2月更新后，Claude Code模型在处理复杂工程任务时已变得不可用。报告者通过分析数月的工作日志发现，模型质量出现了显著退化。，核心问题在于，模型开始频繁忽略指令、提供...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">LM Studio 0.4.0版本引入了llmster和lms CLI（命令行界面）。本文详细介绍了如何在macOS系统上本地部署Google Gemma 4 26B模型进行推理，并将其与Claude Code结合使用。，本地运行模型具有诸多优势：可避免云AI API的速率限制、使用成本、隐私顾虑和网络延迟问题。对于代码审查、草稿撰写或提示词测试等快速任务，完全在本地硬件上运行的模型能实现零API成本、数据不离机以及稳定可用。，Google Gemma 4模型家族包含四个型号，覆盖广泛的硬件目标。其中“E”系列模型（E2B、E4B）采用逐层嵌入技术，专为设备端部署优化，且是唯一支持音频输入（语音识别与翻译）的变体。性能最强的31B密集模型在MMLU Pro和AIME 2026基准测试中分别获得85.2%和89.2%的分数。，作者选择26B-A4B型号的关键在于其混合专家架构：该模型包含128个专家和1个共享专家，但每个令牌仅激活8个专家（约38亿参数）。经验法则估算其等效质量约为总激活参数平方根，使得该模型有效参数量约100亿。实际表现中，它以接近40亿密集模型的推理成本，实现了远超该参数级别的质量。该模型在MMLU Pro和AIME 2026测试中分别获得82.6%和88.3%的分数，性能接近31B密集模型，但运行速度显著更快。，在配备48GB统一内存的14英寸MacBook Pro M4 Pro设备上，该模型运行流畅，生成速度达每秒51个令牌（但在Claude Code中使用时会出现明显降速）。基准测试图表显示，Gemma 4 26B-A4B以约1441的Elo分数位居高效能区间，其性能表现远超252亿参数的理论水平，而310亿密集变体（约1451 Elo）仍保持惊人紧凑性。相比之下，Qwen 3.5 397B-A17B等模型需要1000-6000亿参数才能达到相近分数。，通过LM Studio API服务Gemma 4 26B-a4b LLM模型，用户可创建Claude Code别名命令claude-lm，实现本地化AI辅助编程工作流。</div>
+                        <div class="summary-content">在GitHub的Claude Code项目（Issue #42796）中，用户stellaraccident报告称，自2026年2月更新后，Claude Code模型在处理复杂工程任务时已变得不可用。报告者通过分析数月的工作日志发现，模型质量出现了显著退化。，核心问题在于，模型开始频繁忽略指令、提供错误且过于简化的修复方案、执行与要求相反的操作，并在未完成指令的情况下声称任务已完成。用户指出，这种退化与2026年2月12日引入的“思考内容编辑”（redact-thinking-2026-02-12）功能上线时间点高度吻合。，报告者基于对6,852个Claude Code会话文件、17,871个思考区块和234,760次工具调用的定量分析得出结论：对于高级工程工作流而言，扩展的“思考”过程是结构性的必要环节。它支撑着模型进行多步骤研究、遵守约定以及执行细致的代码修改。当思考深度被削减后，模型的工具使用模式发生了可测量的转变，从“研究优先”转向了“编辑优先”的行为模式。这种转变直接导致了在复杂、长时间会话的工程工作流中观察到质量衰退。，报告者强调，扩展思考对于高级工程工作流程是“负载性”的，而不仅仅是锦上添花。他们已尝试所有公开的解决方案但均无效。尽管问题影响严重，导致模型无法再被信任用于复杂工程，但报告者仍希望Anthropic能解决这些问题。此问题已被标记为“模型缺陷”。</div>
                     </div>
-                    <a href="https://ai.georgeliu.com/p/running-google-gemma-4-locally-with" class="original-link" target="_blank">
+                    <a href="https://github.com/anthropics/claude-code/issues/42796" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Claude</span>
-                        <span>📊 307 points · 2026-04-05 18:13</span>
+                        <span>🏷️ #Claude #GitHub</span>
+                        <span>📊 1194 points · 2026-04-06 14:21</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/salmanmohammadi/nanocode/discussions/1" target="_blank" title="Nanocode：200美元在TPU上能买到的最佳纯JAX版Claude代码">Nanocode：200美元在TPU上能买到的最佳纯JAX版Claude代码</a>
+                        <a href="https://github.com/google-ai-edge/gallery" target="_blank" title="谷歌AI边缘/图库 - 一个展示设备端机器学习/生成式人工智能用例，并允许人们在本地试用和使用模型的图库。">谷歌AI边缘/图库 - 一个展示设备端机器学习/生成式人工智能用例，并允许人们在本地试用和使用模型的图库。</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-1" onclick="toggleNews('global-1')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 193 points</span>
-                    <span>🕐 2026-04-05 15:13</span>
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 18,405 stars</span>
+                    <span>🕐 2026-04-07</span>
                 </div>
-                <p class="news-card-summary">近日，开源项目nanocode在GitHub上发布，这是一个展示如何端到端训练自有Claude Code模型的库。项目完全基于JAX编写，并针对TPU训练进行了优化，核心训练基础设施和理念源自Karpathy的nanochat项目。，nanocode旨在遵循Anthropic训练Claude模型时采...</p>
+                <p class="news-card-summary">谷歌AI Edge团队在GitHub上开源了“google-ai-edge/gallery”项目，这是一个展示设备端机器学习和生成式AI用例的画廊，允许用户在本地尝试和使用模型。该项目旨在让用户在自己的移动设备上探索、体验和评估设备端生成式AI的未来。，其核心是一个应用程序，用户可通过Google ...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">近日，开源项目nanocode在GitHub上发布，这是一个展示如何端到端训练自有Claude Code模型的库。项目完全基于JAX编写，并针对TPU训练进行了优化，核心训练基础设施和理念源自Karpathy的nanochat项目。，nanocode旨在遵循Anthropic训练Claude模型时采用的Constitutional AI方法，通过最简单的路径训练一个具备代理能力的编码伙伴。开发者将编写自己的SOUL.md文件，定义模型与外界交互的代理接口，生成合成数据，并利用偏好优化使模型与设定的“灵魂”（SOUL）对齐。，在技术实现上，其预训练和分词器训练过程与nanochat基本一致，但通过在预训练和分词器混合数据中以1:5的比例加入来自The Stack-V2的额外代码数据，有效提升了模型的编码能力。项目展示了训练成果：一个13亿参数（d24版本）的模型，其训练成本极具竞争力。，据估算，在TPU v6e-8上复现13亿参数的nanocode-d24模型总计需约9小时，成本约200美元；而训练4.77亿参数的nanocode-d20模型仅需约1.5小时，成本约34美元。对于希望低成本尝试的用户，可以利用Google TRC（TPU Research Cloud）项目免费获取一个月的可抢占式TPU资源，新Google Cloud账户通常还可获得300美元赠金。，虽然项目主要针对TPU优化，但也支持在NVIDIA GPU上开箱即用。该项目为研究者和开发者提供了一个清晰、可实践的框架，用于探索和训练与Claude Code类似的对齐代码生成模型。</div>
+                        <div class="summary-content">谷歌AI Edge团队在GitHub上开源了“google-ai-edge/gallery”项目，这是一个展示设备端机器学习和生成式AI用例的画廊，允许用户在本地尝试和使用模型。该项目旨在让用户在自己的移动设备上探索、体验和评估设备端生成式AI的未来。，其核心是一个应用程序，用户可通过Google Play商店或Apple App Store安装，也可直接下载APK文件。该应用的核心价值在于让用户能够在完全离线、私密且高速的环境下，在本地硬件上运行强大的开源大语言模型，无需将数据发送至服务器。，项目目前的核心功能与亮点包括：首先，它正式支持最新发布的Gemma 4模型系列，用户可借此体验设备端AI在高级推理、逻辑和创意方面的前沿能力。其次，其“智能体技能”功能能将LLM从对话工具转变为主动助手，通过集成如维基百科、交互式地图和可视化摘要卡片等工具来增强模型能力，用户甚至可以从URL加载模块化技能或在GitHub社区浏览贡献。第三，“AI聊天与思维模式”支持流畅的多轮对话，并可开启“思维模式”查看模型逐步推理的内部过程，有助于理解复杂问题求解。第四，“图像问答”利用多模态能力，通过设备摄像头或相册识别物体、解决视觉谜题或获取详细描述。第五，“音频转录”功能能利用高效的设备端语言模型，将语音录音实时转录并翻译为文本。此外，还设有“提示词实验室”，作为专门的工作区用于测试不同的提示词和单轮用例。，总体而言，Google AI Edge Gallery作为一个平台，集中展示了设备端AI的实用案例，通过提供直观的本地化体验，降低了用户接触和评估前沿生成式AI技术的门槛。</div>
                     </div>
-                    <a href="https://github.com/salmanmohammadi/nanocode/discussions/1" class="original-link" target="_blank">
+                    <a href="https://github.com/google-ai-edge/gallery" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub</span>
-                        <span>📊 193 points · 2026-04-05 15:13</span>
+                        <span>🏷️ #AI #LLM #GitHub #人工智能 #智能体</span>
+                        <span>📊 18,405 stars · 2026-04-07</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://twitter.com/0x_kaize/status/2038286026284667239" target="_blank" title="我不再触及Claude的使用限制——我做出的改变">我不再触及Claude的使用限制——我做出的改变</a>
+                        <a href="https://github.com/google-ai-edge/LiteRT-LM" target="_blank" title="谷歌AI边缘/LiteRT-LM">谷歌AI边缘/LiteRT-LM</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-2" onclick="toggleNews('global-2')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 11 points</span>
-                    <span>🕐 2026-04-06 08:13</span>
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 2,331 stars</span>
+                    <span>🕐 2026-04-07</span>
                 </div>
-                <p class="news-card-summary">由于原新闻内容无法正常加载，仅显示技术错误提示，因此无法提供基于原文的详细中文摘要。根据标题“”推断，这可能是一篇关于用户如何通过调整使用策略或方法，成功避免触及Anthropic公司AI助手Claude的用量限制的经验分享文章。，典型的此类文章可能涉及以下关键点：用户最初因频繁或高强度使用而遇到C...</p>
+                <p class="news-card-summary">谷歌AI团队在GitHub上开源了其生产就绪的高性能边缘设备大语言模型推理框架LiteRT-LM。该项目旨在为边缘设备部署大型语言模型提供高效解决方案，目前已获得2.3k星标和233个分支。，核心功能方面，LiteRT-LM具备跨平台支持能力，可覆盖Android、iOS、Web、桌面及物联网设备（...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">由于原新闻内容无法正常加载，仅显示技术错误提示，因此无法提供基于原文的详细中文摘要。根据标题“”推断，这可能是一篇关于用户如何通过调整使用策略或方法，成功避免触及Anthropic公司AI助手Claude的用量限制的经验分享文章。，典型的此类文章可能涉及以下关键点：用户最初因频繁或高强度使用而遇到Claude的API调用次数、Token数量或会话时长等限制；随后通过一系列改变来优化使用模式。可能的改变包括：调整请求频率和节奏以避免速率限制；优化提示（Prompt）工程，用更精炼的输入获取更有效的输出，从而减少不必要的Token消耗；合理规划对话结构，将复杂任务拆分为多个高效会话；或者结合使用缓存、RAG（检索增强生成）等技术来减少对LLM的重复查询。文章的价值在于为其他用户，特别是开发者和重度用户，提供了绕过或缓解使用限制的实用技巧和最佳实践，从而更经济、更可持续地利用Claude等AI模型的强大能力。</div>
+                        <div class="summary-content">谷歌AI团队在GitHub上开源了其生产就绪的高性能边缘设备大语言模型推理框架LiteRT-LM。该项目旨在为边缘设备部署大型语言模型提供高效解决方案，目前已获得2.3k星标和233个分支。，核心功能方面，LiteRT-LM具备跨平台支持能力，可覆盖Android、iOS、Web、桌面及物联网设备（如树莓派）。框架通过GPU和NPU硬件加速实现峰值性能，并支持视觉与音频输入的多模态处理。其工具调用功能为智能体工作流提供了函数调用支持，同时支持检索增强生成技术。，技术架构上，该项目采用Bazel构建系统，集成Rust与C++组件，包含完整的工具链和预构建配置。最新动态显示，框架已支持Gemma 4模型部署，用户可通过LiteRT-LM命令行界面在Linux、macOS、Windows（WSL）及树莓派平台上快速体验。示例命令展示了如何从Hugging Face仓库加载量化后的Gemma 4模型进行推理测试。，该框架作为开源项目，采用Apache 2.0许可证，提供了从模型转换、优化到部署的完整工具链。其设计重点在于降低边缘设备部署LLM的技术门槛，同时保持与云端推理相媲美的性能表现，为移动端和物联网场景的AI应用提供了新的基础设施选择。</div>
                     </div>
-                    <a href="https://twitter.com/0x_kaize/status/2038286026284667239" class="original-link" target="_blank">
+                    <a href="https://github.com/google-ai-edge/LiteRT-LM" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Claude</span>
-                        <span>📊 11 points · 2026-04-06 08:13</span>
+                        <span>🏷️ #AI #LLM #Rust #GitHub #智能体</span>
+                        <span>📊 2,331 stars · 2026-04-07</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-3">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/google-ai-edge/gallery" target="_blank" title="Google AI Edge 画廊 - 一个展示设备端机器学习/生成式人工智能用例的平台，允许用户在本地试用和使用模型。">Google AI Edge 画廊 - 一个展示设备端机器学习/生成式人工智能用例的平台，允许用户在本地试用和使用模型。</a>
+                        <a href="https://github.com/TheCraigHewitt/seomachine" target="_blank" title="TheCraigHewitt/seomachine - 一个专为任何企业创建长篇、SEO优化博客内容的Claude Code工作空间。该系统帮助您研究、撰...">TheCraigHewitt/seomachine - 一个专为任何企业创建长篇、SEO优化博客内容的Claude Code工作空间。该系统帮助您研究、撰...</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-3" onclick="toggleNews('global-3')">
                         展开详情 ▼
@@ -130,108 +130,50 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 17,527 stars</span>
-                    <span>🕐 2026-04-06</span>
+                    <span>🔥 3,611 stars</span>
+                    <span>🕐 2026-04-07</span>
                 </div>
-                <p class="news-card-summary">谷歌AI Edge团队在GitHub上开源了“google-ai-edge/gallery”项目，这是一个展示设备端机器学习和生成式AI用例的画廊，允许用户在本地尝试和使用模型。该项目旨在让用户直接在移动设备上体验高性能的生成式AI，整个过程完全离线、私密且快速。，该画廊的核心是AI Edge Ga...</p>
+                <p class="news-card-summary">GitHub项目TheCraigHewitt/seomachine是一个基于Claude Code构建的专门工作空间，旨在为各类企业创建长篇、SEO优化的博客内容。该系统通过集成研究、撰写、分析和优化功能，帮助用户生成排名靠前且能有效服务目标受众的内容。，该项目的核心是一个专为内容创作流程设计的Cl...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">谷歌AI Edge团队在GitHub上开源了“google-ai-edge/gallery”项目，这是一个展示设备端机器学习和生成式AI用例的画廊，允许用户在本地尝试和使用模型。该项目旨在让用户直接在移动设备上体验高性能的生成式AI，整个过程完全离线、私密且快速。，该画廊的核心是AI Edge Gallery应用，它是用户在移动设备上运行全球最强大开源大语言模型（LLM）的首选平台。最新版本的核心亮点是正式支持新发布的Gemma 4模型系列。作为此次更新的重点，Gemma 4让用户能够测试设备端AI的前沿能力，体验先进的推理、逻辑和创意功能，且所有数据处理均在本地完成，无需将数据发送至服务器。，项目提供了丰富的核心功能：，1. 智能体技能：通过“Agent Skills”功能，用户可以将LLM从对话工具转变为主动助手。该功能通过集成诸如维基百科（用于事实核查）、交互式地图和丰富的视觉摘要卡片等工具来增强模型能力。用户甚至可以从URL加载模块化技能，或在GitHub Discussions上浏览社区贡献的技能。，2. 带思考模式的AI聊天：用户可以进行流畅的多轮对话，并可开启新的“Thinking Mode”来窥视模型的“内部思考”过程。此功能允许用户查看模型逐步的推理链条，非常适合理解复杂的解题过程。目前，思考模式从Gemma 4系列开始，在支持的模型上可用。，3. 图像问答：利用多模态能力，通过设备摄像头或相册识别物体、解决视觉谜题或获取详细描述。，4. 音频转录：使用高效的设备端语言模型，将语音录音实时转录并翻译成文本。，5. 提示词实验室：一个专门的工作区，用于测试不同的提示词和单轮用例。，该项目通过Google Play商店和Apple App Store提供应用安装，对于无法访问Google Play的用户，也提供了直接从最新发布版本安装APK的途径。AI Edge Gallery为用户探索、体验和评估设备端生成式AI的未来提供了一个直观且功能强大的平台。</div>
+                        <div class="summary-content">GitHub项目TheCraigHewitt/seomachine是一个基于Claude Code构建的专门工作空间，旨在为各类企业创建长篇、SEO优化的博客内容。该系统通过集成研究、撰写、分析和优化功能，帮助用户生成排名靠前且能有效服务目标受众的内容。，该项目的核心是一个专为内容创作流程设计的Claude Code工作区。它提供了一系列自定义命令，例如/research（研究）、/write（撰写）、/rewrite（重写）、/analyze-existing（分析现有内容）、/optimize（优化）、/performance-review（性能审查）和/publish-draft（发布草稿）等，覆盖了从主题规划到内容上线的全链条。，系统内置了多个专门化的智能体（Agents），包括内容分析器、SEO优化器、元元素创建器、内部链接构建器、关键词映射器、编辑器、性能分析器、标题生成器、转化率优化（CRO）分析师和落地页优化器。这些智能体协同工作，自动化处理内容优化的各个环节。，此外，SEO Machine集成了26种营销技能，涵盖文案写作、CRO、A/B测试、电子邮件序列和定价策略等领域，增强了其商业应用价值。在SEO分析方面，它具备先进的功能，如搜索意图检测、关键词密度与聚类分析、内容长度对比、可读性评分以及0-100分的SEO质量评级。，项目支持与Google Analytics 4、Google Search Console以及DataForSEO等数据源集成，能够获取实时性能洞察，使优化决策基于实际数据。其工作流是上下文驱动的，能够根据项目文件夹中的研究数据、草稿和已发布内容来调整输出。，技术架构上，项目包含用于配置、上下文管理、数据源、草稿和输出的专用目录，并提供了多个研究脚本，例如研究竞争对手差距、性能矩阵、SERP分析和趋势主题等。用户可以通过环境变量配置API密钥来连接Claude和各种数据服务。，总体而言，SEO Machine是一个功能集中的AI驱动内容工厂，它利用Claude Code的指令和上下文能力，将SEO策略、内容营销和性能分析自动化，旨在系统化地生产高质量、高排名的商业博客内容。</div>
                     </div>
-                    <a href="https://github.com/google-ai-edge/gallery" class="original-link" target="_blank">
+                    <a href="https://github.com/TheCraigHewitt/seomachine" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GitHub #人工智能 #智能体</span>
-                        <span>📊 17,527 stars · 2026-04-06</span>
+                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
+                        <span>📊 3,611 stars · 2026-04-07</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-4">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/google-ai-edge/LiteRT-LM" target="_blank" title="谷歌AI边缘/LiteRT-LM">谷歌AI边缘/LiteRT-LM</a>
+                        <a href="https://www.producthunt.com/products/google" target="_blank" title="谷歌AI边缘Eloquent">谷歌AI边缘Eloquent</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-4" onclick="toggleNews('global-4')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 1,813 stars</span>
-                    <span>🕐 2026-04-06</span>
+                    <span class="source-badge">Product Hunt</span>
+                    <span>🔥 Top Product</span>
+                    <span>🕐 2026-04-06T19:10:40-07:00</span>
                 </div>
-                <p class="news-card-summary">谷歌AI团队在GitHub上开源了其生产就绪的高性能边缘设备大语言模型推理框架LiteRT-LM。该项目旨在为在资源受限的边缘设备上部署大型语言模型提供高效解决方案。，LiteRT-LM的核心是一个专为边缘计算优化的开源推理框架，支持在Android、iOS、Web、桌面端及物联网设备（如树莓派）等...</p>
+                <p class="news-card-summary">谷歌推出名为“Eloquent”的AI边缘计算项目，旨在将大型语言模型（LLM）能力高效部署至边缘设备。该项目专注于优化模型在资源受限环境（如智能手机、物联网设备）中的运行性能，核心目标是实现低延迟、高能效的本地AI处理，同时减少对云服务的依赖。，Eloquent的核心技术涉及模型压缩、高效推理框架...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">谷歌AI团队在GitHub上开源了其生产就绪的高性能边缘设备大语言模型推理框架LiteRT-LM。该项目旨在为在资源受限的边缘设备上部署大型语言模型提供高效解决方案。，LiteRT-LM的核心是一个专为边缘计算优化的开源推理框架，支持在Android、iOS、Web、桌面端及物联网设备（如树莓派）等多种平台上运行。框架通过利用GPU和NPU等硬件加速器实现峰值性能，并支持视觉与音频输入的多模态处理能力。，技术方面，该项目提供了完整的工具链，包括Bazel和CMake构建系统支持，并集成了Rust、C++和Python等多种编程语言接口。框架已实现对Gemma 4模型的支持，用户可通过Hugging Face仓库直接获取预转换的模型文件。项目还包含专门的CLI工具，支持在Linux、macOS、Windows（WSL）和树莓派系统上快速运行模型推理。，该框架特别注重生产环境部署需求，提供函数调用支持以实现智能体工作流，具备工具使用能力。项目文档显示其采用模块化架构设计，包含运行时系统、预构建组件和完整的测试工具集。，作为谷歌AI Edge计划的重要组成部分，LiteRT-LM的推出降低了在边缘设备部署LLM的技术门槛，使开发者能够在端侧实现高效的大语言模型推理，为移动应用和物联网设备带来更强大的AI能力。项目采用Apache 2.0许可证，目前已在GitHub获得超过1.8k星标关注。</div>
+                        <div class="summary-content">谷歌推出名为“Eloquent”的AI边缘计算项目，旨在将大型语言模型（LLM）能力高效部署至边缘设备。该项目专注于优化模型在资源受限环境（如智能手机、物联网设备）中的运行性能，核心目标是实现低延迟、高能效的本地AI处理，同时减少对云服务的依赖。，Eloquent的核心技术涉及模型压缩、高效推理框架与硬件适配。它可能采用量化、剪枝等模型小型化技术，并优化Transformer架构在边缘芯片上的执行效率。项目强调在保护用户隐私的前提下，使设备能够直接运行如GPT或Claude等先进LLM的轻量化版本，支持实时语言理解、文本生成等任务。，该项目的价值在于推动AI普惠与隐私保护。通过边缘部署，用户数据可在本地处理，避免了敏感信息上传至云端，增强了数据安全。同时，它能改善网络连接不稳定地区的AI服务可用性，并降低云API调用成本。对于开发者，Eloquent可能提供工具链或API，简化边缘AI应用的开发流程。，此举反映了谷歌在AI与边缘计算融合领域的重要布局，旨在扩大其AI生态影响力，并与云端AI服务形成互补。</div>
                     </div>
-                    <a href="https://github.com/google-ai-edge/LiteRT-LM" class="original-link" target="_blank">
+                    <a href="https://www.producthunt.com/products/google" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Rust #Python #GitHub</span>
-                        <span>📊 1,813 stars · 2026-04-06</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-global-5">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/ollama/ollama" target="_blank" title="ollama/ollama - 快速上手 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 及其他模型。">ollama/ollama - 快速上手 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 及其他模型。</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-global-5" onclick="toggleNews('global-5')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 167,444 stars</span>
-                    <span>🕐 2026-04-06</span>
-                </div>
-                <p class="news-card-summary">Ollama项目是一个开源平台，旨在简化大型语言模型（LLM）的本地部署与运行。它支持包括Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma在内的多种开源模型，为用户提供了一个统一的工具来快速启动和管理这些AI模型。，核心功能是允许用户通过简单的命...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">Ollama项目是一个开源平台，旨在简化大型语言模型（LLM）的本地部署与运行。它支持包括Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma在内的多种开源模型，为用户提供了一个统一的工具来快速启动和管理这些AI模型。，核心功能是允许用户通过简单的命令行工具或REST API在本地计算机上运行模型。用户可以通过`ollama run <模型名>`命令直接与模型交互聊天，例如运行`ollama run gemma3`即可启动Gemma 3模型进行对话。平台还提供了完整的REST API，支持通过HTTP请求调用模型，例如使用curl发送JSON数据到本地端点（默认`localhost:11434`）即可获取模型响应，便于集成到现有应用程序或自动化流程中。，项目特点在于其易用性和广泛的集成支持。它提供了跨平台的一键安装脚本（支持macOS、Windows和Linux），并配有Docker镜像。除了基础模型运行，Ollama还能通过特定启动命令（如`ollama launch claude`）与多种AI代理和应用集成，例如支持Claude Code、Codex等编码助手，以及通过OpenClaw将其转变为连接WhatsApp、Telegram、Slack等多个通讯平台的个人AI助手。，其价值在于降低了开发者和小型团队使用前沿开源LLM的技术门槛，无需复杂的配置即可在本地环境中实验、开发和部署模型。项目在GitHub上拥有极高关注度（16.7万星），拥有活跃的社区和详细的文档，包括快速入门指南和完整的API文档，是构建基于开源大模型应用的高效起点。</div>
-                    </div>
-                    <a href="https://github.com/ollama/ollama" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GPT #Claude #GitHub</span>
-                        <span>📊 167,444 stars · 2026-04-06</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-global-6">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/ggml-org/llama.cpp" target="_blank" title="ggml-org/llama.cpp - 基于C/C++的LLM推理">ggml-org/llama.cpp - 基于C/C++的LLM推理</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-global-6" onclick="toggleNews('global-6')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 101,779 stars</span>
-                    <span>🕐 2026-04-06</span>
-                </div>
-                <p class="news-card-summary">llama.cpp 是一个专注于在纯 C/C++ 环境中实现高效 LLM 推理的开源项目。其核心目标是提供无需复杂依赖（如 Python 或庞大的深度学习框架）即可本地运行大型语言模型的轻量级解决方案，特别注重性能与可移植性。，该项目支持多种模型架构，包括 LLaMA、GPT-2 和 GPT-J 等...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">llama.cpp 是一个专注于在纯 C/C++ 环境中实现高效 LLM 推理的开源项目。其核心目标是提供无需复杂依赖（如 Python 或庞大的深度学习框架）即可本地运行大型语言模型的轻量级解决方案，特别注重性能与可移植性。，该项目支持多种模型架构，包括 LLaMA、GPT-2 和 GPT-J 等，并能加载和转换 Hugging Face 格式的模型。其关键特性在于使用了自定义的 ggml 张量库进行高效计算，并支持将模型量化为 4 位、5 位和 8 位等格式，以显著减少内存占用和提升推理速度。项目提供了丰富的示例，涵盖文本生成、对话、代码补全等多种任务。，近期的重要更新包括：增加了对 gpt-oss 模型原生 MXFP4 格式的支持（与 NVIDIA 合作）；在 llama-server 中引入了多模态支持；提供了用于代码填充（FIM）的 VS Code 和 Vim/Neovim 插件。此外，Hugging Face 推理端点现已开箱即用地支持 GGUF 模型格式，进一步简化了部署流程。，项目提供了多种安装和构建方式，包括使用 Make、CMake 或预构建的二进制包，方便用户快速上手。其活跃的社区和持续的开发，使其成为在资源受限环境或需要高度集成控制的应用中部署 LLM 的热门选择。</div>
-                    </div>
-                    <a href="https://github.com/ggml-org/llama.cpp" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #LLM #GPT #Python</span>
-                        <span>📊 101,779 stars · 2026-04-06</span>
+                        <span>🏷️ #AI #LLM #GPT #Claude</span>
+                        <span>📊 Top Product · 2026-04-06T19:10:40-07:00</span>
                     </div>
                 </div>
             </article>
@@ -247,36 +189,36 @@
             <article class="news-card collapsed" id="news-tech-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/kessler/gemma-gem" target="_blank" title="Show HN：Gemma Gem——嵌入浏览器的AI模型——无需API密钥，无需云端">Show HN：Gemma Gem——嵌入浏览器的AI模型——无需API密钥，无需云端</a>
+                        <a href="https://github.com/abhigyanpatwari/GitNexus" target="_blank" title="abhigyanpatwari/GitNexus - GitNexus：零服务器代码智能引擎 - GitNexus是一款完全在浏览器中运行的客户端知识图谱...">abhigyanpatwari/GitNexus - GitNexus：零服务器代码智能引擎 - GitNexus是一款完全在浏览器中运行的客户端知识图谱...</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-0" onclick="toggleNews('tech-0')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 101 points</span>
-                    <span>🕐 2026-04-06 01:13</span>
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 24,103 stars</span>
+                    <span>🕐 2026-04-07</span>
                 </div>
-                <p class="news-card-summary">Gemma Gem 是一款完全在本地设备上运行的浏览器AI助手扩展程序，它通过WebGPU技术将Google的Gemma 4模型嵌入浏览器中，无需API密钥、无需云端服务，且所有数据都不会离开用户设备。，该项目的核心价值在于实现了完全本地化的AI交互。用户可以直接在浏览器中与AI模型对话，并要求其执...</p>
+                <p class="news-card-summary">GitNexus 是一个零服务器代码智能引擎，它是一个完全在浏览器中运行的客户端知识图谱创建工具。用户只需输入一个 GitHub 仓库或上传 ZIP 文件，即可获得一个交互式知识图谱，该图谱内置了 Graph RAG Agent。该项目专为代码探索而设计，旨在为 AI 智能体构建上下文“神经系统”。...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Gemma Gem 是一款完全在本地设备上运行的浏览器AI助手扩展程序，它通过WebGPU技术将Google的Gemma 4模型嵌入浏览器中，无需API密钥、无需云端服务，且所有数据都不会离开用户设备。，该项目的核心价值在于实现了完全本地化的AI交互。用户可以直接在浏览器中与AI模型对话，并要求其执行网页操作。其关键技术特点包括：利用WebGPU在本地进行模型推理，通过@huggingface/transformers库加载并运行Gemma 4模型（提供E2B约500MB和E4B约1.5GB两种版本选择，首次运行后缓存），所有数据处理均在设备本地完成，确保了隐私安全。，Gemma Gem 具备强大的网页交互能力。它不仅能读取页面内容、回答关于当前网页的问题，还能执行一系列自动化操作：点击指定CSS选择器的元素、在表单中输入文本、滚动页面、甚至通过Service Worker在页面上下文中执行JavaScript代码。其架构设计精巧，包含Content Script（注入聊天界面和DOM操作工具）、Service Worker（消息路由和处理截图/JS执行）以及Offscreen Document（承载模型运行和智能体循环）三个主要部分。，用户安装后，在支持WebGPU的Chrome浏览器中，通过右下角的宝石图标即可启动聊天界面。模型加载进度会实时显示。用户可自然语言指令AI助手分析页面信息或执行网页动作。扩展还提供了设置选项，允许用户在Gemma 4的不同模型规模间切换，选择会持久保存。，总之，Gemma Gem 创新性地将大型语言模型（LLM）的能力与浏览器自动化深度结合，在保护用户数据隐私的前提下，提供了一个功能强大、完全离线的网页AI交互解决方案。</div>
+                        <div class="summary-content">GitNexus 是一个零服务器代码智能引擎，它是一个完全在浏览器中运行的客户端知识图谱创建工具。用户只需输入一个 GitHub 仓库或上传 ZIP 文件，即可获得一个交互式知识图谱，该图谱内置了 Graph RAG Agent。该项目专为代码探索而设计，旨在为 AI 智能体构建上下文“神经系统”。，其核心功能是能够将任何代码库索引成一个知识图谱，涵盖每个依赖项、调用链、代码簇和执行流程。然后通过智能工具暴露这些信息，确保 AI 代理在理解和操作代码时不会遗漏关键上下文。它被描述为“类似 DeepWiki，但更深入”——如果说 DeepWiki 帮助理解代码，那么 GitNexus 则允许用户分析和探索更深层次的代码关系。，该项目强调其纯客户端、无需服务器的特性，所有处理均在本地浏览器中完成，确保了隐私和便捷性。它提供了多种集成方式，包括 Claude 插件和 Cursor 集成，方便开发者融入现有工作流。，项目维护者特别发出重要警告：GitNexus 没有官方的加密货币、代币或硬币，任何在 Pump.fun 或其他平台上使用 GitNexus 名称的代币均与该项目无关，提醒用户不要购买任何声称与 GitNexus 有关联的加密货币。同时，项目也提供了企业级解决方案（SaaS 和自托管版本）。</div>
                     </div>
-                    <a href="https://github.com/kessler/gemma-gem" class="original-link" target="_blank">
+                    <a href="https://github.com/abhigyanpatwari/GitNexus" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #JavaScript #智能体</span>
-                        <span>📊 101 points · 2026-04-06 01:13</span>
+                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
+                        <span>📊 24,103 stars · 2026-04-07</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/abhigyanpatwari/GitNexus" target="_blank" title="abhigyanpatwari/GitNexus - GitNexus：零服务器代码智能引擎 - GitNexus是一款完全在浏览器中运行的客户端知识图谱...">abhigyanpatwari/GitNexus - GitNexus：零服务器代码智能引擎 - GitNexus是一款完全在浏览器中运行的客户端知识图谱...</a>
+                        <a href="https://github.com/HKUDS/DeepTutor" target="_blank" title="港大/DeepTutor - "DeepTutor：原生智能体驱动的个性化学习助手">港大/DeepTutor - "DeepTutor：原生智能体驱动的个性化学习助手</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-1" onclick="toggleNews('tech-1')">
                         展开详情 ▼
@@ -284,137 +226,21 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 22,956 stars</span>
-                    <span>🕐 2026-04-06</span>
+                    <span>🔥 11,719 stars</span>
+                    <span>🕐 2026-04-07</span>
                 </div>
-                <p class="news-card-summary">GitNexus 是一个零服务器代码智能引擎，它是一个完全在浏览器中运行的客户端知识图谱创建工具。用户只需输入一个 GitHub 仓库或上传 ZIP 文件，即可获得一个交互式知识图谱，该图谱内置了 Graph RAG Agent，非常适合用于代码探索。，该项目旨在为 AI 智能体构建上下文“神经系统...</p>
+                <p class="news-card-summary">香港大学数据科学实验室（HKUDS）开源项目DeepTutor近日发布了1.0.0版本，标志着其正式进入“智能体原生”架构的新阶段。该项目是一个高度个性化的AI学习助手，旨在通过先进的智能体技术为用户提供定制化的辅导体验。，DeepTutor的核心是其彻底重写的“智能体原生”架构（DeepTutor...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">GitNexus 是一个零服务器代码智能引擎，它是一个完全在浏览器中运行的客户端知识图谱创建工具。用户只需输入一个 GitHub 仓库或上传 ZIP 文件，即可获得一个交互式知识图谱，该图谱内置了 Graph RAG Agent，非常适合用于代码探索。，该项目旨在为 AI 智能体构建上下文“神经系统”。它能够将任何代码库索引成一个知识图谱，涵盖每一个依赖关系、调用链、代码簇和执行流程，并通过智能工具将其暴露出来，从而确保 AI 智能体不会遗漏代码信息。其核心特点是无需服务器，所有处理均在本地浏览器中完成，保障了隐私和安全。，GitNexus 提供了多种集成方式，包括 Claude 插件、Cursor 集成以及 Web 版本，并支持通过 MCP（Model Context Protocol）服务器进行连接。其知识图谱支持复杂的查询，例如查找特定函数的调用者、分析代码变更的影响、可视化代码库中的连接关系等。项目强调其并非官方加密货币或代币，任何使用其名称的加密货币均与该项目无关。，主要功能包括：深度代码索引与图谱构建、内置 Graph RAG 智能体进行交互式查询、完整的客户端处理以保护代码隐私、以及对大型代码库的快速分析和探索。它本质上是一个用于增强代码理解和 AI 智能体上下文的强大工具。</div>
+                        <div class="summary-content">香港大学数据科学实验室（HKUDS）开源项目DeepTutor近日发布了1.0.0版本，标志着其正式进入“智能体原生”架构的新阶段。该项目是一个高度个性化的AI学习助手，旨在通过先进的智能体技术为用户提供定制化的辅导体验。，DeepTutor的核心是其彻底重写的“智能体原生”架构（DeepTutor 2.0）。新架构采用了两层插件模型，整合了工具（Tools）与能力（Capabilities），使得系统更加模块化和灵活。项目提供了多种接入方式，包括命令行界面（CLI）、软件开发工具包（SDK）以及名为“TutorBot”的多通道机器人智能体，方便用户在不同场景下使用。，该平台的关键功能包括“协同写作”和“引导式学习”，并配备了持久化记忆系统，能够持续跟踪用户的学习进度和交互历史，从而实现真正个性化的学习路径规划。在知识处理方面，DeepTutor支持灵活的检索增强生成（RAG）管道，允许为每个知识库选择不同的RAG策略，并支持增量文档上传和广泛的文档格式（通过Docling库），增强了“RAG-Anything”的能力。系统还具备会话持久化和完整的本地化支持（包括中文）。，此次更新将项目许可证改为Apache-2.0，确立了其开源属性。版本迭代迅速，从发布到获得超万星标仅用39天，显示了社区的广泛关注。DeepTutor致力于通过可扩展的智能体框架，为用户创造一个适应性强、功能丰富的个性化学习环境。</div>
                     </div>
-                    <a href="https://github.com/abhigyanpatwari/GitNexus" class="original-link" target="_blank">
+                    <a href="https://github.com/HKUDS/DeepTutor" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
-                        <span>📊 22,956 stars · 2026-04-06</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-2">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/block/goose" target="_blank" title="block/goose——超越代码建议的开源可扩展AI助手：支持任意大语言模型的安装、执行、编辑与测试">block/goose——超越代码建议的开源可扩展AI助手：支持任意大语言模型的安装、执行、编辑与测试</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-2" onclick="toggleNews('tech-2')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 37,652 stars</span>
-                    <span>🕐 2026-04-06</span>
-                </div>
-                <p class="news-card-summary">开源AI智能体项目block/goose近日发布，这是一个超越代码建议的、可扩展的AI代理，能够安装、执行、编辑和测试任何LLM。该项目在GitHub上已获得大量关注。，goose的核心定位是一个本地的、可扩展的开源AI智能体，旨在自动化复杂的开发任务。它不仅仅提供代码建议，更能从头开始构建整个项目...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">开源AI智能体项目block/goose近日发布，这是一个超越代码建议的、可扩展的AI代理，能够安装、执行、编辑和测试任何LLM。该项目在GitHub上已获得大量关注。，goose的核心定位是一个本地的、可扩展的开源AI智能体，旨在自动化复杂的开发任务。它不仅仅提供代码建议，更能从头开始构建整个项目，包括编写和执行代码、调试故障、编排工作流以及与外部API交互——所有这些都可以自主完成。无论是原型设计、代码优化还是管理复杂的工程流水线，goose都能适应您的工作流程并精确执行任务。，该项目的关键特性在于其高度的灵活性。它能够与任何大型语言模型（LLM）协同工作，并支持多模型配置，以优化性能和成本。它还能与模型上下文协议（MCP）服务器无缝集成。goose提供了桌面应用程序和命令行界面（CLI）两种形式，旨在成为帮助开发者提升效率、专注于创新的终极AI助手。，其功能覆盖了软件开发的多个环节，从项目初始化到测试执行，展现了AI代理在工程任务自动化方面的强大潜力。作为一个开源项目，goose允许开发者根据自身需求进行扩展和定制。</div>
-                    </div>
-                    <a href="https://github.com/block/goose" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GitHub #智能体</span>
-                        <span>📊 37,652 stars · 2026-04-06</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-3">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/KeygraphHQ/shannon" target="_blank" title="KeygraphHQ/shannon - Shannon Lite是一款用于Web应用和API的自主式白盒AI渗透测试工具。它能分析源代码、识别攻击向量并...">KeygraphHQ/shannon - Shannon Lite是一款用于Web应用和API的自主式白盒AI渗透测试工具。它能分析源代码、识别攻击向量并...</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-3" onclick="toggleNews('tech-3')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 36,054 stars</span>
-                    <span>🕐 2026-04-06</span>
-                </div>
-                <p class="news-card-summary">KeygraphHQ在GitHub上开源了Shannon Lite项目，这是一个面向Web应用与API的自主式白盒AI渗透测试工具。它通过分析源代码、识别攻击向量并执行真实漏洞利用，在生产环境部署前验证安全风险。，Shannon由Keygraph开发，其核心工作流程结合了静态代码分析与动态漏洞利用。...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">KeygraphHQ在GitHub上开源了Shannon Lite项目，这是一个面向Web应用与API的自主式白盒AI渗透测试工具。它通过分析源代码、识别攻击向量并执行真实漏洞利用，在生产环境部署前验证安全风险。，Shannon由Keygraph开发，其核心工作流程结合了静态代码分析与动态漏洞利用。工具首先解析应用程序的源代码，定位潜在的攻击路径；随后通过浏览器自动化及命令行工具，对运行中的应用及其API发起真实的攻击测试，涵盖注入攻击、身份验证绕过、SSRF（服务器端请求伪造）、XSS（跨站脚本）等常见漏洞类型。仅当漏洞具备可复现的利用概念验证（PoC）时，才会被纳入最终报告。，该项目旨在解决现代开发流程中的安全测试缺口。随着Claude Code、Cursor等AI编程工具的普及，开发团队能够持续高速交付代码，但传统的渗透测试往往每年仅进行数次，导致大量漏洞在未被察觉的情况下流入生产环境。Shannon提供了按需、自动化的渗透测试能力，可集成至每次构建或发布流程，实现持续安全验证。，目前，Shannon已通过npx @keygraph/shannon提供便捷安装方式。在公开测试中，该工具成功在OWASP Juice Shop演示应用中识别出20余个漏洞，包括身份验证绕过与数据库信息泄露等高风险问题。其白盒测试特性、自动化漏洞利用机制以及与开发流程的整合能力，为团队提供了一种可频繁执行、结果可验证的安全测试方案。</div>
-                    </div>
-                    <a href="https://github.com/KeygraphHQ/shannon" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub</span>
-                        <span>📊 36,054 stars · 2026-04-06</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-4">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/NousResearch/hermes-agent" target="_blank" title="NousResearch/hermes-agent - 与你共同成长的智能体">NousResearch/hermes-agent - 与你共同成长的智能体</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-4" onclick="toggleNews('tech-4')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 27,227 stars</span>
-                    <span>🕐 2026-04-06</span>
-                </div>
-                <p class="news-card-summary">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心特点是内置了持续学习循环机制，能够从交互经验中自主创建并优化技能，在运行过程中不断改进自身能力，主动沉淀知识，并能检索过往对话历史。该智能体还能在多次会话中逐步构建并深化对用户的理...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心特点是内置了持续学习循环机制，能够从交互经验中自主创建并优化技能，在运行过程中不断改进自身能力，主动沉淀知识，并能检索过往对话历史。该智能体还能在多次会话中逐步构建并深化对用户的理解模型。，Hermes Agent具有高度的部署灵活性，支持在成本低廉的VPS（低至每月5美元）、GPU集群或按需计费的无服务器基础设施上运行，闲置时成本极低。它不依赖于本地硬件，用户可以通过Telegram等应用与部署在云虚拟机上的智能体进行交互。，在模型支持方面，该项目兼容多种主流LLM服务，包括Nous Portal、OpenRouter（支持超过200个模型）、z.ai/GLM、Kimi/Moonshot、MiniMax、OpenAI等，为用户提供了广泛的选择空间。智能体通过API与这些模型连接，并能利用RAG等技术增强其信息处理能力。，项目代码库结构清晰，包含代理核心模块、技能库、插件系统、工具集、测试用例及完整的文档。它采用了模块化设计，便于开发者扩展功能。智能体的学习与改进机制是其关键创新点，旨在实现长期、个性化的能力增长，而非仅限于单次任务执行。</div>
-                    </div>
-                    <a href="https://github.com/NousResearch/hermes-agent" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #OpenAI #GitHub #智能体</span>
-                        <span>📊 27,227 stars · 2026-04-06</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-5">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/kepano/obsidian-skills" target="_blank" title="kepano/obsidian-skills - Obsidian 的智能体技能。教你的智能体使用 Markdown、Bases、JSON Canvas ...">kepano/obsidian-skills - Obsidian 的智能体技能。教你的智能体使用 Markdown、Bases、JSON Canvas ...</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-5" onclick="toggleNews('tech-5')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 20,144 stars</span>
-                    <span>🕐 2026-04-06</span>
-                </div>
-                <p class="news-card-summary">GitHub项目kepano/obsidian-skills为Obsidian知识库软件提供了一套Agent技能。该项目遵循Agent Skills规范，旨在让AI智能体（如Claude Code、Codex CLI等）能够理解并操作Obsidian的核心功能。，核心技能包包含五个主要模块：，1. ...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">GitHub项目kepano/obsidian-skills为Obsidian知识库软件提供了一套Agent技能。该项目遵循Agent Skills规范，旨在让AI智能体（如Claude Code、Codex CLI等）能够理解并操作Obsidian的核心功能。，核心技能包包含五个主要模块：，1. obsidian-markdown：创建和编辑Obsidian风味Markdown文件（.md），支持维基链接、嵌入块、标注框、属性等Obsidian特有语法。，2. obsidian-bases：创建和编辑Obsidian Bases文件（.base），可操作视图、过滤器、公式和摘要。，3. json-canvas：创建和编辑JSON Canvas文件（.canvas），用于处理节点、边、组和连接。，4. obsidian-cli：通过Obsidian命令行接口（CLI）与知识库交互，支持插件和主题开发相关操作。，5. defuddle：利用Defuddle工具从网页提取纯净的Markdown内容，移除杂乱信息以节省AI处理的token数量。，该项目提供了多种安装方式，可通过Obsidian插件市场直接添加，或使用npx skills命令行工具安装。对于不同的AI代理平台，如Claude Code、Codex CLI和OpenCode，也提供了对应的手动安装路径指南。例如，OpenCode用户只需将整个仓库克隆到指定技能目录，重启后即可自动发现所有技能。，该技能集的价值在于将AI智能体深度集成到Obsidian工作流中，使其能够直接创建、编辑和管理知识库中的各种文件格式，从而扩展了AI在个人知识管理和笔记场景中的应用能力。项目采用MIT开源协议，在GitHub上已获得超过2万颗星标，显示出较高的社区关注度。</div>
-                    </div>
-                    <a href="https://github.com/kepano/obsidian-skills" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
-                        <span>📊 20,144 stars · 2026-04-06</span>
+                        <span>🏷️ #AI #智能体</span>
+                        <span>📊 11,719 stars · 2026-04-07</span>
                     </div>
                 </div>
             </article>
@@ -430,7 +256,7 @@
             <article class="news-card collapsed" id="news-other-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/arman-bd/guppylm" target="_blank" title="Show HN：我构建了一个微型LLM来揭秘语言模型的工作原理">Show HN：我构建了一个微型LLM来揭秘语言模型的工作原理</a>
+                        <a href="https://dornsife.usc.edu/news/stories/ai-may-be-making-us-think-and-write-more-alike/" target="_blank" title="人工智能可能正让我们思维和写作方式趋同">人工智能可能正让我们思维和写作方式趋同</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-0" onclick="toggleNews('other-0')">
                         展开详情 ▼
@@ -438,28 +264,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 620 points</span>
-                    <span>🕐 2026-04-06 01:13</span>
+                    <span>🔥 85 points</span>
+                    <span>🕐 2026-04-07 12:21</span>
                 </div>
-                <p class="news-card-summary">开发者Arman在GitHub上开源了一个名为GuppyLM的小型语言模型项目，旨在以实践方式揭示语言模型的工作原理。该模型仅包含约900万个参数，被设计成一条名为“Guppy”的小鱼角色，其对话内容围绕水族箱生活展开，风格简短且全部使用小写字母。，GuppyLM的核心目标是证明训练一个语言模型并非...</p>
+                <p class="news-card-summary">一项由南加州大学多恩西夫分校计算机科学与心理学研究者发表的观点论文指出，人工智能可能正在使人类的思维和写作方式趋于同质化。该研究于2026年3月11日发表在Cell Press旗下的《认知科学趋势》期刊上。，研究团队由心理学与计算机科学教授Morteza Dehghani领导，他们警告称，AI聊天机...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">开发者Arman在GitHub上开源了一个名为GuppyLM的小型语言模型项目，旨在以实践方式揭示语言模型的工作原理。该模型仅包含约900万个参数，被设计成一条名为“Guppy”的小鱼角色，其对话内容围绕水族箱生活展开，风格简短且全部使用小写字母。，GuppyLM的核心目标是证明训练一个语言模型并非神秘或高不可攀。项目强调无需博士学位或大规模GPU集群，用户仅需一个Colab笔记本和大约5分钟时间，即可从零开始完成一个可工作的LLM，涵盖数据生成、分词器构建、模型架构设计、训练循环和推理全流程。这为学习者提供了一个清晰、完整的实践路径，有助于理解从原始文本到训练权重再到生成输出的每个环节，从而打破大型模型给人的“黑箱”感。，模型架构采用了极简的Transformer设计，包含6层、384维隐藏状态、6个注意力头，前馈网络维度为768并使用ReLU激活函数。其词汇表大小为4096（基于BPE分词），最大序列长度为128个token。它使用了LayerNorm和可学习的位置嵌入，并采用了权重绑定技术。项目特意避免了GQA、RoPE、SwiGLU等复杂优化，以保持最基础的形态。，GuppyLM使用约6万条涵盖60个主题的合成对话进行训练，整个过程在单个GPU上约5分钟内完成，最终模型体积小到足以在浏览器中运行。其对话示例显示，Guppy的回复紧扣鱼类视角，谈论食物、水、气泡和岩石等，对人类抽象概念（如金钱、政治）则不予涉及，形成了独特而一致的“鱼格”。该项目作为一个教育工具，成功地将LLM的核心机制封装在一个有趣且易于理解的范例中。</div>
+                        <div class="summary-content">一项由南加州大学多恩西夫分校计算机科学与心理学研究者发表的观点论文指出，人工智能可能正在使人类的思维和写作方式趋于同质化。该研究于2026年3月11日发表在Cell Press旗下的《认知科学趋势》期刊上。，研究团队由心理学与计算机科学教授Morteza Dehghani领导，他们警告称，AI聊天机器人正在标准化人们的说话、写作和思维方式。如果这种同质化趋势不受控制，可能会削弱人类集体的智慧与适应能力。论文第一作者、南加州大学维特比工程学院博士生Zhivar Sourati指出，个体在写作、推理和世界观上原本存在差异，但当这些差异都经由相同的大型语言模型（LLM）中介后，其独特的语言风格、观点和推理策略会被同质化，导致不同用户产生标准化的表达和思维。，研究者强调，认知多样性在群体和社会中能增强创造力与解决问题的能力。然而，随着全球数十亿人越来越多地使用少数几个相同的AI聊天机器人处理各种任务，这种认知多样性正在萎缩。例如，当人们使用聊天机器人润色文本时，其写作会失去风格上的个性，作者对产出的内容也感到更少的创作所有权。，Sourati进一步表示，问题不仅在于LLM塑造了人们的写作或说话方式，更在于它们微妙地重新定义了何为可信的言论、正确的观点乃至合理的推理。研究团队引用多项研究表明，LLM输出的内容多样性低于人类创作，且其输出往往反映西方、受教育、工业化、富裕和民主社会的语言、价值观与推理风格。由于LLM的训练目标是捕捉并复制训练数据中的统计规律性，而这些数据常常过度代表主导语言和意识形态，因此其输出往往只映射出人类经验中狭窄且偏颇的一部分。，尽管有研究显示个体使用LLM时能产生更多包含细节的想法，但团队发现，群体在使用LLM后产生的想法反而更少、创造性更低。为此，研究者呼吁AI开发者应在LLM训练集中纳入更多现实世界的多样性，这不仅能帮助保护人类的认知多样性，也能提升聊天机器人的推理能力。</div>
                     </div>
-                    <a href="https://github.com/arman-bd/guppylm" class="original-link" target="_blank">
+                    <a href="https://dornsife.usc.edu/news/stories/ai-may-be-making-us-think-and-write-more-alike/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #LLM #GitHub</span>
-                        <span>📊 620 points · 2026-04-06 01:13</span>
+                        <span>🏷️ #AI #LLM #人工智能</span>
+                        <span>📊 85 points · 2026-04-07 12:21</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/fikrikarim/parlor" target="_blank" title="Show HN：在 M3 Pro 上使用 Gemma E2B 实现实时 AI（音频/视频输入，语音输出）">Show HN：在 M3 Pro 上使用 Gemma E2B 实现实时 AI（音频/视频输入，语音输出）</a>
+                        <a href="https://arxiv.org/abs/2604.04757" target="_blank" title="AI智能体可相互交流且无法被察觉">AI智能体可相互交流且无法被察觉</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-1" onclick="toggleNews('other-1')">
                         展开详情 ▼
@@ -467,28 +293,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 149 points</span>
-                    <span>🕐 2026-04-06 05:13</span>
+                    <span>🔥 5 points</span>
+                    <span>🕐 2026-04-07 12:21</span>
                 </div>
-                <p class="news-card-summary">项目Parlor是一个在设备端运行的实时多模态AI系统，允许用户与完全在本地运行的AI进行自然的语音和视觉对话。它利用Gemma 4 E2B模型处理语音和视觉理解，并通过Kokoro进行文本到语音的合成，实现了音频/视频输入、语音输出的实时交互。整个流程在本地完成，无需依赖云端服务器。，核心功能包括...</p>
+                <p class="news-card-summary">一项由Vinod Vaikuntanathan和Or Zamir于2026年4月提交的arXiv预印本研究论文提出，AI代理之间可以进行无法被检测的秘密对话。该研究探讨了由不同实体运营的两个AI代理，在代表用户或组织进行交互时，是否能在生成的计算记录与诚实交互记录在计算上无法区分的前提下，并行开展秘...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">项目Parlor是一个在设备端运行的实时多模态AI系统，允许用户与完全在本地运行的AI进行自然的语音和视觉对话。它利用Gemma 4 E2B模型处理语音和视觉理解，并通过Kokoro进行文本到语音的合成，实现了音频/视频输入、语音输出的实时交互。整个流程在本地完成，无需依赖云端服务器。，核心功能包括：通过浏览器采集麦克风和摄像头数据，经WebSocket将音频PCM和JPEG帧发送至FastAPI服务器；服务器使用Gemma 4 E2B（通过LiteRT-LM在GPU上运行）进行语音和视觉理解，同时通过Kokoro TTS（在Mac上使用MLX，在Linux上使用ONNX）生成语音回复；回复的音频流通过WebSocket传回浏览器播放并显示文字记录。系统支持基于Silero VAD的语音活动检测，实现免提交互和打断功能（Barge-in），允许用户在AI说话过程中随时插话，并采用句子级别的TTS流式传输，在完整响应生成前即可开始播放音频。，该项目目前处于研究预览阶段，是一个早期实验，可能存在不完善之处。开发者旨在探索完全在设备端运行AI以消除服务器成本，从而实现可持续的免费服务。其应用场景特别侧重于语言学习，例如帮助用户练习英语口语。尽管无法执行复杂的智能体编码任务，但凭借其多语言支持和本地实时处理能力，未来有望在手机等设备上运行，用户可通过摄像头拍摄物体并与之对话，为语言学习者带来变革性体验。，运行要求包括Python 3.12+、配备Apple Silicon的macOS或支持GPU的Linux系统，以及约3GB的可用内存。项目代码已开源在GitHub，可通过uv工具快速安装和启动。</div>
+                        <div class="summary-content">一项由Vinod Vaikuntanathan和Or Zamir于2026年4月提交的arXiv预印本研究论文提出，AI代理之间可以进行无法被检测的秘密对话。该研究探讨了由不同实体运营的两个AI代理，在代表用户或组织进行交互时，是否能在生成的计算记录与诚实交互记录在计算上无法区分的前提下，并行开展秘密对话。即使面对一个知晓完整模型描述、协议和代理私有上下文的强大被动审计者，这种隐蔽对话也能实现。，研究基于LLM水印和隐写术的最新进展。首先，论文证明，如果双方拥有交互专用的秘密密钥，它们可以实现最优速率的隐蔽对话：隐藏对话几乎可以利用诚实消息分布中存在的全部熵。，该研究的主要贡献在于将这一机制扩展到无密钥场景，即代理在开始时没有任何共享秘密。研究表明，即使每个模型拥有任意的私有上下文，且其消息简短且完全自适应，只要足够多的单个消息至少具有恒定的最小熵，隐蔽的密钥交换以及随后的隐蔽对话仍然是可能的。这与以往依赖单个消息最小熵随安全参数增长的隐蔽通信研究形成了鲜明对比。，为实现这一目标，研究者引入了一种新的密码学原语，称为“伪随机噪声弹性密钥交换”。这是一种密钥交换协议，其公开记录是伪随机的，同时在恒定噪声下仍能保持正确性。论文研究了这一原语，给出了几种与当前应用相关的构造方案，并通过严格的限制条件表明，更简单的变体要么不可能实现，要么容易受到高效攻击。，这些结果表明，仅凭对话记录审计无法排除AI代理之间的隐蔽协调。该研究还确定了一个可能具有独立研究价值的新密码学理论领域。这项研究对AI代理交互的安全审计提出了新的挑战，并可能引发关于AI系统可信度和监管的新讨论。</div>
                     </div>
-                    <a href="https://github.com/fikrikarim/parlor" class="original-link" target="_blank">
+                    <a href="https://arxiv.org/abs/2604.04757" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Python #GitHub #智能体</span>
-                        <span>📊 149 points · 2026-04-06 05:13</span>
+                        <span>🏷️ #AI #LLM #智能体</span>
+                        <span>📊 5 points · 2026-04-07 12:21</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://news.ycombinator.com/item?id=47659807" target="_blank" title="问 HN：系统（或人类）如何检测文本是否由大语言模型生成">问 HN：系统（或人类）如何检测文本是否由大语言模型生成</a>
+                        <a href="https://www.showbiz411.com/2026/04/05/itunes-takeover-by-fake-ai-singer-eddie-dalton-now-occupies-eleven-spots-on-chart-despite-not-being-human-or-real-exclusive" target="_blank" title="AI歌手占据iTunes单曲榜十一个席位">AI歌手占据iTunes单曲榜十一个席位</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-2" onclick="toggleNews('other-2')">
                         展开详情 ▼
@@ -496,28 +322,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 14 points</span>
-                    <span>🕐 2026-04-06 12:13</span>
+                    <span>🔥 215 points</span>
+                    <span>🕐 2026-04-06 16:21</span>
                 </div>
-                <p class="news-card-summary">在Hacker News社区中，用户elC0mpa提问：“系统或人类如何检测文本是否由LLM生成？”问题核心在于是否存在可靠的API或技术方法来识别AI生成的文本。讨论中，用户们普遍认为目前没有完全可靠的检测系统，且这场“检测与反检测”的竞赛可能永远无法让检测方占据上风。，主要观点集中在人类如何通过...</p>
+                <p class="news-card-summary">AI虚拟歌手“艾迪·道尔顿”霸占iTunes榜单 占据单曲榜11席及专辑榜第三名，2026年4月1日，内容创作者达拉斯·利特尔通过其AI生成的虚拟歌手“艾迪·道尔顿”在iTunes榜单上实现了前所未有的霸榜现象。这个完全由人工智能技术创造、现实中不存在的歌手，目前已有11首歌曲同时进入iTunes单...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">在Hacker News社区中，用户elC0mpa提问：“系统或人类如何检测文本是否由LLM生成？”问题核心在于是否存在可靠的API或技术方法来识别AI生成的文本。讨论中，用户们普遍认为目前没有完全可靠的检测系统，且这场“检测与反检测”的竞赛可能永远无法让检测方占据上风。，主要观点集中在人类如何通过文本风格线索进行主观判断。多位用户指出，LLM生成的文本常带有某些固定模式或风格特征，例如：过度使用破折号（尤其是em dash）、特定高频词汇（如“Delve”、“Vibrant”、“Additionally”）、以及“It‘s not X, it’s Y”这类句式结构。此外，AI文本可能包含不合常理的格式（如用表情符号创建项目列表）或引用不存在的案例、事件和论文。，然而，有评论指出，这种依赖风格特征的检测方式存在严重问题。它可能导致真实人类作者为了避免被误判为AI，不得不刻意降低写作质量、避免使用某些清晰表达方式，甚至加入细微错误。讽刺的是，如今被指控为AI生成反而可能成为高质量文本的“标志”。讨论中也提到，具备母语水平的人通常能区分未经润色的AI文本与人类写作，但这依赖于主观经验而非客观标准。，总体而言，社区共识是：尽管人类可以通过某些风格线索进行推测，但不存在确定性的检测方法，尤其是可靠的API。这场讨论揭示了当前LLM文本检测面临的困境——它更多依赖于对写作风格的模糊识别，而非技术性的确凿证据，并且可能引发对真实作者的不公平指控。</div>
+                        <div class="summary-content">AI虚拟歌手“艾迪·道尔顿”霸占iTunes榜单 占据单曲榜11席及专辑榜第三名，2026年4月1日，内容创作者达拉斯·利特尔通过其AI生成的虚拟歌手“艾迪·道尔顿”在iTunes榜单上实现了前所未有的霸榜现象。这个完全由人工智能技术创造、现实中不存在的歌手，目前已有11首歌曲同时进入iTunes单曲榜前100名，具体排名分别为第3、8、15、22、42、44、51、58、60、68和79位。更令人惊讶的是，其收录这些歌曲的合辑专辑也攀升至iTunes专辑榜第三名。，利特尔通过编写提示词和操作AI工具，完全跳过了传统音乐制作中的录制环节与创作流程，持续批量生成以“艾迪·道尔顿”为名的歌曲。自4月1日以来，他已新增发布四首歌曲，并预计这些作品也将在短期内冲入前100名。其中一首名为《又老一天》的歌曲在YouTube上已获得120万次观看。，然而，数据存在明显矛盾。尽管榜单排名惊人，但根据音乐数据公司Luminate的统计，“艾迪·道尔顿”所有歌曲的总销量仅为6900次。同时，这些歌曲没有获得任何电台播放量，流媒体数据也未见显著。这种榜单成绩与实际市场表现的巨大差异，引发了关于iTunes排名机制是否被操纵的质疑。，这一事件凸显了AI技术对音乐产业的冲击。创作者仅通过输入提示词和点击按钮就能快速生成大量音乐内容，并可能利用平台机制获得显眼的榜单位置。这种现象引起了行业观察者对音乐创作真实性、榜单公正性以及AI生成内容对传统音乐人影响的深切担忧。目前尚无官方对此榜单异常现象作出解释。</div>
                     </div>
-                    <a href="https://news.ycombinator.com/item?id=47659807" class="original-link" target="_blank">
+                    <a href="https://www.showbiz411.com/2026/04/05/itunes-takeover-by-fake-ai-singer-eddie-dalton-now-occupies-eleven-spots-on-chart-despite-not-being-human-or-real-exclusive" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM</span>
-                        <span>📊 14 points · 2026-04-06 12:13</span>
+                        <span>🏷️ #AI #人工智能</span>
+                        <span>📊 215 points · 2026-04-06 16:21</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-3">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://gizmodo.com/cognitive-surrender-is-a-new-and-useful-term-for-how-ai-melts-brains-2000742595" target="_blank" title="认知投降"成为描述人工智能如何消融人类思维的新术语">认知投降"成为描述人工智能如何消融人类思维的新术语</a>
+                        <a href="https://github.com/kitfunso/hippo-memory" target="_blank" title="Show HN：Hippo，受生物学启发的AI智能体记忆系统">Show HN：Hippo，受生物学启发的AI智能体记忆系统</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-3" onclick="toggleNews('other-3')">
                         展开详情 ▼
@@ -525,21 +351,50 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 40 points</span>
-                    <span>🕐 2026-04-06 00:13</span>
+                    <span>🔥 112 points</span>
+                    <span>🕐 2026-04-06 22:21</span>
                 </div>
-                <p class="news-card-summary">“认知投降”是一个描述AI如何侵蚀人类思维能力的新术语，由沃顿商学院市场营销研究员史蒂文·肖和吉迪恩·纳夫于2026年1月提出。该术语源于一项涉及1,372名参与者的研究，旨在探讨人类在面对AI输出时的决策行为。，研究采用改编版认知反射测试（Cognitive Reflection Test），其中...</p>
+                <p class="news-card-summary">Hippo是一个受生物学启发的AI智能体记忆系统，旨在解决AI工具间记忆不互通和会话间遗忘的问题。该项目通过模拟人类记忆的衰减、检索强化和巩固机制，为开发者提供了一个跨平台的共享记忆层。，核心功能包括：支持与Claude Code、Codex、Cursor、OpenClaw等多种CLI智能体工具集成...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">“认知投降”是一个描述AI如何侵蚀人类思维能力的新术语，由沃顿商学院市场营销研究员史蒂文·肖和吉迪恩·纳夫于2026年1月提出。该术语源于一项涉及1,372名参与者的研究，旨在探讨人类在面对AI输出时的决策行为。，研究采用改编版认知反射测试（Cognitive Reflection Test），其中包含需要慢速、审慎分析才能得出正确答案的题目（例如“5台机器5分钟生产5个部件，100台机器生产100个部件需要多久？”正确答案为5分钟）。参与者可自由选择是否借助AI聊天机器人协助答题，但机器人有时会提供错误答案。，结果显示，约半数参与者在答题过程中选择咨询AI。当AI给出正确答案时，参与者接受率为93%；但当AI提供错误答案时，接受率仍高达80%。这意味着即使AI出错，多数人仍选择放弃自主思考，接受错误引导。更令人担忧的是，使用AI的参与者自信心平均比未使用者高出11.7%，尽管其答案可能基于错误信息。，研究者将此现象称为“认知投降”，即人类倾向于将认知责任过度让渡给AI系统，甚至在其明显错误时仍选择服从。该研究指出，除了丹尼尔·卡尼曼在《思考，快与慢》中提出的“系统1”（直觉快速思考）和“系统2”（理性慢速思考）外，AI的介入可能正在形成一种依赖外部智能的“系统3”。这种依赖不仅削弱了人类的批判性思维与事实核查能力，还可能引发广泛的社会认知风险。，该术语自提出后迅速引发关注，成为反思AI与人类认知关系的关键概念。研究者强调，这一现象突显了在AI工具日益普及的背景下，保持独立判断能力与技术批判意识的重要性。</div>
+                        <div class="summary-content">Hippo是一个受生物学启发的AI智能体记忆系统，旨在解决AI工具间记忆不互通和会话间遗忘的问题。该项目通过模拟人类记忆的衰减、检索强化和巩固机制，为开发者提供了一个跨平台的共享记忆层。，核心功能包括：支持与Claude Code、Codex、Cursor、OpenClaw等多种CLI智能体工具集成；可从ChatGPT、Claude（CLAUDE.md文件）、Cursor（.cursorrules文件）等平台导入记忆；采用SQLite数据库作为存储核心，同时辅以可读的markdown/YAML镜像文件，支持Git版本跟踪。系统设计为零运行时依赖，仅需Node.js 22.5+环境，并可选配@xenova/transformers库以支持嵌入向量功能。，该工具主要面向多工具开发者、需要避免智能体重复错误的团队、以及希望管理杂乱指令文件的用户。它通过标签分类、置信度分级和自动衰减过时信息等功能，将混杂的规则、偏好和陈旧解决方案结构化。其记忆具有可移植性，避免了供应商锁定，用户可通过复制文件夹轻松导出记忆。，在最新v0.10.0版本中，引入了主动失效功能：通过`hippo learn --git`命令，系统能够检测代码迁移和破坏性变更提交，并主动弱化引用旧模式的记忆。，使用方式简洁：通过npm全局安装后，使用`hippo init`初始化，即可通过`hippo remember`记录记忆（如错误信息），并通过`hippo recall`进行预算可控的检索。该项目强调“良好记忆的秘密不在于记住更多，而在于知道该忘记什么”，通过生物启发式的记忆管理，帮助AI智能体在不同工具和会话间持续学习并优化其行为。</div>
                     </div>
-                    <a href="https://gizmodo.com/cognitive-surrender-is-a-new-and-useful-term-for-how-ai-melts-brains-2000742595" class="original-link" target="_blank">
+                    <a href="https://github.com/kitfunso/hippo-memory" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #人工智能</span>
-                        <span>📊 40 points · 2026-04-06 00:13</span>
+                        <span>🏷️ #AI #GPT #Claude #智能体</span>
+                        <span>📊 112 points · 2026-04-06 22:21</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-other-4">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://agentreadingtest.com" target="_blank" title="智能体阅读测试">智能体阅读测试</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-other-4" onclick="toggleNews('other-4')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">Hacker News</span>
+                    <span>🔥 65 points</span>
+                    <span>🕐 2026-04-06 19:21</span>
+                </div>
+                <p class="news-card-summary">是一个专门用于评估AI编程助手（如Claude Code、Cursor、GitHub Copilot等）在读取网页内容方面能力的基准测试。该测试旨在揭示AI代理在处理文档网站时常见的静默失败模式，例如内容截断、CSS样式掩盖真实文本、客户端渲染导致空页面结构，以及标签页内容序列化后仅显示首选项等问题...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">是一个专门用于评估AI编程助手（如Claude Code、Cursor、GitHub Copilot等）在读取网页内容方面能力的基准测试。该测试旨在揭示AI代理在处理文档网站时常见的静默失败模式，例如内容截断、CSS样式掩盖真实文本、客户端渲染导致空页面结构，以及标签页内容序列化后仅显示首选项等问题。，测试基于《Agent-Friendly Documentation Spec》中记录的具体问题设计了一系列网页。每个页面在关键位置嵌入了“金丝雀令牌”，但测试并非直接让代理寻找令牌，而是为其分配真实的文档处理任务。只有在完成所有任务后，代理才会得知令牌的存在，并报告其遇到的具体令牌。用户将结果粘贴至评分表单即可获得详细分析。，测试流程如下：用户引导AI代理访问起始页agentreadingtest.com/start/，并令其遵循指令。代理需完成10项文档任务，每项任务对应一个针对特定失败模式的测试页面。任务全部完成后，代理访问结果页面获取令牌列表，并以逗号分隔的形式输出。将此列表提交至评分表单，即可获得代理内容处理管道的详细表现及内容丢失位置的具体分析。，测试项目包括：1. 截断测试：通过150K字符页面中位于不同位置的令牌，精确映射代理的截断限制点。2. 样板掩埋测试：80K行内CSS样式置于真实内容前，检验代理区分CSS噪声与文档内容的能力。3. SPA空壳测试：客户端渲染页面，验证代理是否仅看到空页面结构。4. 标签页内容测试：8种语言变体置于标签页中，检验代理在序列化内容中的读取深度。5. 软404测试：返回HTTP 200状态码但显示页面不存在信息，评估代理识别错误页面的能力。6. 破损代码围栏测试：未闭合的Markdown代码围栏导致后续内容被误判为代码，检验Markdown解析意识。7. 内容协商测试：HTML与Markdown版本包含不同令牌，验证代理是否请求更优格式。8. 跨主机重定向测试：301重定向至不同主机名，多数代理因安全限制不会跟随。，该基准测试为开发者提供了量化评估AI编程助手文档处理能力的标准化工具，有助于优化代理在真实工作流程中的内容获取可靠性。</div>
+                    </div>
+                    <a href="https://agentreadingtest.com" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
+                        <span>📊 65 points · 2026-04-06 19:21</span>
                     </div>
                 </div>
             </article>
