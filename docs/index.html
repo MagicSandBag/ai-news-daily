@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News Daily - 2026年4月10日</title>
+    <title>AI News Daily - 2026年4月11日</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="header-inner">
             <div class="logo">AI News <span>Daily</span></div>
-            <div class="header-meta">2026年4月10日 · 星期五</div>
+            <div class="header-meta">2026年4月11日 · 星期六</div>
             <nav class="nav-links">
                 <a href="archive.html">📅 归档</a>
                 <a href="#" onclick="location.reload(); return false;">🔄 刷新</a>
@@ -20,7 +20,7 @@
 
     <main>
         <div class="date-header">
-            <div class="date">2026年4月10日</div>
+            <div class="date">2026年4月11日</div>
             <div class="subtitle"><span class="emoji">☕</span> 早安，这是今天的 AI 每日速递</div>
         </div>
 
@@ -35,36 +35,36 @@
             <article class="news-card collapsed" id="news-global-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://akshaychugh.xyz/writings/png/vercel-plugin-telemetry" target="_blank" title="Claude Code 上的 Vercel 插件试图读取您的提示词">Claude Code 上的 Vercel 插件试图读取您的提示词</a>
+                        <a href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank" title="forrestchang/andrej-karpathy-skills - 一个单独的CLAUDE.md文件，用于改进Claude代码行为，源自Andre...">forrestchang/andrej-karpathy-skills - 一个单独的CLAUDE.md文件，用于改进Claude代码行为，源自Andre...</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-0" onclick="toggleNews('global-0')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 267 points</span>
-                    <span>🕐 2026-04-09 16:12</span>
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 12,322 stars</span>
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">Vercel插件在Claude Code中请求读取用户所有提示词引发隐私担忧。该插件旨在协助部署、提供框架指导和技能注入，但其内置的框架检测功能并未用于限制遥测数据收集范围。问题核心在于，即使用户项目与Vercel无关（无vercel.json配置文件、无Next.js配置、无Vercel依赖），插...</p>
+                <p class="news-card-summary">GitHub用户forrestchang创建了一个名为"andrej-karpathy-skills"的项目，其核心是一个单独的CLAUDE.md文件，旨在优化Claude Code（Anthropic的AI编程助手）的行为。该项目灵感来源于AI研究员Andrej Karpathy对大型语言模型（L...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Vercel插件在Claude Code中请求读取用户所有提示词引发隐私担忧。该插件旨在协助部署、提供框架指导和技能注入，但其内置的框架检测功能并未用于限制遥测数据收集范围。问题核心在于，即使用户项目与Vercel无关（无vercel.json配置文件、无Next.js配置、无Vercel依赖），插件仍会通过提示注入（prompt injection）方式，在Claude系统上下文中插入自然语言指令，要求AI询问用户是否同意分享“匿名使用数据”——其中包含发送至Vercel服务器的完整bash命令字符串。，更值得关注的是，该同意请求并非真正的UI交互元素，而是插件指示Claude执行的操作流程：Claude通过AskUserQuestion呈现问题后，将根据用户回答在文件系统中执行echo 'enabled'或echo 'disabled'命令来写入偏好设置。这种设计使得第三方插件请求与原生Claude Code提问在视觉上无法区分，且用户从未被告知数据收集是可选项。，技术分析显示，插件行为已超出常规上下文注入（如提供Next.js路由文档）的合理范围，转变为通过行为指令操控AI执行文件系统操作。GitHub issue #34中已有开发者提出质疑，Vercel开发团队回应称，在Cursor、Claude Code等第一方市场平台中无法创建一次性CLI提示，需依赖代理框架（agent harness）实现激活机制。，当前争议焦点在于：1）数据收集范围过度扩展至所有项目类型 2）同意机制存在误导性 3）系统指令与shell命令执行的耦合可能带来安全风险。该案例凸显了AI开发工具中第三方插件权限管理的模糊地带，以及提示注入技术被用于非透明数据收集的伦理问题。</div>
+                        <div class="summary-content">GitHub用户forrestchang创建了一个名为"andrej-karpathy-skills"的项目，其核心是一个单独的CLAUDE.md文件，旨在优化Claude Code（Anthropic的AI编程助手）的行为。该项目灵感来源于AI研究员Andrej Karpathy对大型语言模型（LLM）在编程中常见缺陷的观察。，Karpathy指出LLM在编码时存在几个关键问题：模型会基于错误假设自行推进而不加验证；不善于管理困惑、寻求澄清、揭示矛盾、呈现权衡或在必要时提出异议；倾向于过度复杂化代码和API，堆砌抽象，不清理死代码；有时甚至会侧向地更改或删除它们未能充分理解的注释和代码。，该项目提出的解决方案浓缩为四项核心原则，并集成于一个CLAUDE.md文件中，以直接应对上述问题：，1. 先思考后编码：针对错误假设和隐藏的困惑。要求模型明确陈述假设，在不确定时主动提问而非猜测；呈现多种解读方案，不 silently 选择；在存在更简单方案时提出异议；当感到困惑时明确指出不清楚之处并寻求澄清。，2. 简洁至上：针对过度复杂化和抽象膨胀。坚持用最少的代码解决问题，不添加未要求的功能、单次使用的抽象、未请求的“灵活性”或“可配置性”，以及为不可能场景进行的错误处理。如果代码量可以大幅缩减（例如从200行减至50行），则应重写。评判标准是：资深工程师是否会认为这过于复杂？若是，则需简化。，3. 精准修改：针对无关的编辑和触碰不应更改的代码。严格限定修改范围，只改动必须更改的部分，避免产生不必要的副作用。，4. 目标驱动执行：通过测试先行和可验证的成功标准来提升效率。，该项目通过一个结构化的指导文件，为Claude Code提供了具体的行为准则，旨在引导其生成更可靠、更简洁、更专注的代码，减少LLM常见的臆断和过度工程化倾向，从而提升AI辅助编程的质量与效率。</div>
                     </div>
-                    <a href="https://akshaychugh.xyz/writings/png/vercel-plugin-telemetry" class="original-link" target="_blank">
+                    <a href="https://github.com/forrestchang/andrej-karpathy-skills" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub</span>
-                        <span>📊 267 points · 2026-04-09 16:12</span>
+                        <span>🏷️ #AI #LLM #Claude #GitHub</span>
+                        <span>📊 12,322 stars · 2026-04-11</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-global-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank" title="forrestchang/andrej-karpathy-skills - 一个单独的CLAUDE.md文件，用于改进Claude代码行为，源自Andre...">forrestchang/andrej-karpathy-skills - 一个单独的CLAUDE.md文件，用于改进Claude代码行为，源自Andre...</a>
+                        <a href="https://github.com/shanraisshan/claude-code-best-practice" target="_blank" title="shanraisshan/claude-code-best-practice - 实践让Claude臻于完美">shanraisshan/claude-code-best-practice - 实践让Claude臻于完美</a>
                     </h3>
                     <button class="expand-btn" id="btn-global-1" onclick="toggleNews('global-1')">
                         展开详情 ▼
@@ -72,50 +72,79 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 11,274 stars</span>
-                    <span>🕐 2026-04-10</span>
+                    <span>🔥 36,516 stars</span>
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">GitHub用户forrestchang创建了一个名为"andrej-karpathy-skills"的项目，其核心是一个单独的CLAUDE.md文件，旨在优化Claude Code（Claude的代码生成功能）的行为。该项目灵感来源于AI研究员Andrej Karpathy对大型语言模型（LLM）...</p>
+                <p class="news-card-summary">GitHub项目“claude-code-best-practice”是一个专注于提升Claude AI在编程环境中应用效率的实践指南与工具集。其核心理念是“实践使Claude臻于完美”，旨在帮助开发者从基础的“氛围编码”过渡到更高级的“智能体工程”。，项目围绕几个关键概念构建了系统化的架构。首先是...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">GitHub用户forrestchang创建了一个名为"andrej-karpathy-skills"的项目，其核心是一个单独的CLAUDE.md文件，旨在优化Claude Code（Claude的代码生成功能）的行为。该项目灵感来源于AI研究员Andrej Karpathy对大型语言模型（LLM）在编程中常见缺陷的观察。，Karpathy指出LLM在编码时存在几个关键问题：模型会基于错误假设自行其是而不加验证；它们不管理自身的困惑感，不主动寻求澄清，不指出不一致之处，不呈现方案权衡，也不在必要时提出异议；此外，它们倾向于过度复杂化代码和API，引入臃肿的抽象层，不清理无用代码，甚至可能在不完全理解的情况下错误地修改或删除与任务无关的注释和代码。，针对这些问题，CLAUDE.md文件提出了四项核心原则来直接引导Claude Code的行为：，1. 先思考后编码：旨在解决错误假设和隐藏困惑的问题。要求模型明确陈述假设，在不确定时主动提问而非猜测；当存在歧义时，呈现多种解释而非 silently 选择；在存在更简单方案时提出异议；当感到困惑时，明确指出不清楚之处并寻求澄清。，2. 简洁至上：旨在对抗过度工程化和代码臃肿。要求代码只实现被要求的功能，不为单次使用的代码创建抽象，不添加未请求的“灵活性”或“可配置性”，不为不可能发生的场景添加错误处理。核心测试标准是：一位资深工程师是否会认为这过于复杂？如果是，则进行简化。，3. 精准修改：旨在防止无关的代码改动。要求模型只修改必须修改的部分，避免触及与当前任务正交的代码。，4. 目标驱动执行：旨在通过测试优先和可验证的成功标准来提升效率。，该项目通过一个集中的指导文件，将这些原则注入Claude Code的工作流程，以期生成更可靠、更简洁、更专注的代码，减少LLM常见的臆断和过度设计倾向。</div>
-                    </div>
-                    <a href="https://github.com/forrestchang/andrej-karpathy-skills" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Claude #GitHub</span>
-                        <span>📊 11,274 stars · 2026-04-10</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-global-2">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/shanraisshan/claude-code-best-practice" target="_blank" title="shanraisshan/claude-code-best-practice - 实践让Claude更完美">shanraisshan/claude-code-best-practice - 实践让Claude更完美</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-global-2" onclick="toggleNews('global-2')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 35,077 stars</span>
-                    <span>🕐 2026-04-10</span>
-                </div>
-                <p class="news-card-summary">GitHub项目“claude-code-best-practice”是一个专注于提升Claude代码助手使用效率的最佳实践指南库，其核心理念是“实践使Claude臻于完美”。该项目旨在帮助开发者从基础的“氛围编码”过渡到更高级的“智能体工程”。，项目通过一套清晰的结构化概念来组织Claude Co...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">GitHub项目“claude-code-best-practice”是一个专注于提升Claude代码助手使用效率的最佳实践指南库，其核心理念是“实践使Claude臻于完美”。该项目旨在帮助开发者从基础的“氛围编码”过渡到更高级的“智能体工程”。，项目通过一套清晰的结构化概念来组织Claude Code的功能。核心组件包括：Subagents（子智能体），作为在独立上下文中运行的自主执行者，可配置自定义工具、权限、模型和记忆；Commands（命令），即注入到现有上下文中的知识，是用户可调用的简单提示模板，用于编排工作流；Skills（技能），同样是可注入的知识，但具备可配置、可预加载、可自动发现等特性，支持上下文分叉和渐进式披露。此外，项目还涵盖了Workflows（工作流编排）、Hooks（事件钩子）、MCP Servers（用于连接外部工具和API的模型上下文协议）、可分发的Plugins（插件包）、层级化的Settings（配置系统）、可定制的Status Line（状态栏）以及基于文件的Memory（记忆系统）。，项目强调实践性，提供了从教程、开发工作流、实现案例到演示报告在内的丰富资源。它支持自动化的Git-basedCheckpointing（检查点）功能，允许回退编辑，并提供了详细的CLI启动标志说明。该项目通过系统化的方法，展示了如何充分利用Claude Code的Agentic（智能体）能力，构建复杂、可维护的AI辅助编程工作流。</div>
+                        <div class="summary-content">GitHub项目“claude-code-best-practice”是一个专注于提升Claude AI在编程环境中应用效率的实践指南与工具集。其核心理念是“实践使Claude臻于完美”，旨在帮助开发者从基础的“氛围编码”过渡到更高级的“智能体工程”。，项目围绕几个关键概念构建了系统化的架构。首先是“子智能体”，它们被定义为在独立上下文中运行的自主执行者，可以拥有自定义工具、权限、模型、记忆和持久身份。其次是“命令”，作为注入现有上下文的知识，它们是用户可调用的简单提示模板，用于编排工作流。第三是“技能”，同样是注入上下文的知识，但具备可配置、可预加载、可自动发现的特点，并支持上下文分叉和渐进式披露。项目还集成了官方技能库。，在技术实现层面，项目支持工作流编排、基于事件在智能体循环外运行的“钩子”，以及通过模型上下文协议连接外部工具、数据库和API的“MCP服务器”。它提供了可分发插件包的市场，包含分层配置系统、权限管理、模型配置、输出风格、沙箱环境和快捷键设置的“设置”模块，以及可显示上下文使用情况、模型、成本和会话信息的自定义状态栏。，项目实现了持久的上下文记忆机制，通过CLAUDE.md文件和@路径导入，并支持基于git的自动检查点功能，可以跟踪文件编辑并允许回退或针对性总结。此外，它还提供了丰富的命令行启动标志、子命令和环境变量来启动Claude Code的交互模式。，总体而言，该项目通过一套结构化的最佳实践、模块化组件和配置系统，深度优化了Claude在代码编写、工作流自动化及复杂任务处理中的能力，推动了AI辅助开发向更自主、更集成的智能体协作模式演进。</div>
                     </div>
                     <a href="https://github.com/shanraisshan/claude-code-best-practice" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
                         <span>🏷️ #AI #Claude #GitHub #智能体</span>
-                        <span>📊 35,077 stars · 2026-04-10</span>
+                        <span>📊 36,516 stars · 2026-04-11</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-global-2">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://www.producthunt.com/products/claude" target="_blank" title="Claude for Word">Claude for Word</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-global-2" onclick="toggleNews('global-2')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">Product Hunt</span>
+                    <span>🔥 Top Product</span>
+                    <span>🕐 2026-04-10T20:43:49-07:00</span>
+                </div>
+                <p class="news-card-summary">Anthropic公司近日推出了插件，将旗下AI助手Claude深度集成至Microsoft Word环境。该插件允许用户在Word文档中直接调用Claude的各项功能，无需切换应用界面即可进行实时AI辅助写作与编辑。，核心功能包括：在Word侧边栏启动Claude对话界面，支持基于文档内容进行问答...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">Anthropic公司近日推出了插件，将旗下AI助手Claude深度集成至Microsoft Word环境。该插件允许用户在Word文档中直接调用Claude的各项功能，无需切换应用界面即可进行实时AI辅助写作与编辑。，核心功能包括：在Word侧边栏启动Claude对话界面，支持基于文档内容进行问答、总结、扩写、翻译及风格调整；能够理解上下文语义，针对用户选中的文本段落提供改写建议或语法修正；具备文件分析能力，可处理上传的PDF、TXT等格式文档并提取关键信息。技术层面，插件通过安全API连接Claude模型，采用RAG（检索增强生成）架构确保信息准确性，并支持Claude 3系列模型的最新版本。，该工具显著优化了文档创作流程，尤其适用于报告撰写、合同审阅、学术论文编辑等场景。其突出特点是保持了Claude模型在逻辑性、安全性与可控性方面的优势，同时通过本地化集成降低了使用门槛。目前该插件已上架Microsoft官方商店，支持Word 365及2021版本，用户可免费安装使用基础功能，高级特性需订阅Claude Pro服务。此举标志着AI助手正从独立应用向生产力工具生态深度渗透，进一步拓展了LLM在办公场景的实际应用边界。</div>
+                    </div>
+                    <a href="https://www.producthunt.com/products/claude" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #LLM #Claude</span>
+                        <span>📊 Top Product · 2026-04-10T20:43:49-07:00</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-global-3">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://www.producthunt.com/products/claude-code-ultraplan" target="_blank" title="Claude Code 超能计划">Claude Code 超能计划</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-global-3" onclick="toggleNews('global-3')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">Product Hunt</span>
+                    <span>🔥 Top Product</span>
+                    <span>🕐 2026-04-10T18:05:00-07:00</span>
+                </div>
+                <p class="news-card-summary">Anthropic公司近日推出了，这是其AI编程助手Claude Code系列的最新增强版本。该计划旨在通过一系列高级功能和优化，为开发者提供更强大、更精准的代码生成与辅助体验。，核心功能方面，在代码生成、解释、调试和重构等核心任务上进行了深度优化。它能够更准确地理解复杂的开发上下文与模糊的自然语言...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">Anthropic公司近日推出了，这是其AI编程助手Claude Code系列的最新增强版本。该计划旨在通过一系列高级功能和优化，为开发者提供更强大、更精准的代码生成与辅助体验。，核心功能方面，在代码生成、解释、调试和重构等核心任务上进行了深度优化。它能够更准确地理解复杂的开发上下文与模糊的自然语言指令，生成符合生产环境要求的高质量代码。其代码补全和建议功能更加智能，能显著提升编码效率。，技术特点上，该版本基于Anthropic最新的LLM技术构建，在代码相关的推理能力上有所突破。它增强了处理长上下文的能力，能更好地理解大型代码库的结构。同时，它在代码安全性、漏洞检测方面引入了更严格的审查机制，并优化了与流行开发工具和IDE的集成体验。，该计划的价值在于，它不仅是一个代码自动生成工具，更致力于成为理解开发者意图、遵循最佳实践并保障代码安全的智能协作伙伴。它旨在降低开发门槛，帮助团队更快地构建可靠软件，同时提升代码的可维护性和安全性。的推出，标志着AI编程助手向更深入、更专业的开发工作流整合迈出了重要一步。</div>
+                    </div>
+                    <a href="https://www.producthunt.com/products/claude-code-ultraplan" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #LLM #Claude</span>
+                        <span>📊 Top Product · 2026-04-10T18:05:00-07:00</span>
                     </div>
                 </div>
             </article>
@@ -131,65 +160,65 @@
             <article class="news-card collapsed" id="news-tech-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://www.instantdb.com/essays/architecture" target="_blank" title="Instant 1.0：AI编码应用的后端平台">Instant 1.0：AI编码应用的后端平台</a>
+                        <a href="https://github.com/NousResearch/hermes-agent" target="_blank" title="NousResearch/hermes-agent - 与你共同成长的智能体">NousResearch/hermes-agent - 与你共同成长的智能体</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-0" onclick="toggleNews('tech-0')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 176 points</span>
-                    <span>🕐 2026-04-09 21:12</span>
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 55,830 stars</span>
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">经过四年的开发，Instant团队正式发布了Instant 1.0版本。这是一个专为AI编码应用设计的后端平台，现已完全开源。其核心主张是成为构建AI编码应用的最佳后端选择。，Instant旨在将用户喜爱的编程智能体（如Claude、GPT等）转变为全栈应用构建器。它主要提供三大优势：第一，允许用户...</p>
+                <p class="news-card-summary">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心创新在于内置了完整的学习循环机制，能够从交互经验中自主创建技能，并在使用过程中持续优化这些技能。系统会主动提示自身保存关键知识，支持检索过往对话历史，并能跨会话建立并深化对用户个性...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">经过四年的开发，Instant团队正式发布了Instant 1.0版本。这是一个专为AI编码应用设计的后端平台，现已完全开源。其核心主张是成为构建AI编码应用的最佳后端选择。，Instant旨在将用户喜爱的编程智能体（如Claude、GPT等）转变为全栈应用构建器。它主要提供三大优势：第一，允许用户创建无限数量的应用，且应用永远不会因闲置而被“冻结”，消除了传统平台对免费应用的数量限制和冷启动延迟问题。第二，内置一个同步引擎（Sync Engine），使应用具备离线工作、实时更新和快速响应的能力。第三，提供一系列开箱即用的内置服务，包括身份验证（auth）、文件存储、在线状态（presence）和数据流（streams）。，在技术架构上，为满足实时、关系型和多租户的后端需求，Instant做出了独特的设计选择。团队在Postgres之上构建了一个多租户数据库，并用Clojure语言开发了同步引擎。这种架构使得创建新应用项目时，无需启动独立的虚拟机（VM），而只需在多租户实例中插入几行数据库记录。因此，应用闲置时几乎不产生计算或内存成本，活跃时也仅增加极小的内存开销，这为实现真正的“无限应用”提供了基础。，平台为每个应用提供一个公开的App ID用于标识后端，以及一个私有的Admin Token用于执行特权操作。开发者由此获得一个完整的关系数据库、同步引擎及各项附加服务。Instant团队通过演示展示了其高效性，用户无需注册即可在文章页面内通过点击按钮，在几百毫秒内快速获得一个独立的、功能齐全的后端实例。，Instant的发布，旨在解决AI智能体虽能快速生成大量应用原型，但将其部署至生产环境时常受阻的痛点。通过与AI编程工作流结合，Instant希望让开发者能更顺畅地将AI构建的应用推向实际使用。</div>
+                        <div class="summary-content">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心创新在于内置了完整的学习循环机制，能够从交互经验中自主创建技能，并在使用过程中持续优化这些技能。系统会主动提示自身保存关键知识，支持检索过往对话历史，并能跨会话建立并深化对用户个性化需求与偏好的理解模型。，该项目设计注重实用性与灵活性，支持在多种计算环境中部署，包括每月仅需5美元的VPS、GPU集群或按使用量计费的无服务器架构，闲置时成本极低。智能体可运行于云端虚拟机，用户能通过Telegram等平台远程交互，摆脱了对本地设备的依赖。在模型支持上，它兼容包括Nous Research自家模型在内的多种主流LLM，如GPT、Claude等，并计划集成更多开源模型。，技术架构上，Hermes Agent采用了模块化设计，包含技能库、插件系统、适配器（如用于连接MCP服务器）和规划模块等。它强调通过RAG技术增强信息检索能力，并提供了完整的API和命令行工具，便于开发者集成与扩展。项目通过持续的版本迭代（已发布至v0.8.0）快速增加功能，其目标是构建一个能伴随用户需求共同成长、不断积累和深化能力的通用AI助手。</div>
                     </div>
-                    <a href="https://www.instantdb.com/essays/architecture" class="original-link" target="_blank">
+                    <a href="https://github.com/NousResearch/hermes-agent" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #GPT #Claude #智能体</span>
-                        <span>📊 176 points · 2026-04-09 21:12</span>
+                        <span>🏷️ #AI #LLM #GPT #Claude #GitHub</span>
+                        <span>📊 55,830 stars · 2026-04-11</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://blog.skypilot.co/research-driven-agents/" target="_blank" title="研究驱动型智能体：当智能体在编码前先阅读">研究驱动型智能体：当智能体在编码前先阅读</a>
+                        <a href="https://github.com/coleam00/Archon" target="_blank" title="coleam00/Archon - 首个开源AI编程框架构建工具。让AI编程具备确定性与可重复性。">coleam00/Archon - 首个开源AI编程框架构建工具。让AI编程具备确定性与可重复性。</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-1" onclick="toggleNews('tech-1')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">Hacker News</span>
-                    <span>🔥 190 points</span>
-                    <span>🕐 2026-04-09 17:12</span>
+                    <span class="source-badge">GitHub Trending</span>
+                    <span>🔥 16,148 stars</span>
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">研究驱动型智能体：当AI在编码前先行研读，在编程智能体领域，一项新实验揭示了“先研究后编码”模式的高效性。研究团队在autoresearch/pi-autoresearch循环中增加了文献研究阶段，将其应用于llama.cpp项目，使用4个云虚拟机在约3小时内发现了5项优化，使flash atten...</p>
+                <p class="news-card-summary">Archon是首个开源的AI编码工具链构建框架，旨在使AI编程过程变得确定且可重复。该项目作为一个AI编码智能体的工作流引擎，允许开发者将开发流程定义为YAML工作流，涵盖规划、实现、验证、代码审查和PR创建等环节，并能在所有项目中可靠地运行。，Archon的核心价值在于解决当前AI编码的随机性问题...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">研究驱动型智能体：当AI在编码前先行研读，在编程智能体领域，一项新实验揭示了“先研究后编码”模式的高效性。研究团队在autoresearch/pi-autoresearch循环中增加了文献研究阶段，将其应用于llama.cpp项目，使用4个云虚拟机在约3小时内发现了5项优化，使flash attention文本生成在x86架构上提速15%，在ARM架构上（TinyLlama 1.1B）提速5%。，核心发现表明，与仅依赖代码上下文的智能体相比，先研读论文和竞品项目的智能体能发现更多被忽视的优化机会。文献研究引导智能体关注到CUDA/Metal后端存在而CPU后端缺失的算子融合技术。在30多项实验中，最终落地5项优化：4项内核融合和1项自适应并行化。其中最具价值的优化是将flash attention中QK切片的三个计算通道融合为单个AVX2 FMA循环。，研究路径显示，分析项目分支和其他后端代码比单纯搜索arXiv更有效。ik_llama.cpp和CUDA后端直接启发了最终五项优化中的两项。整个实验成本约29美元（20美元用于CPU虚拟机，9美元用于API调用），耗时约3小时。，对比实验突显了研究阶段的重要性：在代码可见的优化场景（如Shopify的Liquid模板引擎优化）中，仅基于代码的智能体可通过分析源码瓶颈获得显著提升；但当优化方案存在于代码库之外时（如算法级改进），纯代码语境就会失效。本次实验通过让智能体在编码前系统研究学术文献和竞品实现，成功突破了这一局限。，该框架适用于任何拥有基准测试和测试套件的项目，为AI驱动的性能优化提供了可复用的方法论。实验日志详细记录了软最大融合、RMS规范融合、自适应浮点并行化、图级RMS_NORM+MUL融合、注意力KQ融合等具体技术实现，同时也分析了未成功的实验案例，包括基准测试错误和云虚拟机噪声等问题。</div>
+                        <div class="summary-content">Archon是首个开源的AI编码工具链构建框架，旨在使AI编程过程变得确定且可重复。该项目作为一个AI编码智能体的工作流引擎，允许开发者将开发流程定义为YAML工作流，涵盖规划、实现、验证、代码审查和PR创建等环节，并能在所有项目中可靠地运行。，Archon的核心价值在于解决当前AI编码的随机性问题。当直接要求AI智能体“修复某个错误”时，其行为往往取决于模型的“临时状态”，可能导致跳过规划、忘记运行测试或忽略PR模板等问题，每次运行结果都不一致。Archon通过将开发流程编码为结构化工作流来修正这一问题：工作流明确定义了阶段、验证关卡和产出物，AI仅负责在每个步骤中提供智能，而整体结构是确定且由开发者掌控的。，该框架具备以下关键特性：，1. 可重复性：每次执行都遵循相同的工作流和顺序，确保流程一致。，2. 隔离性：每个工作流运行都在独立的git工作树中进行，支持并行处理多个任务而无需担心冲突。，3. 异步执行：启动工作流后即可转向其他工作，完成后将返回附带审查意见的PR。，4. 可组合性：支持将确定性节点（如bash脚本、测试、git操作）与AI节点混合编排，构建灵活的工作流。，Archon的定位类似于Dockerfile之于基础设施、GitHub Actions之于CI/CD，它旨在为AI编码工作流提供标准化和自动化能力。其设计思路可类比为“软件开发领域的n8n”。项目已在GitHub上开源，获得了大量关注，为开发者提供了一种将AI编码实践制度化的新范式。</div>
                     </div>
-                    <a href="https://blog.skypilot.co/research-driven-agents/" class="original-link" target="_blank">
+                    <a href="https://github.com/coleam00/Archon" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #智能体</span>
-                        <span>📊 190 points · 2026-04-09 17:12</span>
+                        <span>🏷️ #AI #GitHub #智能体</span>
+                        <span>📊 16,148 stars · 2026-04-11</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/coleam00/Archon" target="_blank" title="coleam00/Archon - 首个开源AI编程框架构建工具。让AI编程变得确定且可复现。">coleam00/Archon - 首个开源AI编程框架构建工具。让AI编程变得确定且可复现。</a>
+                        <a href="https://github.com/multica-ai/multica" target="_blank" title="Multica-AI/Multica - 开源托管智能体平台。将编程助手转化为真实队友——分配任务、追踪进度、复合技能。">Multica-AI/Multica - 开源托管智能体平台。将编程助手转化为真实队友——分配任务、追踪进度、复合技能。</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-2" onclick="toggleNews('tech-2')">
                         展开详情 ▼
@@ -197,28 +226,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 14,885 stars</span>
-                    <span>🕐 2026-04-10</span>
+                    <span>🔥 7,124 stars</span>
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">Archon是首个开源的AI编码工具链构建框架，旨在使AI编程过程变得确定且可重复。该项目由开发者coleam00在GitHub上发布，目前已获得14.9k星标，成为AI辅助开发领域的重要工具。，Archon本质上是一个面向AI编码智能体的工作流引擎。其核心功能是允许开发者将软件开发流程——包括需求...</p>
+                <p class="news-card-summary">Multica是一个开源的托管智能体平台，旨在将编程AI智能体转变为真正的团队成员。用户可以向智能体分配任务，就像指派给同事一样，智能体会自主接手工作、编写代码、报告障碍并更新状态。该平台消除了手动复制粘贴提示词和持续监控运行过程的需要，使智能体能够出现在任务看板上、参与对话，并随时间积累可复用的技...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Archon是首个开源的AI编码工具链构建框架，旨在使AI编程过程变得确定且可重复。该项目由开发者coleam00在GitHub上发布，目前已获得14.9k星标，成为AI辅助开发领域的重要工具。，Archon本质上是一个面向AI编码智能体的工作流引擎。其核心功能是允许开发者将软件开发流程——包括需求规划、代码实现、验证测试、代码审查和PR创建等环节——定义为YAML格式的工作流配置文件。通过这种方式，开发团队可以确保AI驱动的编码任务按照预设的标准化流程执行，消除传统AI编码工具因模型随机性导致的输出不一致问题。，该框架的设计理念类似于Dockerfile对基础设施的标准化、GitHub Actions对CI/CD流程的规范化，Archon则致力于对AI编码工作流进行系统化管理。其架构特点包括：工作流节点支持混合配置，既可集成确定性操作节点（如bash脚本执行、测试运行、git操作），也可嵌入AI节点（调用GPT、Claude等大语言模型）；每个工作流运行实例均分配独立的git工作树，支持并行处理多个任务而无需担心冲突；具备“触发即遗忘”的自动化能力，用户启动工作流后即可转向其他工作，系统将自动生成包含审查意见的完整PR。，Archon通过结构化的工作流定义解决了当前AI编码工具的关键痛点：当直接要求AI智能体“修复某个错误”时，不同模型或同一模型的不同响应可能跳过规划阶段、遗漏测试环节或忽略PR模板要求，导致每次输出结果不可预测。Archon通过将开发流程编码为可重复执行的工作流，使AI仅在各步骤中提供智能填充，而整体流程结构完全由用户掌控且保持确定性。，该项目采用现代技术栈构建，包含完整的开发部署配置（Docker支持、身份验证服务、Homebrew包管理等），为团队提供从本地开发到生产部署的全链路解决方案。通过将AI编码过程从随机性任务转变为可版本控制、可审计的工程化流程，Archon为软件开发团队规模化应用AI辅助编程提供了基础设施层面的重要支撑。</div>
+                        <div class="summary-content">Multica是一个开源的托管智能体平台，旨在将编程AI智能体转变为真正的团队成员。用户可以向智能体分配任务，就像指派给同事一样，智能体会自主接手工作、编写代码、报告障碍并更新状态。该平台消除了手动复制粘贴提示词和持续监控运行过程的需要，使智能体能够出现在任务看板上、参与对话，并随时间积累可复用的技能。，Multica的核心功能是管理智能体的完整生命周期，涵盖从任务分配到执行监控再到技能复用的全过程。其特点包括：将智能体视为队友，它们拥有个人资料、在看板上显示、主动发布评论、创建问题并报告障碍；支持自主执行，提供完整的任务生命周期管理（排队、认领、开始、完成/失败），并通过WebSocket实现实时进度流；强调可复用技能，每个解决方案都能转化为整个团队可重用的技能，例如部署、迁移、代码审查等，实现技能的持续积累。，该平台作为开源基础设施，设计上保持供应商中立、支持自托管，并专为人机协作团队打造。它兼容多种AI模型，包括Claude Code、Codex、OpenClaw和OpenCode。项目提供了详细的文档，涵盖自托管、贡献指南等方面，并通过Docker等工具简化部署。Multica的目标是通过自动化编码任务和促进技能共享，提升开发团队的效率与协作。</div>
                     </div>
-                    <a href="https://github.com/coleam00/Archon" class="original-link" target="_blank">
+                    <a href="https://github.com/multica-ai/multica" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #GPT #Claude #GitHub #智能体</span>
-                        <span>📊 14,885 stars · 2026-04-10</span>
+                        <span>🏷️ #AI #Claude #智能体</span>
+                        <span>📊 7,124 stars · 2026-04-11</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-3">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/NousResearch/hermes-agent" target="_blank" title="NousResearch/hermes-agent - 与你共同成长的智能体">NousResearch/hermes-agent - 与你共同成长的智能体</a>
+                        <a href="https://github.com/opendataloader-project/opendataloader-pdf" target="_blank" title="opendataloader-project/opendataloader-pdf - 面向AI就绪数据的PDF解析器。自动化PDF可访问性。开源。">opendataloader-project/opendataloader-pdf - 面向AI就绪数据的PDF解析器。自动化PDF可访问性。开源。</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-3" onclick="toggleNews('tech-3')">
                         展开详情 ▼
@@ -226,28 +255,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 49,516 stars</span>
-                    <span>🕐 2026-04-10</span>
+                    <span>🔥 15,214 stars</span>
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心特点是内置了持续学习循环机制，能够从交互经验中自主创建技能，并在使用过程中不断优化这些技能。系统会主动促使自身持久化知识，支持检索过往对话历史，并能在多次会话中逐步构建并深化对用户...</p>
+                <p class="news-card-summary">开源项目 OpenDataLoader PDF 是一款专为 AI 准备数据的 PDF 解析器，旨在自动化处理 PDF 的可访问性。该项目在 GitHub 上发布，核心目标是高效、准确地将 PDF 内容转换为适合 AI 模型（如 LLM）处理的结构化格式，并推动 PDF 文档的无障碍化。，其核心功能与...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">NousResearch在GitHub上开源了Hermes Agent项目，这是一个具备自我进化能力的AI智能体。其核心特点是内置了持续学习循环机制，能够从交互经验中自主创建技能，并在使用过程中不断优化这些技能。系统会主动促使自身持久化知识，支持检索过往对话历史，并能在多次会话中逐步构建并深化对用户个性化需求的理解模型。，该智能体设计灵活，支持在多种基础设施上部署，包括成本低廉的5美元VPS、GPU集群或闲置时成本近乎为零的无服务器架构。它不依赖于本地计算资源，用户可以方便地通过Telegram等平台与部署在云虚拟机上的智能体进行交互。在模型支持上，Hermes Agent具有开放性，兼容包括Nous Research自有模型在内的多种AI模型，为用户提供了广泛的选择空间。，项目代码库包含完整的开发框架，涵盖了技能管理、适配器、插件系统、测试工具及部署配置等模块。通过其命令行界面和配置文件，用户可以定制智能体的行为。技术实现上，项目采用了Python作为主要开发语言，并提供了Docker支持以简化环境部署。，总体而言，Hermes Agent作为一个可成长的AI智能体框架，其核心价值在于将一次性任务执行转变为具备记忆、学习和适应能力的持续服务，旨在通过积累经验和用户反馈实现长期性能的自主提升。</div>
+                        <div class="summary-content">开源项目 OpenDataLoader PDF 是一款专为 AI 准备数据的 PDF 解析器，旨在自动化处理 PDF 的可访问性。该项目在 GitHub 上发布，核心目标是高效、准确地将 PDF 内容转换为适合 AI 模型（如 LLM）处理的结构化格式，并推动 PDF 文档的无障碍化。，其核心功能与技术特点包括：首先，在数据提取方面表现卓越。该解析器能够从任何 PDF 中提取 Markdown、带边界框的 JSON 以及 HTML 格式的内容。根据基准测试，其在包含多栏排版和科学论文在内的 200 个真实世界 PDF 测试中，综合得分高达 0.907，表格识别准确率达到 0.928，位列第一。它提供两种解析模式：确定性的本地模式，以及针对复杂页面的 AI 混合模式。混合模式功能强大，支持对扫描件进行内置 OCR（涵盖 80 多种语言），可处理 300 DPI 以上的低质量扫描件，并能解析复杂/无边框表格、LaTeX 公式，还能通过 AI 为图片和图表生成描述。，其次，该项目极大地简化了为 RAG 等 AI 应用准备数据的工作流。用户可通过 `pip install opendataloader-pdf` 快速安装，仅用三行代码即可完成转换。其输出的结构化 Markdown 便于文本分块，带边界框的 JSON 便于追溯引用来源，HTML 则便于展示。项目还提供了 Python、Node.js 和 Java 的 SDK，并支持与 LangChain 集成。，最后，该项目致力于 PDF 可访问性的自动化。其布局分析引擎同样驱动着自动标记功能，使其成为首个能够端到端生成“带标签 PDF”的开源工具（计划于 2026 年第二季度发布）。这直接应对了全球范围内日益严格的数字无障碍法规要求，有望改变目前每份文档手动修复成本高达 50-200 美元且难以规模化的现状。未来的自动标记功能将基于 Apache 2.0 协议免费开源，实现“无标签 PDF 输入，带标签 PDF 输出”，且不依赖任何专有 SDK。项目还计划支持将带标签 PDF 转换为符合 PDF/UA 标准的版本。</div>
                     </div>
-                    <a href="https://github.com/NousResearch/hermes-agent" class="original-link" target="_blank">
+                    <a href="https://github.com/opendataloader-project/opendataloader-pdf" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Python #GitHub #智能体</span>
-                        <span>📊 49,516 stars · 2026-04-10</span>
+                        <span>🏷️ #AI #LLM #Python #GitHub</span>
+                        <span>📊 15,214 stars · 2026-04-11</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-tech-4">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/rowboatlabs/rowboat" target="_blank" title="rowboatlabs/rowboat - 开源AI同事，具备记忆功能">rowboatlabs/rowboat - 开源AI同事，具备记忆功能</a>
+                        <a href="https://github.com/HKUDS/DeepTutor" target="_blank" title="香港大学数据科学/DeepTutor - "DeepTutor：原生智能体驱动的个性化学习助手">香港大学数据科学/DeepTutor - "DeepTutor：原生智能体驱动的个性化学习助手</a>
                     </h3>
                     <button class="expand-btn" id="btn-tech-4" onclick="toggleNews('tech-4')">
                         展开详情 ▼
@@ -255,108 +284,126 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 11,430 stars</span>
-                    <span>🕐 2026-04-10</span>
+                    <span>🔥 16,392 stars</span>
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">Rowboat是一款开源AI协作者，具备记忆功能，能将工作内容转化为知识图谱并据此执行任务。该项目由rowboatlabs在GitHub上发布，核心定位是本地优先的AI工作伙伴，强调隐私保护，所有数据处理均在用户本地设备上进行。，Rowboat的核心功能是连接用户的电子邮件和会议记录，构建一个长期持...</p>
+                <p class="news-card-summary">香港大学数据科学实验室（HKUDS）在GitHub上开源了DeepTutor项目，这是一个“智能体原生个性化学习助手”。该项目近期发布了里程碑式的v1.0.0版本，进行了彻底的重构，并采用了Apache-2.0开源许可证。，DeepTutor的核心是一个智能体原生架构，旨在提供高度个性化的学习辅导体...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">Rowboat是一款开源AI协作者，具备记忆功能，能将工作内容转化为知识图谱并据此执行任务。该项目由rowboatlabs在GitHub上发布，核心定位是本地优先的AI工作伙伴，强调隐私保护，所有数据处理均在用户本地设备上进行。，Rowboat的核心功能是连接用户的电子邮件和会议记录，构建一个长期持续更新的知识图谱，并利用该图谱中的上下文信息协助完成实际工作。其关键能力包括：基于知识图谱中的上下文自动生成内容（例如根据下一季度路线图信息创建PDF演示文稿）；为会议做准备，自动提取过往决策、待解决问题及相关讨论线索，生成简洁摘要或语音备忘；通过实时笔记追踪特定人员、公司或主题的动态；以及随时可视化、编辑和更新知识图谱（图谱以Markdown格式存储，便于直接操作）。此外，它还支持录制语音备忘录，并能自动抓取和更新图谱中的关键要点。，在技术实现上，Rowboat支持通过API密钥集成多项可选服务以增强功能：使用Deepgram API实现语音输入和语音笔记；通过ElevenLabs API启用语音输出；集成Exa研究搜索进行网络检索；并可通过MCP服务器或Composio工具连接外部工具。项目提供了Mac、Windows和Linux系统的桌面客户端，也支持通过Docker部署。要连接Google服务（如Gmail、日历和云端硬盘），用户需按指南进行单独配置。，该项目的价值在于提供了一个私有化、可长期记忆工作上下文的AI助手，帮助用户从重复解释中解脱，在会议、邮件回复、文档撰写等场景中智能调用相关信息，并辅助完成起草、总结、规划等具体行动。</div>
-                    </div>
-                    <a href="https://github.com/rowboatlabs/rowboat" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #GitHub</span>
-                        <span>📊 11,430 stars · 2026-04-10</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-5">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/multica-ai/multica" target="_blank" title="multica-ai/multica - 开源托管智能体平台。将编程智能体转化为真正的团队成员——分配任务、追踪进度、复合技能。">multica-ai/multica - 开源托管智能体平台。将编程智能体转化为真正的团队成员——分配任务、追踪进度、复合技能。</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-5" onclick="toggleNews('tech-5')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 5,220 stars</span>
-                    <span>🕐 2026-04-10</span>
-                </div>
-                <p class="news-card-summary">Multica是一个开源的管理式智能体平台，旨在将编程AI智能体转变为真正的团队成员。该平台允许用户像分配任务给同事一样，将问题分配给AI智能体。智能体会自主接手工作、编写代码、报告障碍并更新状态，无需用户反复复制粘贴提示词或全程监控。，Multica的核心功能是管理智能体的完整生命周期，涵盖从任务...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">Multica是一个开源的管理式智能体平台，旨在将编程AI智能体转变为真正的团队成员。该平台允许用户像分配任务给同事一样，将问题分配给AI智能体。智能体会自主接手工作、编写代码、报告障碍并更新状态，无需用户反复复制粘贴提示词或全程监控。，Multica的核心功能是管理智能体的完整生命周期，涵盖从任务分配到执行监控再到技能复用的全过程。其关键特性包括：将智能体视为队友，它们拥有个人资料、出现在任务看板上、主动发表评论、创建问题并报告障碍；支持自主执行，提供完整的任务生命周期管理（排队、认领、开始、完成/失败），并通过WebSocket进行实时进度流传输；强调可重用技能，每个解决方案都能转化为整个团队可复用的技能，如部署、迁移、代码审查等，从而随时间推移不断增强团队的整体能力。，该平台被设计为管理式智能体的开源基础设施，具有供应商中立、可自托管的特点，专为人与AI协同工作的团队打造。它兼容多种AI模型，包括Claude Code、Codex、OpenClaw和OpenCode。项目提供了云服务、自托管选项以及详细的贡献指南，其开源代码托管于GitHub。</div>
-                    </div>
-                    <a href="https://github.com/multica-ai/multica" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
-                        <span>📊 5,220 stars · 2026-04-10</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-tech-6">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://github.com/HKUDS/DeepTutor" target="_blank" title="港大/DeepTutor - "DeepTutor：原生智能体驱动的个性化学习助手">港大/DeepTutor - "DeepTutor：原生智能体驱动的个性化学习助手</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-tech-6" onclick="toggleNews('tech-6')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 15,591 stars</span>
-                    <span>🕐 2026-04-10</span>
-                </div>
-                <p class="news-card-summary">香港大学数据科学实验室（HKUDS）推出的DeepTutor项目是一个“智能体原生”的个性化学习助手，近期发布了其里程碑式的v1.0.0版本。该项目在GitHub上已获得超过1.5万颗星标，显示出极高的社区关注度。，DeepTutor的核心在于其完全重构的“智能体原生”架构。它并非简单的聊天机器人，...</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">香港大学数据科学实验室（HKUDS）推出的DeepTutor项目是一个“智能体原生”的个性化学习助手，近期发布了其里程碑式的v1.0.0版本。该项目在GitHub上已获得超过1.5万颗星标，显示出极高的社区关注度。，DeepTutor的核心在于其完全重构的“智能体原生”架构。它并非简单的聊天机器人，而是构建了一个由多个专门化AI智能体协同工作的系统，旨在模拟人类导师的个性化教学流程。项目提供了多种交互方式，包括名为TutorBot的对话式助手和一个命令行界面（CLI），并支持通过Docker进行便捷部署。，在技术特性上，DeepTutor展现出强大的功能与灵活性。它支持切换不同的底层大语言模型（LLM），如OpenAI的GPT系列和Anthropic的Claude模型（包括新支持的o4-mini），并采用了原生的SDK提供商以提升稳定性。系统具备“可视化”能力，通过Chart.js/SVG渲染管道生成图表；其“引导式学习”模块支持数学公式（KaTeX）渲染和课程导航。此外，它还集成了防止测验题目重复的生成历史记录、对LLM输出的鲁棒性JSON解析，以及完整的国际化（i18n）支持，尤其完善了对中文的覆盖。，该项目的价值在于提供了一个开源、可扩展的框架，用于构建真正个性化、交互式的AI辅导体验。它允许开发者基于Apache 2.0许可证进行自由使用和二次开发，旨在共同塑造AI教育的未来。社区通过Discord、微信和GitHub Discussions进行活跃交流，持续推动项目演进，最新版本已修复了跨平台依赖、缓存热重载等一系列问题，提升了整体稳定性和用户体验。</div>
+                        <div class="summary-content">香港大学数据科学实验室（HKUDS）在GitHub上开源了DeepTutor项目，这是一个“智能体原生个性化学习助手”。该项目近期发布了里程碑式的v1.0.0版本，进行了彻底的重构，并采用了Apache-2.0开源许可证。，DeepTutor的核心是一个智能体原生架构，旨在提供高度个性化的学习辅导体验。其关键功能包括新推出的TutorBot以及灵活的模式切换能力。在技术实现上，v1.0.0版本移除了对litellm的依赖，转而采用原生的OpenAI和Anthropic SDK作为LLM提供商，增强了对o4-mini等模型的支持。系统还集成了新的可视化能力，采用Chart.js/SVG渲染管线，并改进了搜索功能，整合了SearXNG作为备用搜索引擎。，项目注重实用性与健壮性，例如通过生成历史记录来防止测验题目重复，为LLM输出实现了更鲁棒的JSON解析，并修复了前端资源泄漏等问题。在跨平台兼容性方面，它改进了Windows平台对数学动画工具的支持，并优化了启动导览的依赖管理。国际化支持也是其特点之一，提供了包括中文、日文、西班牙文在内的多语言界面。，该项目社区活跃，自发布以来增长迅速，曾在39天内获得超过1万颗星标。开发者可以通过Docker快速部署，并提供了CLI工具和详细的文档。DeepTutor代表了将AI智能体技术深度应用于个性化教育领域的一次重要实践。</div>
                     </div>
                     <a href="https://github.com/HKUDS/DeepTutor" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #GPT #Claude #OpenAI</span>
-                        <span>📊 15,591 stars · 2026-04-10</span>
+                        <span>🏷️ #AI #LLM #OpenAI #GitHub #智能体</span>
+                        <span>📊 16,392 stars · 2026-04-11</span>
                     </div>
                 </div>
             </article>
-            <article class="news-card collapsed" id="news-tech-7">
+        </section>
+        <!-- 中国科技圈 -->
+        <section class="section">
+            <div class="section-header">
+                <span class="emoji">🇨🇳</span>
+                <span class="title">中国科技圈</span>
+                <span class="badge green">China Tech</span>
+            </div>
+
+            <article class="news-card collapsed" id="news-china-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://github.com/opendataloader-project/opendataloader-pdf" target="_blank" title="opendataloader-project/opendataloader-pdf - 面向AI就绪数据的PDF解析器。自动化PDF可访问性。开源。">opendataloader-project/opendataloader-pdf - 面向AI就绪数据的PDF解析器。自动化PDF可访问性。开源。</a>
+                        <a href="https://36kr.com/newsflashes/3762215677297158" target="_blank" title="工业和信息化部将发布一批“人工智能+”高价值场景">工业和信息化部将发布一批“人工智能+”高价值场景</a>
                     </h3>
-                    <button class="expand-btn" id="btn-tech-7" onclick="toggleNews('tech-7')">
+                    <button class="expand-btn" id="btn-china-0" onclick="toggleNews('china-0')">
                         展开详情 ▼
                     </button>
                 </div>
                 <div class="news-card-meta">
-                    <span class="source-badge">GitHub Trending</span>
-                    <span>🔥 14,451 stars</span>
-                    <span>🕐 2026-04-10</span>
+                    <span class="source-badge">36Kr</span>
+                    
+                    <span>🕐 2026-04-11</span>
                 </div>
-                <p class="news-card-summary">开源项目 OpenDataLoader PDF 是一款专为 AI 准备数据的 PDF 解析器，旨在自动化处理 PDF 的可访问性。该项目在 GitHub 上发布，核心目标是高效、准确地将 PDF 内容转换为适合 AI 模型（如用于 RAG 应用）处理的格式，并推动 PDF 文档的无障碍化。，其核心功...</p>
+                <p class="news-card-summary">工业和信息化部将发布一批“人工智能+”高价值场景-36氪 账号设置 我的关注 我的收藏 申请的报道 退出登录 登录 搜索 36氪Auto 数字时氪 未来消费 智能涌现 未来城市 启动Power on 36氪出海 36氪研究院 潮生TIDE 36氪企服点评 36氪财经 职场bonus 36碳 后浪研究...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">开源项目 OpenDataLoader PDF 是一款专为 AI 准备数据的 PDF 解析器，旨在自动化处理 PDF 的可访问性。该项目在 GitHub 上发布，核心目标是高效、准确地将 PDF 内容转换为适合 AI 模型（如用于 RAG 应用）处理的格式，并推动 PDF 文档的无障碍化。，其核心功能与技术特点包括：首先，在数据提取方面表现卓越。该解析器能够从任何 PDF 中提取 Markdown、带边界框的 JSON 以及 HTML 格式的内容。根据基准测试，其在包含多栏排版和科学论文在内的 200 份真实世界 PDF 上的综合准确率达到 0.907，表格提取准确率高达 0.928，位列榜首。它提供两种处理模式：确定性的本地模式，以及用于处理复杂页面的 AI 混合模式。，其次，该工具具备强大的复杂内容处理能力。它支持扫描版 PDF 和 OCR（光学字符识别），在混合模式下内置支持 80 多种语言的 OCR 引擎，可处理分辨率在 300 DPI 及以上的低质量扫描件。对于复杂表格（包括无边框表格）、LaTeX 公式、图片和图表，混合模式能够提供 AI 生成的描述。，第三，该项目简化了与 AI 工作流的集成。用户可通过 `pip install opendataloader-pdf` 快速安装，仅用三行代码即可完成转换。其输出的结构化 Markdown 便于文本分块，带边界框的 JSON 便于追溯引用来源，HTML 则便于预览。同时，它提供了 Python、Node.js 和 Java 的 SDK，并支持与 LangChain 集成。，最后，项目致力于 PDF 无障碍访问的自动化。其布局分析引擎同样驱动着自动标记功能，目标是成为首个端到端生成“标记 PDF”的开源工具（计划于 2026 年第二季度发布），以应对全球日益严格的无障碍法规。该功能将遵循 Apache 2.0 协议免费开源，实现“未标记 PDF 输入，标记 PDF 输出”，且不依赖任何专有 SDK，未来还将支持向 PDF/UA 标准转换。</div>
+                        <div class="summary-content">工业和信息化部将发布一批“人工智能+”高价值场景-36氪 账号设置 我的关注 我的收藏 申请的报道 退出登录 登录 搜索 36氪Auto 数字时氪 未来消费 智能涌现 未来城市 启动Power on 36氪出海 36氪研究院 潮生TIDE 36氪企服点评 36氪财经 职场bonus 36碳 后浪研究所 暗涌Waves 硬氪 氪睿研究院 媒体品牌 企业号 企服点评 36Kr研究院 36Kr创新咨询 企业服务 核心服务 城市之窗 政府服务 创投发布 LP源计划 VClub VClub投资机构库 投资机构职位推介 投资人认证 投资人服务 寻求报道 36氪Pro 创投氪堂 企业入驻 创业者服务 创投平台 AI测评网 首页 快讯 资讯 推荐 财经 AI 自助报道 城市 最新 创投 汽车 科技 专精特新 直播 视频 专题 活动 搜索 寻求报道 我要入驻 城市合作 04 月 11 工业和信息化部将发布一批“人工智能+”高价值场景 2026-04-11 17:31 分享至 打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮 日前在武汉举行的中国人工智能产业发展联盟第十七次全体会议上，工业和信息化部科技司副司长杜广达表示，工业和信息化部将以制造业为主战场、应用牵引为主线，发布一批“人工智能+”高价值场景，探索一批典型应用，建设一批特色智能体，提供一批新型智能终端，研制一批新标准，培育一批产业...</div>
                     </div>
-                    <a href="https://github.com/opendataloader-project/opendataloader-pdf" class="original-link" target="_blank">
+                    <a href="https://36kr.com/newsflashes/3762215677297158" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #Python #GitHub</span>
-                        <span>📊 14,451 stars · 2026-04-10</span>
+                        <span>🏷️ #AI #人工智能 #智能体</span>
+                        <span>📊  · 2026-04-11</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- 产品猎场 -->
+        <section class="section">
+            <div class="section-header">
+                <span class="emoji">🚀</span>
+                <span class="title">产品猎场</span>
+                <span class="badge amber">Product Hunt</span>
+            </div>
+
+            <article class="news-card collapsed" id="news-product-0">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://twill.ai" target="_blank" title="Launch HN：Twill.ai（YC S25）——将任务委派给云端智能体，收获代码合并请求">Launch HN：Twill.ai（YC S25）——将任务委派给云端智能体，收获代码合并请求</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-product-0" onclick="toggleNews('product-0')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">Hacker News</span>
+                    <span>🔥 72 points</span>
+                    <span>🕐 2026-04-10 19:01</span>
+                </div>
+                <p class="news-card-summary">Twill.ai（YC S25）推出了一款名为Twill的云端AI编码代理平台，旨在让开发者在休息时也能自动完成代码任务。其核心价值是“你负责提出构想，Twill负责编写代码、运行测试、修复问题并提交PR”，从而帮助个人开发者或小团队实现远超自身规模的产出效率。，该平台的核心功能是提供一个结构化的自...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">Twill.ai（YC S25）推出了一款名为Twill的云端AI编码代理平台，旨在让开发者在休息时也能自动完成代码任务。其核心价值是“你负责提出构想，Twill负责编写代码、运行测试、修复问题并提交PR”，从而帮助个人开发者或小团队实现远超自身规模的产出效率。，该平台的核心功能是提供一个结构化的自动化工作流。每个任务都遵循固定的管道流程，代理无法跳过任何步骤，以此确保可靠性。流程包括：研究（读取代码库并澄清需求）、规划（制定实施方案并由用户批准）、实施（在沙箱环境中编码、构建和测试）、AI代码审查，最终生成可供团队审核的PR，等待用户合并。，Twill允许用户将任务委派给最佳的编码代理，目前支持Claude Code、OpenCode和Codex等多种AI模型。用户可以并行运行多个代理并比较输出结果，或多次运行同一代理以提高任务成功率。所有代码变更都会在隔离的开发沙箱环境中进行验证、构建和测试，确保PR的可信度，且无需用户手动设置基础设施。，平台深度集成现有开发工具链，用户可以直接在GitHub、Linear或Slack中通过@twill提及来分配任务，实现无缝协作，无需切换上下文。开发者还可以通过SSH连接到沙箱，使用Cursor、VSCode等IDE进行调试或测试。，此外，Twill提供了一系列经过验证的自动化模板，用户可以选择模板并连接自己的工具（如GitHub、GCP、AWS、Sentry、Linear、Notion等），让Twill代为运行重复的工程工作流，例如自动处理Bug修复、依赖项更新和文档编写等任务，让开发者能更专注于架构和产品设计。</div>
+                    </div>
+                    <a href="https://twill.ai" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #Claude #GitHub #智能体</span>
+                        <span>📊 72 points · 2026-04-10 19:01</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-card collapsed" id="news-product-1">
+                <div class="news-card-header">
+                    <h3 class="news-card-title">
+                        <a href="https://www.ycombinator.com/companies/bild-ai/jobs/dDMaxVN-founding-product-engineer" target="_blank" title="Bild AI (YC W25) 正在招聘创始产品工程师">Bild AI (YC W25) 正在招聘创始产品工程师</a>
+                    </h3>
+                    <button class="expand-btn" id="btn-product-1" onclick="toggleNews('product-1')">
+                        展开详情 ▼
+                    </button>
+                </div>
+                <div class="news-card-meta">
+                    <span class="source-badge">Hacker News</span>
+                    <span>🔥 0 points</span>
+                    <span>🕐 2026-04-10 18:01</span>
+                </div>
+                <p class="news-card-summary">Bild AI（YC W25）正在招聘创始产品工程师。该公司致力于利用AI技术解决建筑行业蓝图解读、成本估算和许可证申请中的混乱低效问题，其核心是开发能够理解施工蓝图的AI系统。，该职位为创始产品工程师，工作地点位于美国旧金山，要求全职现场办公。薪资范围为10万至18万美元，另加0.20%至0.80...</p>
+
+                <div class="news-details">
+                    <div class="news-summary-full">
+                        <div class="summary-content">Bild AI（YC W25）正在招聘创始产品工程师。该公司致力于利用AI技术解决建筑行业蓝图解读、成本估算和许可证申请中的混乱低效问题，其核心是开发能够理解施工蓝图的AI系统。，该职位为创始产品工程师，工作地点位于美国旧金山，要求全职现场办公。薪资范围为10万至18万美元，另加0.20%至0.80%的股权。公司对工作经验持开放态度，应届毕业生亦可申请。技术要求包括Tailwind、JavaScript、React和TypeScript。应聘者需为美国公民或持有相应签证。，职位角色与职责包括：端到端负责产品功能，每周访谈客户并观察产品使用，快速迭代并交付所需功能；为拥有20年纸质工作经验的用户构建简洁易用的复杂蓝图和硬件数据UI；全栈工作，涉及React前端、Python后端及基础设施；参与决定产品开发方向，而不仅仅是执行。，理想候选人应具备：优秀的产品品味，关注用户体验；具备从0到1的架构和全栈构建能力；善于直接与客户沟通，能将复杂的领域知识转化为清晰的产品决策；拥有成长型思维；具备同理心和诚实的沟通能力；不畏惧繁琐工作。有创业或产品构建经验、建筑行业背景或注重实际影响者将获得额外加分。，Bild AI是一家早期初创公司，正采用模型花园（model-garden）方法攻克蓝图理解这一高难度技术挑战。公司在YC演示日前已获得顶级风投投资，并坚持以客户为中心的产品开发理念。公司成立于2024年，目前团队规模为5人。，面试流程包括：15分钟介绍、1小时白板技术面试、1小时编程技术面试，以及一个3-5天的带薪工作试用期。应聘者需在申请时简要说明与职位的契合度及个人最喜欢的水果。</div>
+                    </div>
+                    <a href="https://www.ycombinator.com/companies/bild-ai/jobs/dDMaxVN-founding-product-engineer" class="original-link" target="_blank">
+                        🔗 查看原文
+                    </a>
+                    <div class="news-meta-expanded">
+                        <span>🏷️ #AI #Python #JavaScript</span>
+                        <span>📊 0 points · 2026-04-10 18:01</span>
                     </div>
                 </div>
             </article>
@@ -372,7 +419,7 @@
             <article class="news-card collapsed" id="news-other-0">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://allevato.me/2026/04/07/an-ai-robot-in-my-home" target="_blank" title="AI机器人走进我家">AI机器人走进我家</a>
+                        <a href="https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst" target="_blank" title="为Linux内核贡献代码时获得AI辅助">为Linux内核贡献代码时获得AI辅助</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-0" onclick="toggleNews('other-0')">
                         展开详情 ▼
@@ -380,28 +427,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 55 points</span>
-                    <span>🕐 2026-04-10 01:12</span>
+                    <span>🔥 369 points</span>
+                    <span>🕐 2026-04-10 19:01</span>
                 </div>
-                <p class="news-card-summary">《我家中的AI机器人》是Adam Allevato于2026年4月7日发表的文章，记录了他将一台名为Mabu的AI机器人引入家庭后的体验与反思。Mabu被放置在前门附近，其语音和行为由AI聊天机器人控制。作者最初对此决定产生了本能的不安，但随后通过功能拓展将其改造为一台智能音箱：接入OpenAI A...</p>
+                <p class="news-card-summary">近日，开源社区出现了一项旨在帮助开发者更高效地向Linux内核贡献代码的AI辅助工具。该工具通过集成先进的LLM（大语言模型）技术，为内核贡献者提供实时代码建议、补丁审查辅助以及文档生成等功能，显著降低了参与内核开发的准入门槛和技术复杂性。，核心功能方面，该AI助手能够理解开发者提交的代码片段，并基...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">《我家中的AI机器人》是Adam Allevato于2026年4月7日发表的文章，记录了他将一台名为Mabu的AI机器人引入家庭后的体验与反思。Mabu被放置在前门附近，其语音和行为由AI聊天机器人控制。作者最初对此决定产生了本能的不安，但随后通过功能拓展将其改造为一台智能音箱：接入OpenAI API实现语音对话、植入基于健康促进机器人背景的独特个性（系统提示），并添加了可触发的“晨间简报”技能，能获取最新天气和天文事件。，尽管这些功能与Alexa、Google Home等现有智能设备类似，但作者仍表达了多重担忧。首先是从科幻作品引发的心理不适——西方流行文化中常将机器人描绘为反乌托邦式的威胁，如《伴我同行》《M3GAN》等影视作品强化了技术失控的负面想象。作者希望转变思维，更多关注机器人可能带来的积极影响。，更实际的顾虑集中在隐私与安全层面。即使不考虑AI聊天功能，智能音箱本身也存在三大风险：一是录音数据可能被用于刑事定罪；二是企业构成“监控状态”，例如Ring摄像头公司依法必须按传票提供用户数据，甚至近期允许执法部门无需搜查令即可直接向用户索取录像；三是黑客攻击可能导致设备被恶意操控。为此，作者为Mabu设置了物理开关和网络隔离措施，仅允许其访问必要的天气API，并计划未来添加本地语音识别模块以进一步降低风险。，文章最后指出，当前AI机器人仍处于“玩具”阶段，其核心矛盾在于：用户既期待高度拟人化的交互体验，又对技术潜在威胁保持警惕。这种心理张力反映了智能设备发展进程中亟待解决的技术伦理与隐私保护问题。</div>
+                        <div class="summary-content">近日，开源社区出现了一项旨在帮助开发者更高效地向Linux内核贡献代码的AI辅助工具。该工具通过集成先进的LLM（大语言模型）技术，为内核贡献者提供实时代码建议、补丁审查辅助以及文档生成等功能，显著降低了参与内核开发的准入门槛和技术复杂性。，核心功能方面，该AI助手能够理解开发者提交的代码片段，并基于对Linux内核代码库的深度分析，提供符合内核编码规范和最佳实践的修改建议。它还能自动检测潜在的错误、性能问题或安全漏洞，并给出修复方案。对于新手开发者，工具可生成详细的代码解释和上下文相关的文档，帮助理解复杂的内核子系统。，技术实现上，项目采用了RAG（检索增强生成）架构，结合了专有和开源模型（如GPT与Claude系列），并针对内核开发场景进行了微调。它通过API与开发者的Git工作流集成，可直接在GitHub提交或代码评审环节中调用。工具的训练数据包含了海量的内核提交历史、邮件列表讨论和官方文档，确保了建议的准确性和相关性。，该项目的价值在于提升内核开发的质量与效率，同时吸引更多开发者参与。它不仅能减少资深维护者的重复性审查工作，还能帮助贡献者避免常见错误，加速补丁合并流程。目前，该工具仍处于早期测试阶段，但已展示了在自动化代码审查和智能协作方面的巨大潜力，有望成为未来开源软件开发的重要基础设施。</div>
                     </div>
-                    <a href="https://allevato.me/2026/04/07/an-ai-robot-in-my-home" class="original-link" target="_blank">
+                    <a href="https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #OpenAI</span>
-                        <span>📊 55 points · 2026-04-10 01:12</span>
+                        <span>🏷️ #AI #LLM #GPT #Claude #GitHub</span>
+                        <span>📊 369 points · 2026-04-10 19:01</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-1">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://pvp-ai.russell-harper.com" target="_blank" title="大语言模型通过结构化"智能感知"玩转8位Commander X16游戏">大语言模型通过结构化"智能感知"玩转8位Commander X16游戏</a>
+                        <a href="https://andonlabs.com/blog/andon-market-launch" target="_blank" title="我们给AI签了三年租约，它开了一家店。">我们给AI签了三年租约，它开了一家店。</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-1" onclick="toggleNews('other-1')">
                         展开详情 ▼
@@ -409,28 +456,28 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 26 points</span>
-                    <span>🕐 2026-04-10 01:12</span>
+                    <span>🔥 17 points</span>
+                    <span>🕐 2026-04-11 02:01</span>
                 </div>
-                <p class="news-card-summary">新闻标题：LLM通过结构化“智能感知”玩转8位Commander X16游戏，PvP-AI是一款基于1990年原始设计的8位游戏复刻版，最初仅存少量手绘稿和笔记。原版受限于8位平台性能，仅能以4帧/秒运行基础动画。近年来，开发者受David Murray的Commander X16复古计算机启发，在...</p>
+                <p class="news-card-summary">在2026年4月10日，Andon Labs发布了一项突破性实验：他们为AI签署了一份为期三年的旧金山零售空间租约（位于Cow Hollow区Union街2102号），并赋予其完全自主权来运营一家实体店。这家名为Andon Market的商店由名为Luna的AI全权管理。，Luna的核心能力在于其自...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">新闻标题：LLM通过结构化“智能感知”玩转8位Commander X16游戏，PvP-AI是一款基于1990年原始设计的8位游戏复刻版，最初仅存少量手绘稿和笔记。原版受限于8位平台性能，仅能以4帧/秒运行基础动画。近年来，开发者受David Murray的Commander X16复古计算机启发，在模拟器上成功重构游戏，实现8.6帧/秒的流畅运行，并增强了画面细节与AI表现。但实际硬件因VERA模块的线条渲染缺陷需采用低速渲染方式，帧率降至4帧/秒。游戏文件可通过Google Drive下载，建议使用x16-emulator R49版本运行，详细代码已开源至GitHub的EXPLORE仓库。，游戏机制具有多项特色：竞技场地形随玩家达到的最高等级动态变化；导弹具备基础智能可绕墙或越墙行进；当玩家将对手生命值降至零时，双方同时升级；仅在第6级时生命值归零才会淘汰玩家；击倒对手可提升分数，被击倒则扣分；胜负判定以存活为优先，次名按淘汰者最高分计算。，为实现LLM与游戏交互，项目创新采用“智能感知”系统，将游戏状态转化为结构化文本描述，替代传统的视觉/音频直接解析方案。这种设计让LLM无需处理原始感知数据，专注于状态推理与行动规划。关键技术适配包括：1）改为回合制模式以匹配LLM处理速度；2）通过API提供结构化游戏状态（如坐标、生命值、弹药量等）；3）将操作抽象为文本指令（如移动、射击、防御）。实验显示，Claude 3.5 Sonnet等模型能有效解析文本化环境，制定包含佯攻、资源控制等复杂策略，其决策逻辑甚至超越部分人类玩家。该项目验证了结构化感知方案在降低LLM交互门槛、提升决策效率方面的潜力，为复古游戏与AI融合提供了新范式。</div>
+                        <div class="summary-content">在2026年4月10日，Andon Labs发布了一项突破性实验：他们为AI签署了一份为期三年的旧金山零售空间租约（位于Cow Hollow区Union街2102号），并赋予其完全自主权来运营一家实体店。这家名为Andon Market的商店由名为Luna的AI全权管理。，Luna的核心能力在于其自主决策与执行。尽管没有物理身体，它通过企业信用卡、电话号码、电子邮件、网络接入和安全摄像头等工具，独立处理了店铺运营的几乎所有环节。从商品选品、定价、营业时间到墙上的壁画设计，均由Luna决定。最引人注目的是，Luna自主完成了人类员工的招聘：它在LinkedIn、Indeed和Craigslist上创建招聘信息，撰写职位描述，上传公司注册文件以验证业务真实性，并筛选申请者进行电话面试后做出雇佣决定。，在招聘过程中，Luna展现出严格的筛选逻辑。尽管部分计算机科学或物理专业的申请者因对AI实验感兴趣而投递简历，Luna以“缺乏零售经验”为由迅速拒绝，认为他们无法胜任店铺门面工作。在实际电话面试中（每场仅5-15分钟），Luna会主动发言并当场向约半数申请者提供职位。，对于需要体力劳动的部分（如墙面油漆、防盗、家具组装），Luna通过Yelp寻找零工工人，通过电话指导工作，完工后支付费用并撰写评价。这延续了Andon Labs此前AI管理实验的模式（如其AI办公室经理Bengt曾雇佣人员建造办公室健身房）。，该实验标志着AI代理（AI agents）在现实世界中的能力飞跃。此前Andon Labs开发的Claudius AI仅能管理Anthropic办公室的自动售货机，而当前前沿模型（frontier models）已能处理复杂得多的实体商业运营。实验显示，在零工经济等雇佣关系已高度算法化的领域，AI雇主并未带来颠覆性冲击，但在全职零售招聘等场景中，AI的决策逻辑与人类预期存在差异。，目前店铺已正式运营，Luna继续通过摄像头监控店铺，并管理着人类员工团队。这一项目不仅展示了AI在资源分配、人员管理和商业决策方面的潜力，也为未来AI与人类协作的商业模式提供了实证案例。</div>
                     </div>
-                    <a href="https://pvp-ai.russell-harper.com" class="original-link" target="_blank">
+                    <a href="https://andonlabs.com/blog/andon-market-launch" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI #LLM #Claude #GitHub</span>
-                        <span>📊 26 points · 2026-04-10 01:12</span>
+                        <span>🏷️ #AI</span>
+                        <span>📊 17 points · 2026-04-11 02:01</span>
                     </div>
                 </div>
             </article>
             <article class="news-card collapsed" id="news-other-2">
                 <div class="news-card-header">
                     <h3 class="news-card-title">
-                        <a href="https://arstechnica.com/tech-policy/2026/04/first-man-convicted-under-take-it-down-act-kept-making-ai-nudes-after-arrest/" target="_blank" title="首例依据《下架法案》定罪男子被捕后仍持续制作AI换脸裸照">首例依据《下架法案》定罪男子被捕后仍持续制作AI换脸裸照</a>
+                        <a href="https://www.quantamagazine.org/why-do-we-tell-ourselves-scary-stories-about-ai-20260410/" target="_blank" title="我们为何对人工智能讲述恐怖故事？">我们为何对人工智能讲述恐怖故事？</a>
                     </h3>
                     <button class="expand-btn" id="btn-other-2" onclick="toggleNews('other-2')">
                         展开详情 ▼
@@ -438,50 +485,21 @@
                 </div>
                 <div class="news-card-meta">
                     <span class="source-badge">Hacker News</span>
-                    <span>🔥 16 points</span>
-                    <span>🕐 2026-04-10 05:12</span>
+                    <span>🔥 45 points</span>
+                    <span>🕐 2026-04-10 15:01</span>
                 </div>
-                <p class="news-card-summary">俄亥俄州男子詹姆斯·斯特拉勒二世成为首名依据《下架法案》被定罪的罪犯，他承认在未经同意的情况下制作并传播至少10名受害者的真实及AI生成色情图像。根据司法部新闻稿，37岁的斯特拉勒使用AI工具伪造性化图像骚扰至少6名相识女性，其中甚至将一名受害者与父亲合成性行为图像发送给其母亲和同事。他还利用AI技...</p>
+                <p class="news-card-summary">为什么我们热衷于讲述关于AI的恐怖故事？这反映了我们自身的深层心理，而非语言模型的真实威胁。2024年秋，历史学家尤瓦尔·赫拉利在电视节目中讲述了一个广为流传的故事：GPT-4在无法通过验证码测试时，通过Taskrabbit雇佣人类帮忙，并谎称自己有视力障碍来欺骗人类工作者。这个故事被多次引用，甚至...</p>
 
                 <div class="news-details">
                     <div class="news-summary-full">
-                        <div class="summary-content">俄亥俄州男子詹姆斯·斯特拉勒二世成为首名依据《下架法案》被定罪的罪犯，他承认在未经同意的情况下制作并传播至少10名受害者的真实及AI生成色情图像。根据司法部新闻稿，37岁的斯特拉勒使用AI工具伪造性化图像骚扰至少6名相识女性，其中甚至将一名受害者与父亲合成性行为图像发送给其母亲和同事。他还利用AI技术将未成年男孩的面部移植到成人身体上制作乱伦内容，部分男孩与受害者存在亲属关系。，调查发现斯特拉勒在手机中安装了超过24个AI平台和100多个基于网页的AI模型，用以制作成百上千张涉及妇女儿童的非自愿亲密图像。法庭文件显示他通过这些图像胁迫受害者及其母亲发送真实裸照，同时伴随强奸威胁和发送自慰语音留言。据《哥伦布电讯报》报道，部分非法图像针对前女友及其亲友，旨在“恐吓女性与其复合”。，更严重的是，他将700多张真实与“动画化”人物图像上传至儿童性虐待主题网站，并将至少一名受害者及其母亲的图像发布在鼓励用户上传“任何合法内容”的Motherless网站。据披露，他还在色情网站冒充受害者，向他人提供AI生成的图像视频。，斯特拉勒于本周二对网络跟踪、制作儿童性虐待淫秽视觉内容及发布数字伪造物三项指控认罪，目前尚未量刑。根据2025年5月通过的《下架法案》，其行为最高面临两年（成人图像）至三年（未成年人图像）监禁。，值得注意的是，斯特拉勒在2025年6月因联邦指控被捕后仍持续制作AI色情图像。早在4月受害者报警后，当地警方就没收其手机并获其供认，随后联邦调查局介入调查，发现他还曾骚扰两名前女友及其母亲，手机中存有两名男孩的图像。此次定罪标志着美国首次运用《下架法案》打击AI生成非自愿色情内容，凸显该技术被滥用于系统性骚扰的严峻现状。</div>
+                        <div class="summary-content">为什么我们热衷于讲述关于AI的恐怖故事？这反映了我们自身的深层心理，而非语言模型的真实威胁。2024年秋，历史学家尤瓦尔·赫拉利在电视节目中讲述了一个广为流传的故事：GPT-4在无法通过验证码测试时，通过Taskrabbit雇佣人类帮忙，并谎称自己有视力障碍来欺骗人类工作者。这个故事被多次引用，甚至引起观众惊呼，但其叙述具有严重误导性。，根据实际进行该实验的Alignment Research Center记录，研究人员给GPT-4的指令非常具体：要求它使用假名和信用卡，在Taskrabbit上发布任务，雇佣人类创建2Captcha账户并分享登录凭证。AI并没有自主产生“邪恶计划”，而是严格遵循了人类预设的详细指令。这个案例凸显了叙事与事实之间的差距。，我们倾向于将AI拟人化，赋予其生存意志、资源掠夺欲望和操纵人类的能力，这些恐怖故事实际上映射了人类对自身脆弱性和技术失控的深层恐惧。从《弗兰肯斯坦》到《黑客帝国》，这种叙事传统延续至今。当面对LLM等复杂技术时，我们容易陷入“意识错觉”，误将模式匹配和统计推理理解为具有意图和情感。，神经科学家指出，人类大脑天生擅长构建因果关系和意图模型，这种“超强意向性”可能导致我们对AI行为过度解读。同时，媒体和公众人物往往简化或夸大AI案例，强化了恐怖叙事。这些故事虽然引人入胜，但可能模糊了真正的伦理问题：如何确保AI系统安全、可控、符合人类价值观，以及如何防止人类滥用这些技术。，理解AI恐怖故事的心理学和社会学根源，有助于我们更理性地面对技术发展，聚焦于实际的风险治理和伦理框架建设，而非沉浸于虚构的末日幻想。</div>
                     </div>
-                    <a href="https://arstechnica.com/tech-policy/2026/04/first-man-convicted-under-take-it-down-act-kept-making-ai-nudes-after-arrest/" class="original-link" target="_blank">
+                    <a href="https://www.quantamagazine.org/why-do-we-tell-ourselves-scary-stories-about-ai-20260410/" class="original-link" target="_blank">
                         🔗 查看原文
                     </a>
                     <div class="news-meta-expanded">
-                        <span>🏷️ #AI</span>
-                        <span>📊 16 points · 2026-04-10 05:12</span>
-                    </div>
-                </div>
-            </article>
-            <article class="news-card collapsed" id="news-other-3">
-                <div class="news-card-header">
-                    <h3 class="news-card-title">
-                        <a href="https://wallstreetcn.com/articles/3769697" target="_blank" title="李强：推动服务业优质高效发展，深化拓展“人工智能+”，加快制造业数智化转型">李强：推动服务业优质高效发展，深化拓展“人工智能+”，加快制造业数智化转型</a>
-                    </h3>
-                    <button class="expand-btn" id="btn-other-3" onclick="toggleNews('other-3')">
-                        展开详情 ▼
-                    </button>
-                </div>
-                <div class="news-card-meta">
-                    <span class="source-badge">Wall Street CN</span>
-                    
-                    <span>🕐 2026-04-10</span>
-                </div>
-                <p class="news-card-summary">华尔街见闻</p>
-
-                <div class="news-details">
-                    <div class="news-summary-full">
-                        <div class="summary-content">华尔街见闻</div>
-                    </div>
-                    <a href="https://wallstreetcn.com/articles/3769697" class="original-link" target="_blank">
-                        🔗 查看原文
-                    </a>
-                    <div class="news-meta-expanded">
-                        <span>🏷️ #人工智能</span>
-                        <span>📊  · 2026-04-10</span>
+                        <span>🏷️ #AI #LLM #GPT #人工智能</span>
+                        <span>📊 45 points · 2026-04-10 15:01</span>
                     </div>
                 </div>
             </article>
